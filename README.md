@@ -3,3 +3,5 @@ Taps into Space Engineers 2 Source Code, specifically Game2.Simulation\Keen.Game
 0Harmony.dll is required for this to work properly, as it runs as a Harmony Patch. 
 
 Must be installed in correct path, like so: C:\Users\[YourUsername]\AppData\Roaming\SpaceEngineers2\Plugins\SpaceEngineers2NoPCU.dll, and C:\Users\[YourUsername]\AppData\Roaming\SpaceEngineers2\Plugins\0Harmony.dll.
+
+Packaged SpaceEngineers2NoPCU.dll in the SpaceEngineers2NoPCU/bin/Debug/net8.0 directory of this plugin.
