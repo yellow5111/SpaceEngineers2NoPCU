@@ -1,0 +1,822 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.ArmorBlockModel</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.ArmorBlockModelProcessor">
+            <summary>
+            Processes multiple armor block sides into a ArmorBlockComposite
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.ArmorsideAssetType">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.ComparmAssetType">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel">
+            <summary>
+            Model for a composite armor block asset
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.SkipPhysicsShapeGeneration">
+            <summary>
+            If true the time consumint precutting of convex shape is disabled.
+            TODO: remove once editor validation is in place
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CompositeArmorBlockModel}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SkipPhysicsShapeGenerationAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CompositeArmorBlockSide}}#Set(System.Object,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CompositeArmorBlockSide}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CompositeArmorBlockSide}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CompositeArmorBlockSide}}#Set(System.Byte@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel.TypeInfoHolder.SideMeshesAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockModel@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide">
+            <summary>
+            Represents a mesh vs side assigment of armor block composite 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.PlanarOffset">
+            <summary>
+            Translation applied in the direction of the side normal. Only valid for planar armor block sides.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CompositeArmorBlockSide}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#Core#Physics#ArmorSideAsset}}#Set(System.Object,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.Core.Physics.ArmorSideAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#Core#Physics#ArmorSideAsset}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#Core#Physics#ArmorSideAsset}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#Core#Physics#ArmorSideAsset}}#Set(System.Byte@,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.Core.Physics.ArmorSideAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.Core.Physics.ArmorSideAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.SideMeshAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation}#Set(System.Object,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation}#Set(System.Byte@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.RotationAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide.TypeInfoHolder.PlanarOffsetAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CompositeArmorBlockSide@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation">
+            <summary>
+            Cube rotation represents a composite rotation of an object where each directional component is a multiple of 90 degrees.
+            Struct presents way to define <see cref="T:Keen.VRage.Library.Mathematics.IntegerOrientation"/> in more predictable way for user.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90">
+            <summary>
+            Rotation around one axis in 90 degrees steps.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Set(System.Object,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Set(System.Byte@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.XAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Set(System.Object,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Set(System.Byte@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.YAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Set(System.Object,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ArmorBlockModel#Composite#CubeRotation#Rotation90}#Set(System.Byte@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@,Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.Rotation90@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation.TypeInfoHolder.ZAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockModel.Composite.CubeRotation@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockModel.ConvexShapeProcessing.FillConvexShapes(Keen.VRage.Physics.IVRagePhysics,System.Span{Keen.VRage.ContentPipeline.ArmorBlockModel.SideProcessingInfo},Keen.VRage.Game.Armor.Data.ArmorBlockModel@)">
+            <summary>
+            Fills the ArmorBlockModel with its physical representation - convex shapes.
+            The block contains a set of convex shapes for whole geometry and for each possible intersection with bone cell.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.FillConvexShapeResult">
+            <seealso cref="M:Keen.VRage.ContentPipeline.ArmorBlockModel.ConvexShapeProcessing.FillConvexShapes(Keen.VRage.Physics.IVRagePhysics,System.Span{Keen.VRage.ContentPipeline.ArmorBlockModel.SideProcessingInfo},Keen.VRage.Game.Armor.Data.ArmorBlockModel@)"/>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Editor.CompositeArmorBlockAssetInterface">
+            <summary>
+            Editor Asset Interface for CompositeTexture asset types
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockModel.Editor.CompositeArmorBlockGeneratorProvider">
+            <summary>
+            Generator for composite armor blocks
+            </summary>
+        </member>
+    </members>
+</doc>

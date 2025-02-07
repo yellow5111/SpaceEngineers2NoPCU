@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.SlugFont</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.SlugFont.TTFAssetType">
+            <summary>
+            Asset type for .ttf fonts
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.SlugFont.OTFAssetType">
+            <summary>
+            Asset type for .otf fonts
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.SlugFont.XMLAssetType">
+            <summary>
+            Asset type for .xml fonts
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.SlugFont.SlugFontProcessor">
+            <summary>
+            </summary>
+        </member>
+    </members>
+</doc>

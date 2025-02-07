@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.DCS.Generator</name>
+    </assembly>
+    <members>
+        <member name="P:Keen.VRage.DCS.Generator.Generators.GeneratorBase.ExposedCompilation">
+            <summary>
+            <see cref="P:Keen.VRage.DCS.Generator.Generators.GeneratorBase.Compilation"/> with exposed assembly-private symbols
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.DCS.Generator.Generators.InProcessReplicationTranslationTableGenerator.MethodSignatureForType(Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.ITypeSymbol)">
+            <summary>
+            IMPORTANT: if you add parameters to this method signature, also update:
+            - <see cref="M:Keen.VRage.DCS.Generator.Generators.InProcessReplicationTranslationTableGenerator.AddTranslationIfNeeded(Microsoft.CodeAnalysis.Compilation,System.Collections.Generic.HashSet{Microsoft.CodeAnalysis.ITypeSymbol}@,Microsoft.CodeAnalysis.ITypeSymbol)"/> translationTable.TryFindMethod("Translate") > add/remove parameters
+            - <see cref="M:Keen.VRage.DCS.Generator.Generators.InProcessReplicationTranslationTableGenerator.Execute"/> update parameters count XXX in "if (args.Length == XXX)"
+            - InProcessReplicationTranslationTable.Observe() > update parameters count
+            - Execute
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.DCS.Generator.Generators.SignalsGenerator.InferManualSignalsFromSubscriber(System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.INamedTypeSymbol,System.ValueTuple{System.Collections.Generic.List{Keen.VRage.DCS.Generator.CodeTemplates.Argument},System.Boolean}})">
+            <summary>
+            Looks for signals that are defined in this assembly and have a subscriber there but don't have triggers
+            in normal workflow Signal argument's types are dictated by signal trigger but in this case we have to use subscriber's arguments
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.DCS.Generator.SymbolRocks.IsDeclaredReadOnly(Microsoft.CodeAnalysis.IMethodSymbol)">
+            <summary>
+            Emulates Microsoft.CodeAnalysis.CSharp.Symbols.MethodSymbol.IsDeclaredReadOnly
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+            Reserved to be used by the compiler for tracking metadata.
+            This class should not be used by developers in source code.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.KeyValuePair.Create``2(``0,``1)">
+            Creates a new <see cref="T:System.Collections.Generic.KeyValuePair`2"/> from the given values.
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute">
+            <summary>Specifies that null is allowed as an input even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute">
+            <summary>Specifies that null is disallowed as an input even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute">
+            <summary>Specifies that an output may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute">
+            <summary>Specifies that an output will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"/>, the parameter may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter may be null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute">
+            <summary>Specifies that the output will be non-null if the named parameter is non-null.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName">
+            <summary>Gets the associated parameter name.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)">
+            <summary>Initializes the attribute with the associated parameter name.</summary>
+            <param name="parameterName">
+            The associated parameter name.  The output will be non-null if the argument to the parameter specified is non-null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute">
+            <summary>Applied to a method that will never return under any circumstance.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute">
+            <summary>Specifies that the method will not return if the associated Boolean parameter is passed the specified value.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue">
+            <summary>Gets the condition parameter value.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified parameter value.</summary>
+            <param name="parameterValue">
+            The condition parameter value. Code after the method will be considered unreachable by diagnostics if the argument to
+            the associated parameter matches this value.
+            </param>
+        </member>
+    </members>
+</doc>

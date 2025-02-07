@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.Builder.Plugin</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.Builder.Plugin.BuilderPluginAttribute">
+            <summary>
+            Attribute to mark types inheriting from IBuilderPlugin that should
+            be invokable via ContentPipeline.Builder cmd line
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Builder.Plugin.BuilderPluginAttribute.Id">
+            <summary>
+            Unique string identifier used in ContentPipeline.Builder command line to point at the decorated IBuilderPlugin type
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Builder.Plugin.IBuilderPlugin">
+            <summary>
+            Builder plugins interface
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Builder.Plugin.IBuilderPlugin.Execute(System.String[],Keen.VRage.ContentPipeline.Builder.Plugin.IBuilderPluginContext)">
+            <summary>
+            Execute the plugin function using provided args
+            </summary>
+            <param name="args"></param>
+            <param name="context"></param>
+            <returns>false if plugin execution failed and should cause the return to return plugin execution failure code</returns>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Builder.Plugin.IBuilderPluginContext">
+            <summary>
+            Context for builder plugins
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Builder.Plugin.IBuilderPluginContext.LogError(System.String,System.Object[])">
+            <summary>
+            Log an error
+            This will cause the tool to return failure code.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Builder.Plugin.IBuilderPluginContext.LogWarning(System.String,System.Object[])">
+            <summary>
+            Log a warning
+            This won't cause the tool to return failure code, but may fail CI regardless.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Builder.Plugin.IBuilderPluginContext.LogInfo(System.String,System.Object[])">
+            <summary>
+            Log normal message to tool output/console
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Builder.Plugin.IBuilderPluginContext.LogVerbose(System.String,System.Object[])">
+            <summary>
+            Log verbose message to tool output/console (only when verbose mode is enabled)
+            </summary>
+        </member>
+    </members>
+</doc>

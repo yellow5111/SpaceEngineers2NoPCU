@@ -1,0 +1,850 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.ModelVoxels</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.Editor.ModelVoxelAssetInterface">
+            <summary>
+            Asset interface for the model voxel files.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.Editor.ModelVoxelGeneratorProvider">
+            <summary>
+            Generator provider for model voxel assets
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.Editor.VoxelMapAssetInterface">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.InfoProviders.VoxelCustomInfoProvider">
+            <summary>
+            Base class for voxel asset custom info available on the context menu.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelAssetType">
+            <summary>
+            Voxel storage asset type.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData">
+            <summary>
+            Voxel storage that is converted from a mesh.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.BoundingVolumeData">
+            <summary>
+            Parameters used in creation of the bounding volume for the voxel shape when it is used for environment data.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelVoxels#ModelVoxelData}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Set(System.Object,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Set(System.Byte@,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.AssetReferenceAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Quaternion}#Set(System.Object,Keen.VRage.Library.Mathematics.Quaternion@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Quaternion}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Quaternion}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Quaternion}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Quaternion@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Mathematics.Quaternion@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.RotationAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.EulerHintAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.ScaleAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ModelVoxels#BoundingVolumeCreationData}#Set(System.Object,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ModelVoxels#BoundingVolumeCreationData}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ModelVoxels#BoundingVolumeCreationData}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#ModelVoxels#BoundingVolumeCreationData}#Set(System.Byte@,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData.TypeInfoHolder.BoundingVolumeDataAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelData@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData">
+            <summary>
+            Data used for determining the level of detail of the voxel bounding geometry.
+            These should be tweaked to match the detail of the source voxel but may lead to higher storage size.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.MaxHulls">
+            <summary>
+            Maximum number of convex shapes used in the decomposition.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.MaxError">
+            <summary>
+            Maximum error from the original shape.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.GeometrySimplification">
+            <summary>
+            Simplification coefficients for the output geometry.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.UseRelativeError">
+            <summary>
+            The error and simplification values are relative to the shape size.
+            Default will be true, make sure to test all assets when changing to false.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelVoxels#BoundingVolumeCreationData}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxHullsAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.MaxErrorAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.GeometrySimplificationAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Set(Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData.TypeInfoHolder.UseRelativeErrorAccessor.Get(Keen.VRage.ContentPipeline.ModelVoxels.BoundingVolumeCreationData@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelProcessor">
+            <summary>
+            Asset processor for the model voxel asset, an asset generated by converting a mesh to a voxel storage.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelVoxels.ModelVoxelProcessor.BakeGeometryInModel(Keen.VRage.ContentPipeline.ModelsBase.ModelData,System.Collections.Generic.List{Keen.VRage.Library.Mathematics.Vector3D}@,System.Collections.Generic.List{Keen.VRage.Library.Mathematics.Vector3I}@)">
+            <summary>
+            Go through all nodes in skeleton, accumulate local transformations and apply them to the vertices of meshes attached to that given node.
+            All vertices are then collected to single list together with corresponding triangles.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

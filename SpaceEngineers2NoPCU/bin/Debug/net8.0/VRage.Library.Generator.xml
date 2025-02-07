@@ -1,0 +1,1782 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.Library.Generator</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.Library.Generator.Diagnostics.EndGenerationException">
+            <summary>
+            Exception that stops the generation process silently (we assume another, already reported, exception was the cause).
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Diagnostics.EndGenerationException.#ctor(System.Exception)">
+            <summary>
+            Exception that stops the generation process silently (we assume another, already reported, exception was the cause).
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Diagnostics.InvalidCustomSerializerException.#ctor(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax,Microsoft.CodeAnalysis.ITypeSymbol,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Diagnostics.InvalidCustomSerializerException.CreateDiagnostic">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Diagnostics.InvalidSerializationFlagsException.#ctor(System.String,Microsoft.CodeAnalysis.ISymbol)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Diagnostics.MissingSymbolException.ActualSeverity">
+            <summary>
+            Set this to override default severity.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Generation.GenerationCoordinator.DefaultGeneratorFactories">
+            <summary>
+            Default specific generator factories.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Generation.GeneratorBase.PostprocessTypes">
+            <summary>
+            Postprocess all types collected via <see cref="M:Keen.VRage.Library.Generator.Generation.ITypeCollector`1.ProcessType(`0,Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)" />.
+            </summary>
+            <remarks>For generators that do not collect types based on attributes this will be their actual entry point to collect types.</remarks>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Generation.GeneratorBase.Generate">
+            <summary>
+            Generate additional types, generator should avoid processing additional data in this step to reduce conflicting interactions between the
+            various generators.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Generator.Generation.IConfigurationCollector`1">
+            <summary>
+            Configuring projects
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Generation.IConfigurationCollector`1.ProcessAttribute(`0)">
+            <summary>
+            Process the configuration attribute.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Generator.Generation.IGenerator">
+            <summary>
+            Interface describing a type that is capable of generating code.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Generator.Generation.IPolymorphicTypeCollector`1">
+            <summary>
+            Collects types annotated with an attribute of given or derived type.
+            </summary>
+            <typeparam name="TAttribute">The base class for the annotated attribute.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Generator.Generation.ITypeCollector`1">
+            <summary>
+            Collects types annotated with <typeparamref name="TAttribute" />.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Generator.Generation.MainIncrementalGenerator">
+            <summary>
+            Main incremental generator that acts as an entry point for initializing custom generator types.
+            </summary>
+        </member>
+        <member name="E:Keen.VRage.Library.Generator.Generation.MasterGenerator.OnGenerated">
+            <summary>
+            Event fired when this generator processes a compilation.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Generation.MasterGenerator.AffectedGenerators">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Generation.MasterGenerator.Initialize(Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Library.Generator.Generation.MetadataHelper">
+            <summary>
+            Helper for locating symbols, converting metadata representations to real objects.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Generation.MetadataHelper.GetNamespaceSymbols(System.String)">
+            <summary>
+            Get the all symbols for a given namespace from referenced assemblies.
+            </summary>
+            <exception cref="T:Keen.VRage.CodeAnalysis.Diagnostics.MetadataException">When the namespace could not be found.</exception>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Generation.NameClashHelper._namespaces">
+            <summary>
+            Mapping of symbol names to their namespaces
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.ObjectBuilder.ObjectBuilderGenerator.DefaultInitializer">
+            <summary> Default initializer for a member, equals to <c>new()</c>. </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.ObjectBuilder.ObjectBuilderInfo.SUFFIX">
+            <summary>
+            Suffix for generated object builder types.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.ObjectBuilder.SerializableMember.Type">
+            <summary>
+            The type of this member.
+            </summary>
+            <remarks>
+            It may be different from <see cref="P:Keen.VRage.Library.Generator.ObjectBuilder.SerializableMember.OriginalType"/> for object builders.
+            </remarks>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.JsonSerializerGenerator.Format">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.JsonSerializerGenerator.GetReferencedNamespaces">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.JsonSerializerGenerator.GetInterfaces(Keen.VRage.Library.Generator.Serialization.SerializableTypeInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.JsonSerializerGenerator.GetRazorModel(Keen.VRage.Library.Generator.Serialization.SerializableTypeInfo,System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.ITypeSymbol,System.ValueTuple{Microsoft.CodeAnalysis.INamedTypeSymbol,Keen.VRage.Library.Serialization.SerializerFormatSet}})">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ModuleCustomSerializers.Serializers">
+            <summary>
+            The type targeted by the custom serializer
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.NamedObject.NamedObjectSerializerGenerator.ProcessTypes(Microsoft.CodeAnalysis.IncrementalValuesProvider{System.ValueTuple{Keen.VRage.Library.Serialization.NoSerializeAttribute,Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax,Microsoft.CodeAnalysis.SemanticModel}}@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.Pages.Migrations.MigrationsModel.SuppressedMethodVersions">
+            <summary>Versions for which generated migration methods are suppressed.</summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic">
+            <summary>
+            Describes the possible diagnostic failure states when attempting to identify the usable constructor for a read-only/immutable type.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic.NoIssue">
+            <summary> No issues, type is serializable. </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic.CustomAccessorsPresent">
+            <summary> Custom accessors are present on the type and those are not supported. </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic.MissingConstructor">
+            <summary> No constructor is present on the type at all. </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic.ConstructorNameMismatch">
+            <summary> A constructor with correct types exists but the names don't match the serializable members.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic.ConstructorTypeMismatch">
+            <summary> A constructor with correct names exists but the types don't match the serializable members.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic.ConstructorTooManyArgs">
+            <summary> The closest matching constructor has too many arguments.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic.ConstructorNotEnoughArgs">
+            <summary> The closest matching constructor does not have enough arguments.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.ReadOnlyTypeDiagnostic.AmbiguousConstructor">
+            <summary> There are multiple constructors with the correct number and name.</summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.SerializableMember.Type">
+            <summary>
+            The type of this member.
+            </summary>
+            <remarks>
+            It may be different from <see cref="F:Keen.VRage.Library.Generator.Serialization.SerializableMember.OriginalType"/> for object builders.
+            </remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializableMember.HasCustomAccessors">
+            <summary>
+            Whether this member is a custom member with dedicated Get and Set methods.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.SerializableMember.Flags">
+            <summary>
+            Flags transferred to the serializer for the member.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.SerializableTypeInfo.NameType">
+            When implementing ISerializableNamedObject this is the type of the name.
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.SupportedFormats">
+            <summary> Serializer formats supported by the generator. </summary>
+            <remarks>These are the formats initialized by default when the source generator runs on a regular compilation.</remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.DefaultInitializer">
+            <summary> Default initializer for a member, equals to <c>new()</c>. </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.EnabledSerializers">
+            <summary> Serializers enabled for this generator. </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.BuiltInSerializableTypes">
+            <summary>
+            Type that are natively supported by the serializer.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.Generators">
+            <summary>Format specific generators.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator._generatedSerializableTypes">
+            <summary>
+            Serializable types defined in the current compilation that will be generated.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator._serializableTypes">
+            <summary>Serializable types defined in the current compilation.</summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.AffectedGenerators">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.Initialize(Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.GetSerializers(Microsoft.CodeAnalysis.ITypeSymbol,System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.ITypeSymbol,Keen.VRage.Library.Serialization.SerializerFormatSet})">
+            <summary>
+            Whether a particular type can be processed by a given serializer.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.ProcessTypes(Microsoft.CodeAnalysis.IncrementalValuesProvider{System.ValueTuple{Keen.VRage.Library.Generator.Serialization.CustomSerializer,Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax,Microsoft.CodeAnalysis.SemanticModel}}@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.ShouldSerializeCollector.SHOULD_SERIALIZE_PREFIX">
+            <summary> Prefix for conditional serialization methods. </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.CustomGetterCollector.CUSTOM_GETTER_PREFIX">
+            <summary> Prefix for custom serialization methods. </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Serialization.SerializerGenerator.CustomSetterCollector.CUSTOM_SETTER_PREFIX">
+            <summary> Prefix for conditional serialization methods. </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.SerializerGeneratorBase.Format">
+            <summary>
+            The corresponding <see cref="T:Keen.VRage.Library.Serialization.SerializerFormat" /> for this serializer.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Generator.Serialization.SerializerGeneratorBase.SerializerName">
+            <summary>
+            The name the serializer class for this serializer generator should use.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.SerializerGeneratorBase.GetReferencedNamespaces">
+            <summary>
+            Get the namespaces a particular type needs to reference.
+            </summary>
+            <remarks>Namespaces for the type's members are already selected by the main generator and need not to be returned.</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.SerializerGeneratorBase.GetInterfaces(Keen.VRage.Library.Generator.Serialization.SerializableTypeInfo)">
+            <summary>
+            Get the interfaces needed by the part created for the type/serializer.
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Serialization.SerializerGeneratorBase.GetRazorModel(Keen.VRage.Library.Generator.Serialization.SerializableTypeInfo,System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.ITypeSymbol,System.ValueTuple{Microsoft.CodeAnalysis.INamedTypeSymbol,Keen.VRage.Library.Serialization.SerializerFormatSet}})">
+            <summary>
+            Get the razor model used to render this serializer.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Util.MethodUtils.IsMethodInvoked(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Check that a particular method appears to be invoked given it's name (this method won't match symbols exactly so the method that's actually
+            invoked might be a different one).
+            </summary>
+            <param name="block">The code block to inspect.</param>
+            <param name="methodName">The name of the invoked method.</param>
+            <param name="baseMethod">Whether to look for a <c>base</c> qualified invocation of the method.</param>
+            <param name="allowNesting">Whether to allow the method to be invoked in a nested block (such as conditionally in a conditional statement or loop).</param>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Util.StringUtils.MemberNameToLowerCamelCase(System.String)">
+            <summary>
+            Convert a valid, non-constant, member name using Keen coding conventions to `lowerCamelCase`.
+            </summary>
+            <param name="name"></param>
+            <returns>The member name minus any leading underscore ('_') and with the first letter case changed to lower case.</returns>
+        </member>
+        <member name="F:Keen.VRage.Library.Generator.Writers.CodeWriter._atLineEnd">
+            <summary>Whether the current writer stands at a line ending.</summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Writers.CodeWriter.PushIndent(System.String)">
+            <summary>Increase the indent</summary>
+            <param name="indent">indent string</param>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Writers.CodeWriter.PopIndent">
+            <summary>Remove the last indent that was added with PushIndent</summary>
+            <returns>The removed indent string</returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Writers.CodeWriter.PopIndent(System.String@)">
+            <summary>Remove the last indent that was added with PushIndent</summary>
+            <returns>The removed indent string</returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Writers.CodeWriter.ClearIndent">
+            <summary>Remove any indentation</summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Writers.CodeWriter.GetCurrentToken">
+            <summary>
+            Get a trail token for the current state.
+            </summary>
+            <remarks>this can be used to allow a child call to push trailing actions without popping them.</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Writers.CodeWriter.GetCurrentTrailIndex">
+            <summary>
+            Get the current top index for the trail stack.
+            </summary>
+            <remarks>Advanced usage only.</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Writers.CodeWriterExtensions.WriteTrailing(Keen.VRage.Library.Generator.Writers.CodeWriter,System.String)">
+            <summary>
+            Return a token that writes a given string to the code writer once it gets disposed.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Generator.Writers.CodeWriterExtensions.WriteTrailing(Keen.VRage.Library.Generator.Writers.CodeWriter,System.Action{Keen.VRage.Library.Generator.Writers.CodeWriter})">
+            <summary>
+            Return a token that invokes a given action on the code writer once it gets disposed.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Reflection.ReflectionExtensions.ImplementsGenericInterface(System.Type,System.Type)">
+            <summary>
+            Whether a type implements a concrete version of a generic interface.
+            </summary>
+            <param name="subtype">The type.</param>
+            <param name="genericInterface">The generic interface to look for.</param>
+            <returns>Whether the interface was implemented.</returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Reflection.ReflectionExtensions.ImplementsInterface(System.Type,System.Type)">
+            <summary>
+            Whether a type implements an interface.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Reflection.ReflectionExtensions.ImplementsInterface``1(System.Type)">
+            <summary>
+            Whether a type implements an interface.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.MetadataIndexerAttribute">
+            <summary>
+            Mark a type as a metadata indexer, type should implement one of more of the indexer interfaces.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.ModuleMetadataIndexersAttribute">
+            <summary>
+            Mark a type as a metadata indexer, type should implement one of more of the indexer interfaces.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Reflection.ModuleMetadataIndexersAttribute.Indexers">
+            <summary>
+            Indexers declared for the module.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Reflection.ModuleMetadataIndexersAttribute.#ctor(System.Type[])">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.IndexedAttributeBase">
+            <summary>
+            Base class for attributes that should be indexed automatically.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.ModuleIndexedAttributesAttribute">
+            <summary>
+            Collects all types annotated with a given attribute in a module.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Reflection.ModuleIndexedAttributesAttribute.AttributeType">
+            <summary>
+            The type of the attribute that was used.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Reflection.ModuleIndexedAttributesAttribute.AnnotatedTypes">
+            <summary>
+            The types that are annotated.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Reflection.ModuleIndexedAttributesAttribute.AnnotatedPrivateTypes">
+            <summary>
+            The private types that are annotated.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.IndexMetadataAttribute">
+            <summary>
+            Marks an assembly as potentially containing metadata that should be indexed.
+            </summary>
+            <remarks>This attribute is automatically added by VRage.Library.Generator.</remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.MetadataDependenciesAttribute">
+            <summary>
+            List of assemblies that are metadata dependencies of the current.
+            </summary>
+            <remarks>This attribute is automatically added by VRage.Library.Generator.</remarks>
+        </member>
+        <member name="M:Keen.VRage.Library.Reflection.MetadataDependenciesAttribute.#ctor(System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.BundleAttribute">
+            <summary>
+            Attribute used to specify an assembly bundle.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Reflection.BundleAttribute.Name">
+            <summary>
+            The name of the bundle.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Reflection.BundleAttribute.Version">
+            <summary>
+            The version of the bundle.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.BundleInfo">
+            <summary>
+            Class that provides information on a bundle.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.MaterializeAttribute">
+            <summary>
+            Indicates that the annotated type materializes methods from the given type.
+            </summary>
+            <remarks>
+            To "materialize" a method means to add a copy of that method into the annotated class but with a
+            generic type parameter already substituted. By default, all methods from the provided type
+            are taken that satisfy the following rules:
+            <para>
+            1. The method is an extension method.
+            "this" parameter represents the target type this method will be copied into.
+            </para>
+            <para>
+            2. The method is generic.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.ReadonlyMethodAttribute">
+            <summary>
+            Indicates that the annotated method should be materialized as <see langword="readonly"/>.
+            Works for value types only (for reference types this is ignored)
+            </summary>
+            <remarks>
+            Intended for use with <see cref="T:Keen.VRage.Library.Reflection.MaterializeAttribute"/> only
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Reflection.ReflectionUtils">
+            <summary>
+            Helper class for reflection
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Reflection.ReflectionUtils.MS_PRODUCT_NAME">
+            <summary>
+            The string that all MS assemblies contain inside <see cref="T:System.Reflection.AssemblyProductAttribute"/>
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Reflection.ReflectionUtils.ASYNC_STATE_MACHINE_THIS">
+            <summary>
+            The hardcoded name of the 'this' field in .net async state machines
+            It's a constant in Roslyn (see GeneratedNames.ThisProxyFieldName())
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Reflection.ReflectionUtils.RuntimeType">
+            <summary>
+            The unspeakable System.RuntimeType.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Reflection.ReflectionUtils.IsRuntimeAssembly(System.Reflection.Assembly)">
+            <summary>
+            Whether the assembly is a runtime (BCL) assembly
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Reflection.ReflectionUtils.IsAsmThis(System.Reflection.FieldInfo)">
+            <summary>
+            Return true if <paramref name="fieldInAsyncStateMachine"/> corresponds to the 'this' field of an <see cref="T:System.Runtime.CompilerServices.IAsyncStateMachine"/>
+            </summary>
+            <param name="fieldInAsyncStateMachine">a field from an <see cref="T:System.Runtime.CompilerServices.IAsyncStateMachine"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Reflection.ReflectionUtils.GetAllGenericSubTypes(System.Type)">
+            <summary>
+            e.g. for IEnumerable&lt;int&gt; returns a collection of two items 
+            containing typeof(IEnumerable) and typeof(int)
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializeAttribute">
+            <summary>
+            Marks a type or member as serializable.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializeAttribute.Default">
+            <summary>
+            Default attribute, these are the values used when a type is annotated with <see cref="T:System.SerializableAttribute" /> with the default
+            constructor.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.SerializeAttribute.MemberSerializationPolicy">
+            <summary>
+            Policy for automatic member serialization.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializeAttribute.SerializerTypes">
+            <summary>
+            Serializers that should be used for the annotated member.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializeAttribute.Flags">
+            <summary>
+            Flags that modify the serialization.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializeAttribute.Name">
+            <summary>
+            Custom name for the serialized field.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializeAttribute.#ctor(System.Nullable{Keen.VRage.Library.Serialization.SerializerFormatSet},Keen.VRage.Library.Serialization.SerializerFlags)">
+            <summary>
+            Specify how to serialize a type member.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializeAttribute.#ctor(Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializeAttribute.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.NoSerializeAttribute">
+            <summary>
+            Excludes the annotated member(s) from serialization.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.NoSerializeAttribute.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ImmutableAttribute">
+            <summary>
+            Marks a reference type as immutable from a serialization point of view.
+            </summary>
+            <remarks>Immutable types should only have readonly/get-only serializable members, and constructor matching all serializable members.</remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.CustomAccessorsAttribute">
+             <summary>
+             Indicates that the annotated member contained within a serializable type will use custom methods to
+             get / set its value.
+             </summary>
+             <remarks>
+             The get method must take <see cref="T:Keen.VRage.Library.Serialization.SerializationContext"/> and return member's type instance.
+             The set method must take member type's instance and <see cref="T:Keen.VRage.Library.Serialization.SerializationContext"/> and return void.
+             </remarks>
+             <example>
+             <code>
+             public int Integer;
+            
+             public int GetInteger(SerializationContext ctx) => 42;
+             
+             public void SetInteger(int value, SerializationContext ctx) { }
+             </code>
+             </example>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.CustomSerializerAttribute">
+            <summary>
+            Marks a type as the serializer for an otherwise unserializable type.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.CustomSerializerAttribute.Target">
+            <summary>
+            The type targeted by the custom serializer
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.CustomSerializerAttribute.Formats">
+            <summary>
+            Formats supported by the custom serializer.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.CustomSerializerAttribute.#ctor(System.Type,Keen.VRage.Library.Serialization.SerializerFormatSet)">
+            <summary>
+            Create a new <see cref="T:Keen.VRage.Library.Serialization.CustomSerializerAttribute" />.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ModuleCustomSerializersAttribute">
+            <summary>
+            Lists the custom serializers provided by a module.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.ModuleCustomSerializersAttribute.Serializers">
+            <summary>
+            The type targeted by the custom serializer
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.ModuleCustomSerializersAttribute.#ctor(System.Type[],System.Type[],Keen.VRage.Library.Serialization.SerializerFormatSet[])">
+            <summary>
+            Create a new <see cref="T:Keen.VRage.Library.Serialization.ModuleCustomSerializersAttribute" />
+            </summary>
+            <param name="serializers">The serializer types provided by the annotated module.</param>
+            <param name="targets">The target type for each serializer provided to <paramref name="serializers" /></param>
+            <param name="formats">Formats supported by each custom serializer.</param>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializerEnumExtensions">
+            <summary>
+            Extension methods for the serializer enumerations.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializerEnumExtensions.AsFlag(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <summary>
+            Convert a <see cref="T:Keen.VRage.Library.Serialization.SerializerFormat" /> into the corresponding <see cref="T:Keen.VRage.Library.Serialization.SerializerFormatSet" /> flag.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializerEnumExtensions.HasAll(Keen.VRage.Library.Serialization.SerializerFormatSet,Keen.VRage.Library.Serialization.SerializerFormatSet)">
+            <summary>
+            Convert a <see cref="T:Keen.VRage.Library.Serialization.SerializerFormat" /> has all of the <paramref name="flags" />.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializerEnumExtensions.HasAny(Keen.VRage.Library.Serialization.SerializerFormatSet,Keen.VRage.Library.Serialization.SerializerFormatSet)">
+            <summary>
+            Convert a <see cref="T:Keen.VRage.Library.Serialization.SerializerFormat" /> has any of the <paramref name="flags" />.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializerEnumExtensions.Has(Keen.VRage.Library.Serialization.SerializerFormatSet,Keen.VRage.Library.Serialization.SerializerFormat)">
+            <summary>
+            Convert a <see cref="T:Keen.VRage.Library.Serialization.SerializerFormat" /> has the matching flag for <paramref name="format" />.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializerEnumExtensions.GetFormats(Keen.VRage.Library.Serialization.SerializerFormatSet)">
+            <summary>
+            Get the <see cref="T:Keen.VRage.Library.Serialization.SerializerFormat" /> flags set in <paramref name="serializers" />.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializerEnumExtensions.Transfer(Keen.VRage.Library.Serialization.SerializerFlags)">
+            <summary>
+            Geta copy of the flags to transfer to a nested member.
+            </summary>
+            <remarks>
+            Some flags are recursive, they should apply to an entire branch of objects that are serialized, other only apply to the member
+            immediately annotated with the flags.
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.SerializerEnumExtensions.Without(Keen.VRage.Library.Serialization.SerializerFlags,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <summary>
+            Get a copy of the current flags without those set in <paramref name="toRemove" />.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializerFormat">
+            <summary>
+            Type of serializer to use for an operation.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFormat.Binary">
+            <summary>Stable binary serialization.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFormat.Json">
+            <summary>Stable text based JSON serialization.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFormat.BitCompressed">
+            <summary>Unstable bit-compressed serialization (network).</summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializerFlags">
+            <summary>
+            Flags that control, the behaviour of a serialized field or property.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.None">
+            <summary>
+            No special flags.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.Polymorphic">
+            <summary>Field or property is polymorphic and can be the specified type or any derived from it.</summary>
+            <remarks>This is assumed when the member is of an interface type or System.Object.</remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.NestedPolymorphic">
+            <summary>Element type of a generic member is polymorphic.</summary>
+            <remarks>
+            Generic types are free to determine how this flag is propagated, and when multiple type arguments exist, which will be targeted.
+            </remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.NestedNestedPolymorphic">
+            <summary>Element type of a generic member is polymorphic.</summary>
+            <remarks>
+            Generic types are free to determine how this flag is propagated, and when multiple type arguments exist, which will be targeted.
+            </remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.SharedReference">
+            <summary>
+            Indicates the annotated field is a shared object instance that can appear multiple types in the serialized object.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.NestedSharedReference">
+            <summary>
+            Indicates the first inner element type of a generic value or array is a shared reference.
+            </summary>
+            <seealso cref="F:Keen.VRage.Library.Serialization.SerializerFlags.SharedReference"/>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.NestedNestedSharedReference">
+            <summary>
+            Indicates the second inner element type of a generic value or array is a shared reference.
+            </summary>
+            <seealso cref="F:Keen.VRage.Library.Serialization.SerializerFlags.SharedReference"/>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.Optional">
+            <summary>
+            Annotates a member that is serialized conditionally (i.e.: has a matching `ShouldSerialize*()` method).
+            </summary>
+            <remarks>This flag is added automatically and should not be provided by users.</remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.CopyFlags">
+            <summary>
+            Indicates that the annotated member will receive its flags copied from its containing type
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFlags.TransferFlags">
+            <summary>
+            Indicates that the annotated member will have its flags transferred from its containing type
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializerFormatSet">
+            <summary>
+            Flags specifying what serializers some operation or attribute applies to.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFormatSet.None">
+            <summary>No serializers.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFormatSet.Binary">
+            <summary>Stable binary serialization.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFormatSet.Json">
+            <summary>Stable text based JSON serialization.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFormatSet.BitCompressed">
+            <summary>Unstable bit-compressed serialization (network).</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializerFormatSet.All">
+            <summary>All supported serializer types.</summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ISerializable">
+            <summary>
+            Base Serializable interface, only used to mark metadata, never implement directly.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ISerializable`1">
+            <summary>
+            Marks a type as serializable.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.INotifySerialization">
+            <summary>
+            Allows serializable types to perform some action before being serialized and or after being deserialized.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.INotifySerialization.OnBeforeSerialize(Keen.VRage.Library.Serialization.SerializationContext)">
+            <summary>
+            Invoked before this instance will be serialized.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.INotifySerialization.OnAfterDeserialized(Keen.VRage.Library.Serialization.SerializationContext)">
+            <summary>
+            Invoked after this instance has been deserialized.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ISerializer`1">
+            <summary>
+            Interface for an object that's capable of serializing another type.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ISerializer">
+            <summary>
+            Interface for an object that's capable of serializing another type.
+            </summary>
+            <remarks>This is the non-type-safe version of <see cref="T:Keen.VRage.Library.Serialization.ISerializer`1" />.</remarks>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.ISerializer.Bundles">
+            <summary>
+            A set of bundles that the type uses.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.ISerializer.Flags">
+            <summary>
+            Default serialization flags for this object.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.ISerializer.GetMigrations(System.Version)">
+            <summary>
+            Get the required <see cref="T:Keen.VRage.Library.Serialization.Migrations.MigrationInfo"/>s given the bundle version.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializationContext">
+            <summary>
+            Contextual information for an active (de)serialization.
+            </summary>
+            <remarks>
+            Each serializer format has a specific context that provides access to format specific helpers,
+            stream and primitive operations. This context provided initialization parameters and format agnostic information.
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ISerializableNamedObject`1">
+            
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.INamedObjectSerializer`1">
+            <summary>
+            Object that may be referred to by name when serialized.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.INamedObjectSerializer`1.NameSerializer">
+            <summary>
+            Serializer that takes the key from the entry and serializes that.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.INamedObjectSerializer`1.ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,`0@)">
+            <inheritdoc cref="M:Keen.VRage.Library.Serialization.INamedObjectSerializer.ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,System.Object@)" />
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.INamedObjectSerializer">
+            <summary>
+            Object that may be referred to by name when serialized.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.INamedObjectSerializer.NameSerializer">
+            <summary>
+            Serializer that takes the key from the entry and serializes that.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.INamedObjectSerializer.NameType">
+            <summary>
+            The proxy type.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.INamedObjectSerializer.ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,System.Object@)">
+            <summary>
+            Whether the value should be serialized as a name.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.GenericNameContext`1">
+            <summary>
+            Context source for the tracking and identifying of generic named objects.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.GenericGraphSerializableAttribute">
+            <summary>
+            Allow a class to to be serialized in a graph.
+            </summary>
+            <remarks>
+                <para>This attribute triggers the automatic generation of an id property in the serialized state of the class.</para>
+                <para>
+                When serializing this type the <see cref="T:Keen.VRage.Library.Serialization.GenericNameContext`1" /> has to be in the context, otherwise no id is recorded and the class
+                serializes in the traditional fashion.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializeWithObjectBuilderAttribute">
+            <summary>
+            Marks a type as serializable via an object builder. Th object builder will be generated for the type and will contain
+            all of it's serializable members.
+            </summary>
+            <remarks>
+            An object builder is an intermediate type, all members of the annotated type that are serializable
+            (public or otherwise marked with <see cref="T:System.SerializableAttribute" /> are copied to the object builder which is
+            then actually serialized to a specific format.
+            </remarks>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.SerializeWithObjectBuilderAttribute.InitOnly">
+            <summary>
+            Whether the object builder can only be used for initialization.
+            </summary>
+            <remarks>
+            When this property is true the annotated type will only allow deserialization from object builders.
+            It will not be possible to construct an object builder from the value.
+            </remarks>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.SerializeWithObjectBuilderAttribute.ValidateMembers">
+            <summary>
+            Whether the annotated type should validate members that are the same as in the object builder
+            </summary>
+            <remarks>
+            <para>If this is set to true, then all members are validated as usual.</para>
+            <para>If this is set to false, then only members that are not present in object builder are validated.</para>
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.MemberSerializationPolicy">
+            <summary>
+            A policy for selecting which members of a type should be serialized implicitly.
+            Without need for an explicit annotation with the <see cref="T:Keen.VRage.Library.Serialization.SerializeAttribute" />.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.MemberSerializationPolicy.Public">
+            <summary>All public members are serialized by default.</summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.MemberSerializationPolicy.Explicit">
+            <summary>No members are serialized by default.</summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializableTypeFlags">
+            <summary>
+            Serialization flags to a type.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.Polymorphic">
+            <summary>
+            References of this type behave as if they always had the <see cref="F:Keen.VRage.Library.Serialization.SerializerFlags.Polymorphic"/> flag.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.SharedReference">
+            <summary>
+            References of this type behave as if they always had the <see cref="F:Keen.VRage.Library.Serialization.SerializerFlags.SharedReference"/> flag.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.ValueType">
+            <summary>
+            Indicates the CLR type derives from <see cref="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.ValueType"/>.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.KeyType">
+            <summary>
+            Indicates this type can be used as the key on a dictionary or as a member of a set.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.DiskBlittable">
+            <summary>
+            Indicates this type can be serialized to binary formats simply by copying the instance memory to the format stream.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.NamedType">
+            <summary>
+            Indicates this type may be serialized via it's name instead of the instance value. Similar to <see cref="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.SharedReference"/> but with
+            a custom key type and instance discovery logic.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.SerializableTypeFlags.HumanReadableText">
+            <summary>
+            When serialized to text formats this value is printed as a human-readable string. In other formats the natural type layout is used instead.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.KeyTypeAttribute">
+            <summary>
+            Indicates a type that may be used as a dictionary key or a set element.
+            A key type cannot be mutated via an object reference.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.UseMergeableListAttribute">
+            <summary>
+            Indicates that the annotated type will have its collections represented as <see cref="T:Keen.VRage.Library.Collections.MergeableList`1"/> in the generated object builder
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.InitAttribute">
+            <summary>
+            Marks a method as the initializer for a type.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.PostInitAttribute">
+            <summary>
+            Indicates an individual post-init method for a type with an object builder.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.SerializerAttribute">
+            <summary>
+            Marks a method as the initializer for a type.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.ReloadAttribute">
+            <summary>
+            Indicates a custom reload method for an <see cref="T:Keen.VRage.Library.Serialization.ObjectBuilders.IObjectBuilderInitializable"/> type.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.IObjectBuilder">
+            <summary>
+            Interface that identifies an object builder.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.IObjectBuilderInitializable">
+            <summary>
+            Base interface describing an object that can be initialized from an object builder.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.IObjectBuilderInitializable`1">
+            <summary>
+            Interface describing an object that can be initialized from an object builder.
+            </summary>
+            <typeparam name="TObjectBuilder">The type of the object builder.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.IObjectBuilderSerializable">
+            <summary>
+            Base interface describing an object that can be serialized to and from an object builder.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.IObjectBuilderSerializable`1">
+            <summary>
+            Interface describing an object that can be serialized to and from an object builder.
+            </summary>
+            <typeparam name="TObjectBuilder">The type of the object builder.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.ObjectBuilderLoadingContext">
+            <summary>
+            Holds contextual information for initializing object builders.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.ObjectBuilders.CustomObjectBuilderAttribute">
+            <summary>
+            Indicates a custom object builder type for the annotated type.
+            </summary>
+            <remarks>
+            <para>Has custom Init(), Serialize(), (optional) PostInit() methods that behave the same as the standard object builder types.</para>
+            <para>Can be a value type so arguments come in by reference instead of by value (Init(in ObType ob)/Serialize(ref ObType ob)).</para>
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.IMigrations">
+            <summary>
+            Interface used for creating migrations for the type.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.Migrations.IMigrations.GetMigrations(System.Version)">
+            <summary>
+            Get the required <see cref="T:Keen.VRage.Library.Serialization.Migrations.MigrationInfo"/>s given the bundle version.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.MigrationAttribute">
+            <summary>
+            Attribute for annotating a particular migration method.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.Migrations.MigrationAttribute.SuppressGeneratedMigration">
+            <summary>
+            Suppress the generation of migrations on this version, the annotated method will carry them out instead. 
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.InitialLayoutAttribute">
+            <summary>
+            Attribute used to specify initial layout of a type in custom migrations.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.VersionAttribute">
+            <summary>
+            Attribute used to mark a field that represents the type's layout change at a certain migration version
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.MigrationsAttribute">
+            <summary>
+            Attribute for annotating a type containing migrations.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.MigrationInfo">
+            <summary>
+            Struct representing the version and delegate of the migration.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.MigrationInfo.Comparer">
+            <summary>
+            Default comparer for <see cref="T:Keen.VRage.Library.Serialization.Migrations.MigrationInfo"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.NameMigrationAttribute">
+            <summary>
+            Indicates a name migration.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.TypeMigrationAttribute`2">
+            <summary>
+            Indicates a type migration.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.RemoveMigrationAttribute">
+            <summary>
+            Indicates a migration for a removed member.
+            </summary>
+            <remarks>
+            It must be placed on a property that has the same name as the member being removed.
+            </remarks>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.Migrations.RemoveMigrationAttribute.Name">
+            <summary>
+            User provided name for the removed member, if not set the current name of the annotated member is used. 
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Migrations.ReintroduceMigrationAttribute">
+            <summary>
+            Indicates that the annotated member was re-introduced to the type, after it has been removed previously
+            by a <see cref="T:Keen.VRage.Library.Serialization.Migrations.RemoveMigrationAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Json.IJsonSerializable`1">
+            <summary>
+            Marks a type as supported by json serialization.
+            </summary>
+            <remarks>This interface can be implemented automatically, our manually if the type wants to control it's serialization.</remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Validation.DoNotValidateMembersAttribute">
+            <summary>
+            Lists the members which should not be validated in the annotated type
+            </summary>
+            <remarks>
+            The primary use is for definition object builders, where definition's members don't get validated
+            because they have been already validated in object builder types.
+            This attribute is placed on definitions by a source generator
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.Validation.PostInitValidationAttribute">
+            <summary>
+            When added to the member of a class marked with <see cref="T:Keen.VRage.Library.Serialization.SerializeWithObjectBuilderAttribute"/>, 
+            validation will run on the object instance instead of the object builder.
+            </summary>
+            <remarks>
+            Useful for cases where validation require contextes only available once instances are created.
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.GenerateAccessorsAttribute">
+            <summary>
+            Marks a type for accessor generation. The type must be partial.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.IAccessible">
+            <summary>
+            Identifies a type that contains member access information.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IAccessible.GetTypeInfo">
+            <summary>
+            Provides information about accessible members of this object instance.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.IMemberAccessor">
+            <summary>
+            Non-type safe accessor for a particular member on an object.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.Name">
+            <summary>
+            Name of the member.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.SerializedName">
+            <summary>
+            Name of the member when serialized.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanRead">
+            <summary>
+            Whether this member can be read from (can be false for write only properties).
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanWrite">
+            <summary>
+            Whether this member can be written to.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanAccessByRef">
+            <summary>
+            Whether this member can be accessed by reference (either a field, or property that returns by-ref).
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.AccessibleTypeInfo">
+            <summary>
+            Accessible type information if the member is accessible.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.Serializers">
+            <summary>
+            Formats where this member is serialized.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.Member">
+            <summary>
+            Reflection information about this member.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Serialization.IMemberAccessor.MemberType">
+            <summary>
+            Type of this member.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor.Get(System.Object)">
+            <summary>
+            Get the value of the member in <paramref name="instance" />.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">When this member cannot be read (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanRead" /> is <c>false</c>).</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor.Set(System.Object,System.Object)">
+            <summary>
+            Set the member to a particular <paramref name="value" /> on the provided <paramref name="instance" />.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">When this member cannot be written (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanWrite" /> is <c>false</c>).</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor.Get(System.Byte@)">
+            <summary>
+            Get the value of the member in <paramref name="instance" />.
+            </summary>
+            <remarks>This overload expects a reference to the instance itself, it's only available for value types.</remarks>
+            <exception cref="T:System.InvalidOperationException">When the containing type is not a Value Type.</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor.Set(System.Byte@,System.Object)">
+            <summary>
+            Set the member to a particular <paramref name="value" /> on the provided <paramref name="instance" />.
+            </summary>
+            <remarks>This overload expects a reference to the instance itself, it's only available for value types.</remarks>
+            <exception cref="T:System.InvalidOperationException">When the containing type is not a Value Type.</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor.GetReference(System.Object)">
+            <summary>
+            Gets a untyped reference to this member.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">When this member cannot be accessed by reference (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanAccessByRef" /> is <c>false</c>).</exception>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.IMemberAccessor`1">
+            <summary>
+            Type safe accessor for a particular member on an object.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor`1.Get(System.Object)">
+            <summary>
+            Get the value of the member in <paramref name="instance" />.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">When this member cannot be read (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanRead" /> is <c>false</c>).</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor`1.Set(System.Object,`0@)">
+            <summary>
+            Set the member to a particular <paramref name="value" /> on the provided <paramref name="instance" />.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">When this member cannot be written (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanWrite" /> is <c>false</c>).</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor`1.Get(System.Byte@)">
+            <summary>
+            Get the value of the member in <paramref name="instance" />.
+            </summary>
+            <remarks>This overload expects a reference to the instance itself, it's only available for value types.</remarks>
+            <exception cref="T:System.InvalidOperationException">When the containing type is not a Value Type.</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor`1.Set(System.Byte@,`0@)">
+            <summary>
+            Set the member to a particular <paramref name="value" /> on the provided <paramref name="instance" />.
+            </summary>
+            <remarks>This overload expects a reference to the instance itself, it's only available for value types.</remarks>
+            <exception cref="T:System.InvalidOperationException">When the containing type is not a Value Type.</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor`1.GetReference(System.Object)">
+            <summary>
+            Gets a reference to this member.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            When this member cannot be accessed by reference (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanAccessByRef" /> is
+            <c>false</c>).
+            </exception>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.IMemberAccessor`2">
+            <summary>
+            Type safe accessor for a particular member on an object.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor`2.Get(`0@)">
+            <summary>
+            Get the value of the member in <paramref name="instance" />.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">When this member cannot be read (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanRead" /> is <c>false</c>).</exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor`2.GetReference(`0@)">
+            <summary>
+            Gets a reference to this member.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            When this member cannot be accessed by reference (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanAccessByRef" /> is
+            <c>false</c>).
+            </exception>
+        </member>
+        <member name="M:Keen.VRage.Library.Serialization.IMemberAccessor`2.Set(`0@,`1@)">
+            <summary>
+            Set the member to a particular <paramref name="value" /> on the provided <paramref name="instance" />.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">When this member cannot be written (<see cref="P:Keen.VRage.Library.Serialization.IMemberAccessor.CanWrite" /> is <c>false</c>).</exception>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.AccessibleTypeInfo">
+            <summary>
+            Member information about a type.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.MemberValueKind">
+            <summary>
+            Enumeration of the known member kinds.
+            </summary>
+            <remarks>Each kind is handled differently by the object editor.</remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.MemberValueKind.Value">
+            <summary>
+            A simple or composite value.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.MemberValueKind.List">
+            <summary>
+            A list of values.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.MemberValueKind.Set">
+            <summary>
+            A set of values.
+            </summary>
+            <remarks>Sets can only be traversed when they contain immutable values.</remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Serialization.MemberValueKind.Dictionary">
+            <summary>
+            A mapping of keys to values.
+            </summary>
+            <remarks>Dictionaries can only be traversed when their keys are immutabe values.</remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.SerializerBundleAttribute">
+            <summary>
+            A helper attribute used to specify serializer's bundles.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.HasSerializableMetadataAttribute">
+            <summary>
+            Indicates that the annotated type is used by serialization system and
+            needs to have its migrations validated.
+            </summary>
+            <remarks>
+            For most use cases this is automatically applied when using <see cref="T:Keen.VRage.Library.Serialization.SerializeAttribute"/>,
+            but sometimes (e.g. when the annotated type is used as a type argument for another type)
+            the type does not necessarily have to be serializable, so it's enough to only annotate it with
+            this attribute
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Serialization.RequiresSerializableMetadataAttribute">
+            <summary>
+            Indicates that the annotated type parameter does not necessarily
+            need to be serializable, but only contain serializable metadata.
+            </summary>
+            <remarks>
+            By default, all generic type arguments are checked to be serializable.
+            This attribute allows to relax this rule so that the type argument
+            only has to contain serializable metadata.
+            A type has serializable metadata if it is annotated
+            with <see cref="T:Keen.VRage.Library.Serialization.HasSerializableMetadataAttribute"/>.
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.Readers.ICollectionReader`2">
+            <summary>
+            Represents a read-only wrapper for a collection.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.Readers.HashSetReader`1">
+            <summary>
+            Allows read-only manipulation of a <see cref="T:System.Collections.Generic.HashSet`1" /> instance.
+            </summary>
+            <typeparam name="T">The type of the hashset element.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.Readers.DictionaryReader`2">
+            <summary>
+            Reader for a dictionary.
+            </summary>
+            <typeparam name="TKey">Dictionary key type.</typeparam>
+            <typeparam name="TValue">Dictionary value type.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.Readers.ListDictionaryReader`2">
+            <summary>
+            Reader for a <see cref="T:Keen.VRage.Library.Collections.ListDictionary`2"/>.
+            </summary>
+            <typeparam name="TKey">Dictionary key type.</typeparam>
+            <typeparam name="TValue">List value type.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.Readers.HashSetDictionaryReader`2">
+            <summary>
+            Reader for a <see cref="T:Keen.VRage.Library.Collections.HashSetDictionary`2"/>.
+            </summary>
+            <typeparam name="TKey">Dictionary key type.</typeparam>
+            <typeparam name="TValue">Hashset value type.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.HashSetDictionary`2">
+            <summary>
+            Collection which stores multiple elements under same key using a hashset.
+            Collection does not allow removing single value, only all items with same key.
+            </summary>
+            <remarks>See remarks on the base class regarding value collection reuse.</remarks>
+            <typeparam name="TKey">Type of the dictionary key.</typeparam>
+            <typeparam name="TValue">Type of the hashset elements.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.ListDictionary`2">
+            <summary>
+            Collection which stores multiple elements under same key by using list.
+            Collection does not allow removing single value, only all items with same key.
+            </summary>
+            <remarks>See remarks on the base class regarding value collection reuse.</remarks>
+            <typeparam name="TKey">Type of the dictionary key.</typeparam>
+            <typeparam name="TValue">Type of the list's elements.</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.MergeableList`1">
+            <summary>
+            A keyed list that has its key as <see cref="T:System.Guid"/>.
+            </summary>
+            <remarks>
+            Calling <see cref="M:System.Collections.Generic.ICollection`1.Add(`0)"/> or <see cref="M:System.Collections.Generic.IList`1.Insert(System.Int32,`0)"/> will generate a new <see cref="T:System.Guid"/> when inserting
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.MergeableBag`1">
+            <summary>
+            A keyed bag that has its key as <see cref="T:System.Guid"/>.
+            </summary>
+            <remarks>
+            Calling <see cref="M:System.Collections.Generic.ICollection`1.Add(`0)"/> or <see cref="M:System.Collections.Generic.IList`1.Insert(System.Int32,`0)"/> will generate a new <see cref="T:System.Guid"/> when inserting
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.IKeyedCollection">
+            <summary>
+            Represents a non-generic keyed collection, used for ObjectManipulator
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Collections.IKeyedCollection.IsSorted">
+            <summary>
+            Whether this collection is sorted (list) or not (bag)
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.IKeyedCollection.Add(System.Object,System.Object)">
+            <summary>
+            Add a value with a given key to the list
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.IKeyedCollection.Insert(System.Object,System.Int32,System.Object)">
+            <summary>
+            Insert a value with a given key to the list
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.IKeyedCollection.Move(System.Int32,System.Int32)">
+            <summary>
+            Move an item to a new position
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.IKeyedCollection.Swap(System.Int32,System.Int32)">
+            <summary>
+            Swap positions of two elements and their keys
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.IKeyedCollection.IndexOfKey(System.Object)">
+            <summary>
+            Get the index of a given key
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.IKeyedCollection.GetKey(System.Int32)">
+            <summary>
+            Get the key at a given index
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.ImmutableBag`1">
+            <summary>
+            An immutable collection that does not rely on the order of its elements.
+            Stable order is still guaranteed
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.ArrayEnumerable`1">
+            <summary>
+            Enumerable struct that allows the enumeration of arrays using a speakable enumerator.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.ArrayEnumerable`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.ArrayEnumerable`1.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Library.Collections.ArrayEnumerable`1.Enumerator">
+            <summary>
+            Enumerator for the <see cref="T:Keen.VRage.Library.Collections.ArrayEnumerable`1"/>.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Collections.ArrayEnumerable`1.Enumerator.Current">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Library.Collections.ArrayEnumerable`1.Enumerator.System#Collections#IEnumerator#Current">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.ArrayEnumerable`1.Enumerator.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.ArrayEnumerable`1.Enumerator.MoveNext">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Library.Collections.ArrayEnumerable`1.Enumerator.Reset">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Library.UI.InheritAllToPropertyAttribute">
+            <summary>
+            Fields with this attribute will have the generated property inherit all attributes from the field.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.UI.NotifyAlsoAttribute">
+            <summary>
+            Annotating a field in any class that inherits from ObservableObject and is also
+            annotated with NotifyAttribute will add appropriate notify in the setter of the generated property.
+            Use on private fields only. The generated property will always have
+            the accessibility of public.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.UI.NotifyAttribute">
+            <summary>
+            Annotating a field in the any class that inherits from ObservableObject will generate
+            a property with appropriate notify in the setter. Use on private fields only.
+            The generated property will always have the accessibility of public.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.UI.ObservableObject">
+            <summary>
+            An observable object provides an implementation of the property changed event handler.
+            Any class that wats notify listeners about changes 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.UI.ObservableObject.SetMethodName">
+            <summary>
+            Method name used as identifier for the notify generator.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.UI.ObservableObject.PropertyChangedMethodName">
+            <summary>
+            Method name used as identifier for the notify also generator.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.UI.ObservableObject.OnPropertyChanged(System.String)">
+            <summary>
+            When overriding, don't call base.OnPropertyChanged.
+            Instead when you need to invoke the handler call <see cref="M:Keen.VRage.Library.UI.ObservableObject.InvokePropertyChanged(System.String)"/>
+            Caller member name needs to exist on both methods but when overriding and calling the base the caller member name is lost
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.UI.ObservableObject.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            Sets the property of this object
+            </summary>
+            <param name="storage">A reference of the property being modified</param>
+            <param name="value">The value the property is being changed to</param>
+            <param name="propertyName">The name of the property being changed</param>
+            <returns>Whether the update was successful</returns>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.StableHashing">
+            <summary>
+            Stable hashing utilities.
+            </summary>
+            <remarks>
+            Stable in this context means that the hash always computes to the same value, even across different launches or
+            different executables (unlike standard hash codes which are randomized).
+            </remarks>
+        </member>
+        <member name="F:Keen.VRage.Library.Utils.StableHashing.HASH_SEED">
+            <summary>
+            Constant hash seed to help randomize combined hashes.
+            </summary>
+            <remarks>This constant can be relied on and will never change.</remarks>
+        </member>
+        <member name="M:Keen.VRage.Library.Utils.StableHashing.JenkinsHash(System.UInt32)">
+            <summary>
+            Passes a given input through the jenkins hash function.
+            </summary>
+            <param name="x">The seed value.</param>
+            <returns>The final hash.</returns>
+            <remarks>
+                <para>This has function has very good properties but is more expensive than <see cref="M:Keen.VRage.Library.Utils.StableHashing.Combine(System.Int32,System.Int32)" />.</para>
+                <para>More info: https://en.wikipedia.org/wiki/Jenkins_hash_function</para>
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Library.Utils.StableHashing.Hash(System.String,System.Int32)">
+            <summary>
+            Prepare a hash value with all bytes in the provided <paramref name="string" />.
+            </summary>
+            <param name="string">Input character string.</param>
+            <param name="seed">user provided starting seed. Defaults to <see cref="F:Keen.VRage.Library.Utils.StableHashing.HASH_SEED" /></param>
+        </member>
+        <member name="M:Keen.VRage.Library.Utils.StableHashing.Hash(System.ReadOnlySpan{System.Char},System.Int32)">
+            <summary>
+            Prepare a hash value with all characters in the provided <paramref name="span" />.
+            </summary>
+            <param name="span">Input character span.</param>
+            <param name="seed">user provided starting seed. Defaults to <see cref="F:Keen.VRage.Library.Utils.StableHashing.HASH_SEED" /></param>
+        </member>
+        <member name="M:Keen.VRage.Library.Utils.StableHashing.Hash(System.ReadOnlySpan{System.Byte},System.Int32)">
+            <summary>
+            Prepare a hash value with all bytes in the provided <paramref name="span" />.
+            </summary>
+            <param name="span">Input byte span.</param>
+            <param name="seed">user provided starting seed. Defaults to <see cref="F:Keen.VRage.Library.Utils.StableHashing.HASH_SEED" /></param>
+        </member>
+        <member name="M:Keen.VRage.Library.Utils.StableHashing.HashUpperCase(System.ReadOnlySpan{System.Char},System.Int32)">
+            <summary>
+            Prepare a hash value of all characters in the string as if they were their upper case variants (see <see cref="M:System.Char.ToUpper(System.Char)" />).
+            </summary>
+            <param name="span">Input character span.</param>
+            <param name="seed">user provided starting seed. Defaults to <see cref="F:Keen.VRage.Library.Utils.StableHashing.HASH_SEED" /></param>
+        </member>
+        <member name="M:Keen.VRage.Library.Utils.StableHashing.Combine(System.Int32,System.Int32)">
+            <summary>
+            Combine tho values to form a hash.
+            </summary>
+            <param name="value">The current value.</param>
+            <param name="hash">The previous hash or value.</param>
+            <returns>A new hashed value.</returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Utils.StableHashing.Combine(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Combine three values to form a hash.
+            </summary>
+            <returns>A new hashed value.</returns>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.ServiceLocatorContext">
+            <summary>
+            A general purpose context that holds services. Acts as a service locator.
+            <see cref="T:Keen.VRage.Library.Utils.IKeyedService"/> can be used for custom key and multi-key specification. 
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.IKeyedService">
+            <summary>
+            Indicates a context source.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Library.Utils.IKeyedService.Keys">
+            <summary>
+            Types to register this context under. By default this array contains only the exact type of the context instance.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.Cloning.CloneableAttribute">
+            <summary>
+            Indicates that the annotated type can be deeply copied
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.Cloning.CustomClonerAttribute">
+            <summary>
+            Indicates that the annotated type provides a custom implementation of IDeepCloner for the <see cref="F:Keen.VRage.Library.Utils.Cloning.CustomClonerAttribute.Target"/>
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Library.Utils.Cloning.CustomClonerAttribute.Target">
+            <summary>
+            The type targeted by the custom serializer
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.Cloning.ShallowCopyAttribute">
+            <summary>
+            Indicates that the annotated member of a cloneable type should be cloned via a shallow copy
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.Cloning.NotCloneableAttribute">
+            <summary>
+            Indicates that the annotated type can't be cloned, preventing the generation of implementation of <see cref="T:Keen.VRage.Library.Utils.Cloning.IDeepCloneable`1"/>.
+            Can be used to stop propagation of the <see cref="T:Keen.VRage.Library.Utils.Cloning.CloneableAttribute"/> that comes from base type
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.Cloning.ModuleCustomClonersAttribute">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.Cloning.IDeepCloneable`1">
+            <summary>
+            Represents a type that's capable of creating deep copies.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.Cloning.INotifyCloning">
+            <summary>
+            Allows cloneable types to perform some action before being cloned and or after being cloned.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Utils.Cloning.ICloneableNamedObject">
+            <summary>
+            Describes a type that can decide how it is cloned using a special method
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Extensions.MergeableCollectionExtensions">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Extensions.StringExtensions">
+            <summary>
+            Extensions for strings
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Extensions.StringExtensions.SplitFromTo(System.String,System.String,System.String,System.Boolean)">
+            splits into 3 regions:
+            1. Before the start
+            2. [start to end)
+            3. [end to str's end)
+        </member>
+        <member name="M:Keen.VRage.Library.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Immutable.ImmutableArray{System.Char})">
+            <summary>
+            Checks if the character is present in the string. Variant IndexOfAny for ImmutableArray, where we don't need the index.  
+            </summary>
+            <param name="s">String to search in</param>
+            <param name="anyOf">Array of characters to search for</param>
+            <returns>True if present.</returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Extensions.StringExtensions.Yield``1(``0)">
+            <summary>
+            Wraps this object instance into an IEnumerable&lt;T&gt;
+            consisting of a single item.
+            </summary>
+            <typeparam name="T"> Type of the object. </typeparam>
+            <param name="item"> The instance that will be wrapped. </param>
+            <returns> An IEnumerable&lt;T&gt; consisting of a single item. </returns>
+        </member>
+        <member name="M:Keen.VRage.Library.Extensions.StringExtensions.TrimEndNoEmpty(System.String,System.String)">
+            <summary>
+            Trim suffix from string, making sure there are still some characters left
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Library.Extensions.StringExtensions.Split(System.ReadOnlySpan{System.Char},System.Char)">
+            <summary>
+            Given a character range enumerate all sub-ranges between occurrences of the <paramref name="separator"/> character.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Library.Extensions.StringExtensions.SimpleSplitEnumerator">
+            <summary>
+            Enumerator 
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+            Reserved to be used by the compiler for tracking metadata.
+            This class should not be used by developers in source code.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.KeyValuePair.Create``2(``0,``1)">
+            Creates a new <see cref="T:System.Collections.Generic.KeyValuePair`2"/> from the given values.
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute">
+            <summary>Specifies that null is allowed as an input even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute">
+            <summary>Specifies that null is disallowed as an input even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute">
+            <summary>Specifies that an output may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute">
+            <summary>Specifies that an output will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"/>, the parameter may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter may be null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute">
+            <summary>Specifies that the output will be non-null if the named parameter is non-null.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName">
+            <summary>Gets the associated parameter name.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)">
+            <summary>Initializes the attribute with the associated parameter name.</summary>
+            <param name="parameterName">
+            The associated parameter name.  The output will be non-null if the argument to the parameter specified is non-null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute">
+            <summary>Applied to a method that will never return under any circumstance.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute">
+            <summary>Specifies that the method will not return if the associated Boolean parameter is passed the specified value.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue">
+            <summary>Gets the condition parameter value.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified parameter value.</summary>
+            <param name="parameterValue">
+            The condition parameter value. Code after the method will be considered unreachable by diagnostics if the argument to
+            the associated parameter matches this value.
+            </param>
+        </member>
+    </members>
+</doc>

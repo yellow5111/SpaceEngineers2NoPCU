@@ -1,0 +1,1492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.Plugin.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.Plugin.Editor.IProjectPlugin">
+            <summary>
+            Interface for plugin implementations for extending functionality of tools that are used for game/engine development (e.g. Editor). 
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.IProjectPlugin.ObjectBuilderLoadingContextConfigurator(Keen.VRage.Library.Utils.ServiceLocatorContext.Builder@,Keen.VRage.DCS.Components.Entity)">
+            <summary>
+            Method used to configure <see cref="T:Keen.VRage.Library.Serialization.ObjectBuilders.ObjectBuilderLoadingContext"/> that is used when loading the definitions to VRage.
+            Can be used to add services required during <see cref="T:Keen.VRage.Library.Definitions.Definition"/> initialization.
+            </summary>
+            <param name="contextBuilder">The builder from which the loading context is created</param>
+            <param name="engineEntity">Engine entity to be used for mandatory services</param>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.IProjectPlugin.TryConfigureSessionAndScene(Keen.VRage.DCS.Builders.EntityBuilder@,Keen.VRage.Library.Utils.ServiceLocatorContext.Builder@,Keen.VRage.DCS.Builders.SceneBuilder@,Keen.VRage.Plugin.Editor.Preview.SessionConfigurationErrors@)">
+            <summary>
+            Tries to configure the required <see cref="P:Keen.VRage.Core.Game.Systems.Session.SessionComponents"/> and <see cref="T:Keen.VRage.Core.Game.Systems.SessionExternalServices"/>.
+            This could fail e.g. because there is missing required <see cref="T:Keen.VRage.Library.Definitions.Configuration"/> in the Content.
+            
+            If a component/service cannot be added, this method should still attempt to configure all the others.
+            </summary>
+            <returns>Whether all session components, services and the scene were configured successfully.</returns>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.IProjectPlugin.FilterJobs(System.Collections.Generic.List{Keen.VRage.DCS.Builders.SceneBuilder.JobInfo})">
+            <summary>
+            Gives an opportunity to filter out jobs
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.IProjectPlugin.ConfiguratorProcessorConfigurator(Keen.VRage.DCS.Builders.EntityBuilder@)">
+            <summary>
+            Configures configurator entity for <see cref="T:Keen.VRage.Core.Game.GameSystems.PrefabConfigurators.IConfiguratorProcessor"/> used when spawning preview entities
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.IProjectPlugin.TryGetPreviewForAsset(Keen.VRage.Plugin.Editor.Preview.AssetDescriptor,Keen.VRage.Plugin.Editor.Preview.PreviewEntityDataBase@,Keen.VRage.Plugin.Editor.Preview.PreviewErrors@,Keen.VRage.Library.Serialization.IAccessible)">
+            <summary>
+            Gets a preview entity data used to preview the given asset.
+            </summary>
+            <param name="asset">Identification of the asset that should be previewed.
+                The asset should be already known to <see cref="T:Keen.VRage.Library.Definitions.DefinitionManager"/> or <see cref="T:Keen.VRage.Library.Filesystem.ContentCache.ContentCache"/></param>
+            <param name="previewEntityData">If preview is possible, contains all data required to construct the preview entity.</param>
+            <param name="previewErrors">If preview is not possible due to misconfiguration, describes what issues are there that needs to be resolved
+                first. If this plugin does not provide suitable preview for the given asset, this instance is null.</param>
+            <param name="previewSettings">Preview settings instance that the preview implementation should apply if possible.
+                The settings can come from previous asset preview session in case the entity composition needed to be recreated.</param>
+            <returns><see langword="true"/> if preview is possible, <see lang="false"/> otherwise</returns>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.IProjectPlugin.OnProjectLoaded">
+            <summary>
+            Notification that the project was successfully loaded and editor is ready.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.AssetDescriptor">
+            <summary>
+            Descriptor of the asset available in Engine that should be previewed
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.AssetDescriptor.IsDefinition">
+            <summary>
+            Whether the asset is <see cref="T:Keen.VRage.Library.Definitions.Definition"/>, or other resource asset.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Components.BoundingBoxEstimatorComponent">
+            <summary>
+            Component to collect entity bounding box.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Components.BoundingBoxEstimatorComponent.LocalToWorldTransform">
+            <summary>
+            Can be used in <see cref="T:Avalonia.Media.Transform"/> to transform a local coordinate bounding box
+            to a world coordinate bounding box.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Components.BoundingBoxEstimatorComponent.PushLocalToWorldTransform(Keen.VRage.Core.WorldTransform)">
+            <summary>
+            Push as transform that can be used in <see cref="T:Avalonia.Media.Transform"/> to transform 
+            a local coordinate bounding box to a world coordinate bounding box.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Components.BoundingBoxEstimatorComponent.TransformToken">
+            <summary>
+            Disposable token to return to previous <see cref="P:Keen.VRage.Plugin.Editor.Preview.Components.BoundingBoxEstimatorComponent.LocalToWorldTransform"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Components.BoundingBoxEstimatorComponent.TransformToken.#ctor(Keen.VRage.Plugin.Editor.Preview.Components.BoundingBoxEstimatorComponent,Keen.VRage.Core.WorldTransform)">
+            <summary>
+            Disposable token to return to previous <see cref="P:Keen.VRage.Plugin.Editor.Preview.Components.BoundingBoxEstimatorComponent.LocalToWorldTransform"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Components.IParticleEntityProvider">
+            <summary>
+            An interface to get a particle entity
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Components.IParticleEntityProvider.ParticleEntity">
+            <summary>
+            Particle effect entity
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.ActionPreviewGizmoComponentObjectBuilder">
+            <summary>
+            Object builder for <see cref="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.ActionPreviewGizmoComponent"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.ActionPreviewGizmoComponent">
+            <summary>
+            Helper component to add <see cref="T:Keen.VRage.Game.Client.Gizmos.Bindings.IGizmoVisualizer"/> to the preview <see cref="T:Keen.VRage.Core.Game.Systems.Session"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.BoundingBoxGizmoFactory`1">
+            <summary>
+            Factory for <see cref="T:Keen.VRage.Game.Client.Gizmos.Instances.BoundingBoxGizmo"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponentObjectBuilder">
+            <summary>
+            Object builder for <see cref="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent">
+            <summary>
+            Component to define the guid to use in <see cref="M:Keen.VRage.Game.Client.Gizmos.Bindings.GizmoBindingKey.Builder.WithAsset(System.Guid)"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId">
+            <summary>
+            Id to use in <see cref="M:Keen.VRage.Game.Client.Gizmos.Bindings.GizmoBindingKey.Builder.WithAsset(System.Guid)"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Plugin#Editor#Preview#Gizmos#GizmoEntityAssetIdComponent#EntityAssetId}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Object,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Byte@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Set(Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId.TypeInfoHolder.GuidAccessor.Get(Keen.VRage.Plugin.Editor.Preview.Gizmos.GizmoEntityAssetIdComponent.EntityAssetId@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.IGizmoLifetime">
+            <summary>
+            Service to register <see cref="T:Keen.VRage.Game.Client.Gizmos.Bindings.IGizmoVisualizer"/> attached to a specific <see cref="T:Keen.VRage.Core.Game.Systems.Session"/>.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.Gizmos.IGizmoLifetime.Binding">
+            <inheritdoc cref="T:Keen.VRage.Game.Client.Gizmos.Bindings.IGizmoBinding"/>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.IGizmoLifetime.OnVisualizerAdded(Keen.VRage.Game.Client.Gizmos.Bindings.IGizmoVisualizer)">
+            <summary>
+            Notify the lifetime that a gizmo visualizer was added for the current session.
+            </summary>
+            <param name="visualizer"></param>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Gizmos.IGizmoLifetime.DeclareGizmo(Keen.VRage.Game.Client.Gizmos.IGizmo)">
+            <summary>
+            Manually declare a new gizmo bound to the current session.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.PreviewGizmoComponent">
+            <summary>
+            Base component to add <see cref="T:Keen.VRage.Game.Client.Gizmos.Bindings.IGizmoVisualizer"/> to the preview <see cref="T:Keen.VRage.Core.Game.Systems.Session"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.PreviewGizmoFactory">
+            <summary>
+            Base class for factories that can handle bindings for <see cref="T:Keen.VRage.Game.Client.Gizmos.Bindings.GizmoBindingEngineComponent"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.PreviewGizmoFactory`1">
+            <inheritdoc/>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.PropertyGizmoFactory`1">
+            <summary>
+            Default <see cref="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.PreviewGizmoFactory"/> for <see cref="T:Keen.VRage.Game.Client.Gizmos.Bindings.IPropertyGizmo"/>.
+            </summary>
+            <typeparam name="TGizmo"></typeparam>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Gizmos.TransformGizmoFactory`1">
+            <summary>
+            Factory for <see cref="T:Keen.VRage.Game.Client.Gizmos.Instances.TransformGizmo"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Helpers.AssetPreviewProvider">
+            <summary>
+            Helper class offering preview plugin implementations. Provided previews must be stated explicitly in the constructor.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Helpers.AssetPreviewProvider.Builder">
+            <summary>
+            Build class used to create instance of <see cref="T:Keen.VRage.Plugin.Editor.Preview.Helpers.AssetPreviewProvider"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.Helpers.AssetPreviewProvider.Builder.AddResourceAssetPreview(Keen.VRage.Plugin.Editor.Preview.Helpers.ResourceAssetPreview,System.String[])">
+            <param name="preview"></param>
+            <param name="fileExtensions">File extensions with leading dot, e.g. ".mwm"</param>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Helpers.DefinitionAssetPreview`1">
+            <summary>
+            Generic class to be used as base class for implementations of definition previews
+            </summary>
+            <typeparam name="TDefinition"></typeparam>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Helpers.DefinitionAssetPreview">
+            <summary>
+            Non-generic class for internal purposes only, derive from <see cref="T:Keen.VRage.Plugin.Editor.Preview.Helpers.DefinitionAssetPreview`1"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Helpers.ResourceAssetPreview">
+            <summary>
+            Base class for implementation of assets available via <see cref="T:Keen.VRage.Library.Utils.ResourceHandle"/> (e.g. MWM, VX2)
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.Helpers.ResourceHandleSelector">
+            <summary>
+            Helper class that can be used in preview settings to offer selecting one <see cref="T:Keen.VRage.Library.Utils.ResourceHandle"/> out of multiple options
+            </summary>
+            <seealso cref="T:Keen.VRage.Plugin.Editor.Preview.PropertyElements.ResourceHandleComboboxPropertyElement"/>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.PreviewEntityDataBase">
+            <summary>
+            Data to be able to show the specific asset preview in a <see cref="T:Keen.VRage.DCS.Scenes.Scene"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.PreviewEntityDataBase.UsedPreviewResources">
+            <summary>
+            <see cref="T:System.Guid"/>s of custom resources that this preview is using.
+            Needed so that the preview can correctly react to changes to these resources in Editor (usually refreshes the preview).
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.PreviewEntityDataBase.UseCompositeConfigurator">
+            <summary>
+            Whether the <see cref="T:Keen.VRage.DCS.ObjectBuilders.EntityObjectBuilder"/>s returned by <see cref="M:Keen.VRage.Plugin.Editor.Preview.PreviewEntityDataBase.TryGetPreviewEntities(Keen.VRage.Core.Game.Systems.Session,Keen.VRage.DCS.ObjectBuilders.EntityObjectBuilder[]@,Keen.VRage.Plugin.Editor.Preview.PreviewErrors@)"/> should be configured with
+            <see cref="T:Keen.VRage.Core.Game.GameSystems.PrefabConfigurators.IConfiguratorProcessor"/> using configurator entity provided by the preview session.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.PreviewEntityDataBase.TryGetPreviewEntities(Keen.VRage.Core.Game.Systems.Session,Keen.VRage.DCS.ObjectBuilders.EntityObjectBuilder[]@,Keen.VRage.Plugin.Editor.Preview.PreviewErrors@)">
+            <summary>
+            Method returning the serialized entity composition that the preview should be composed of.
+            <para/>
+            Every <see cref="T:Keen.VRage.DCS.Components.Entity"/> built from each <see cref="T:Keen.VRage.DCS.ObjectBuilders.EntityObjectBuilder"/> should contain <see cref="T:Keen.VRage.Core.Game.Data.BoundingBoxData"/>.
+            </summary>
+            <param name="session">Session for which the preview entity is being created.</param>
+            <param name="entities">The object builders that will be used to create the preview entity composition.</param>
+            <param name="previewErrors">Describes problems that are reasons why the preview cannot be created.</param>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.PreviewEntityDataBase.PreviewSettingsRequested(System.Collections.Immutable.ImmutableArray{Keen.VRage.DCS.Components.Entity},Keen.VRage.Library.Serialization.IAccessible@)">
+            <summary>
+            Invoked when the preview entities are prepared e.g. in a scene and a preview settings instance is desired.
+            </summary>
+            <param name="entities">Collection of constructed entities that the preview consists of.</param>
+            <param name="settings">Provides a preview settings instance that can be used to modify the preview in real time.</param>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.PreviewErrors">
+            <summary>
+            Object used to describe reasons why a preview entity for the given asset could not be created, usually because
+            a special setup of configurations must be done first in the project.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.PropertyElements.ResourceHandleComboboxPropertyElement">
+            <summary>
+            Custom element for <see cref="T:Keen.VRage.Plugin.Editor.Preview.Helpers.ResourceHandleSelector"/> that is represented as combobox in UI
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.PropertyElements.ResourceHandleComboboxPropertyElement.ResourceViewModel">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.PropertyElements.ResourceHandleComboboxPropertyView">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.PropertyElements.ResourceHandleComboboxPropertyView.InitializeComponent(System.Boolean)">
+            <summary>
+            Wires up the controls and optionally loads XAML markup and attaches dev tools (if Avalonia.Diagnostics package is referenced).
+            </summary>
+            <param name="loadXaml">Should the XAML be loaded into the component.</param>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.ReactivePreviewEntityData`1">
+            <summary>
+            Base class for preview entity data implementations that are also able to immediately react to changes in corresponding
+            <typeparamref name="TPreviewSettings"/> settings instance in order to modify the preview entities in any way.
+            </summary>
+            <typeparam name="TPreviewSettings">Type of the settings instance that allows immediately react to its changes
+            and apply them to preview entities</typeparam>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.ReactivePreviewSettings">
+            <summary>
+            Base class for any reactive settings used by <see cref="T:Keen.VRage.Plugin.Editor.Preview.ReactivePreviewEntityData`1"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.ReactivePreviewSettings.Init">
+            <summary>
+            Method invoked after settings instance is prepared (<see cref="M:Keen.VRage.Plugin.Editor.Preview.IPreviewSettingsReusable`1.ReuseSettings(`0)"/> was used if possible)
+            and any final preparations on the preview entities can be made. Used to apply changes to the preview entities after they were created.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.IPreviewSettingsReusable`1">
+            <summary>
+            Interface to mark <see cref="T:Keen.VRage.Plugin.Editor.Preview.ReactivePreviewSettings"/> instance is able to reuse previous settings instance to transfer values
+            </summary>
+            <typeparam name="TSettings"></typeparam>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.IPreviewSettingsReusable`1.ReuseSettings(`0)">
+            <summary>
+            Method that takes previous settings instance (if any) and applies some values from it.
+            </summary>
+            <param name="originalSettings"></param>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.IObservablePreviewSettings">
+            <summary>
+            Interface for preview settings that is observable for various events
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.IObservablePreviewSettings.PreviewReload">
+            <summary>
+            Observable for when the preview has to be reloaded (removed and created again)
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.ReactiveRenderViewPreviewSettings">
+            <summary>
+            Base interface for all editor render view settings.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.ReactiveRenderViewPreviewSettings.RestoreDefault">
+            <summary>
+            Set all settings back to default;
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings">
+            <summary>
+            Preview settings for the render view.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.DebugView">
+            <summary>
+            Name of the VRage.Render.DebugView
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.ShowPhysicsDebug">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.SelectedLOD">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Set(Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.DebugViewAccessor.Get(Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Set(Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.ShowPhysicsDebugAccessor.Get(Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Set(Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings.TypeInfoHolder.SelectedLODAccessor.Get(Keen.VRage.Plugin.Editor.Preview.RenderPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings">
+            <summary>
+            Preview settings for the skybox.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.SelectedSkybox">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.Skyboxes">
+            <summary>
+            All available skybox usable by the render view.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.Brightness">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.HideSkybox">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox">
+            <summary>
+            Represent a skybox the render view can use.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.Name">
+            <summary>
+            Display name.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.AssetId">
+            <summary>
+            Explorer Asset ID.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Set(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.NameAccessor.Get(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Object,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Byte@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Set(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox.TypeInfoHolder.AssetIdAccessor.Get(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Plugin#Editor#Preview#SkyboxPreviewSettings#NamedSkybox}#Set(System.Object,Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Plugin#Editor#Preview#SkyboxPreviewSettings#NamedSkybox}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Plugin#Editor#Preview#SkyboxPreviewSettings#NamedSkybox}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Plugin#Editor#Preview#SkyboxPreviewSettings#NamedSkybox}#Set(System.Byte@,Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Set(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings@,Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SelectedSkyboxAccessor.Get(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#IEnumerable{Keen#VRage#Plugin#Editor#Preview#SkyboxPreviewSettings#NamedSkybox}}#Set(System.Object,System.Collections.Generic.IEnumerable{Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#IEnumerable{Keen#VRage#Plugin#Editor#Preview#SkyboxPreviewSettings#NamedSkybox}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#IEnumerable{Keen#VRage#Plugin#Editor#Preview#SkyboxPreviewSettings#NamedSkybox}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#IEnumerable{Keen#VRage#Plugin#Editor#Preview#SkyboxPreviewSettings#NamedSkybox}}#Set(System.Byte@,System.Collections.Generic.IEnumerable{Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Set(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings@,System.Collections.Generic.IEnumerable{Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.NamedSkybox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.SkyboxesAccessor.Get(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Set(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.BrightnessAccessor.Get(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Set(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings.TypeInfoHolder.HideSkyboxAccessor.Get(Keen.VRage.Plugin.Editor.Preview.SkyboxPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.GizmoPreviewSettings">
+            <summary>
+             Preview settings for the gizmos.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.GizmoPreviewSettings.SetGizmoState``1(System.Boolean,System.String)">
+            <summary>
+            Enable or disabled a gizmo.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.GizmoPreviewSettings.GetGizmoSettings``1(System.String)">
+            <summary>
+            Get the <see cref="T:Keen.VRage.Library.Serialization.IAccessible"/> settings for <typeparamref name="TGizmo"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.GizmoPreviewSettings.GetGizmoSettings``2(System.String)">
+            <summary>
+            Get the <typeparamref name="TSetting"/> settings for <typeparamref name="TGizmo"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.GizmoPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.GizmoPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.GizmoPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Preview.GizmoPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.SessionConfigurationErrors">
+            <summary>
+            Object used to describe reasons why a <see cref="T:Keen.VRage.Core.Game.Systems.Session"/> could not be configured by <see cref="T:Keen.VRage.Plugin.Editor.IProjectPlugin"/> instance.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Preview.SessionConfigurationErrors.Builder">
+            <summary>
+            Builder for convenience
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Preview.SessionConfigurationErrors.Builder.TryBuildErrors(Keen.VRage.Plugin.Editor.Preview.SessionConfigurationErrors@)">
+            <returns><see langword="true"/> if any session configuration error happened</returns>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.ProjectPluginAttribute">
+            <summary>
+            Attribute that should annotate types implementing <see cref="T:Keen.VRage.Plugin.Editor.IProjectPlugin"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.ProjectPluginHelper">
+            <summary>
+            Helper to find IProjectPlugin and get ObjectBuilderLoadingContext from it
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.ILayoutService">
+            <summary>
+            Interface for interactions with Editor's layout.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.ILayoutService.RestoreDefault">
+            <summary>
+            Restore <see cref="F:Keen.VRage.Plugin.Editor.Services.EditorLayout.Default"/> layout.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.ILayoutService.RestorePredefinedLayout(Keen.VRage.Plugin.Editor.Services.EditorLayout)">
+            <summary>
+            
+            </summary>
+            <param name="layout"></param>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.EditorLayout">
+            <summary>
+            Well known predefined layout supported by editor.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.IPopupService">
+            <summary>
+            Interface for interactions with Editor's pop-ups
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IPopupService.ClosePopups">
+            <summary>
+            Clone any open pop-up.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.IPropertyInspectorService">
+            <summary>
+            Interface for interactions with Editor's property inspector
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IPropertyInspectorService.GetPropertyElement``2(System.String,Keen.VRage.UI.Shared.ObjectInspector.PropertyElements.Interfaces.IPropertyElementContainer,Avalonia.Controls.Control)">
+            <summary>
+            Search a property in inspector.
+            </summary>
+            <typeparam name="TElement">Type of property element</typeparam>
+            <typeparam name="TControl">Control of the property element</typeparam>
+            <returns>The model element and the view control.</returns>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IPropertyInspectorService.GetPropertyElement``2(Keen.VRage.Library.Serialization.MemberReference,Avalonia.Controls.Control)">
+            <summary>
+            Search a property in inspector.
+            </summary>
+            <typeparam name="TElement">Type of property element</typeparam>
+            <typeparam name="TControl">Control of the property element</typeparam>
+            <returns>The model element and the view control.</returns>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.IRenderViewService">
+            <summary>
+            Interface for interactions with Editor's render view.
+            </summary>
+        </member>
+        <member name="E:Keen.VRage.Plugin.Editor.Services.IRenderViewService.EngineTick">
+            <summary>
+            Event when the Editor is updating the engine.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Services.IRenderViewService.FrameCounter">
+            <summary>
+            Frame count of the Editor engine.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Services.IRenderViewService.RenderFrameCounter">
+            <summary>
+            Frame count of the Editor render thread.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.RequestFrameRate(Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate,System.String)">
+            <summary>
+            Request render view framerate.
+            </summary>
+            <returns>A disposable to return to default framerate.</returns>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.UpdateFrameRateRequest(System.IDisposable@,Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate,System.Boolean,System.String,Keen.VRage.Plugin.Editor.Services.IRenderViewService)">
+            <summary>
+            Request render view framerate if not already requested.
+            </summary>
+            <param name="requestToken"></param>
+            <param name="framerate"></param>
+            <param name="request">true if the framerate should be requested, false if it should be disposed</param>
+            <param name="debugName"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.SetCameraOrbit(System.Single,System.Single,System.Nullable{System.Single})">
+            <summary>
+            Change Editor's render view's camera to orbit with the given parameters.
+            </summary>
+            <param name="distance">Distance to world center.</param>
+            <param name="rotX">Pitch angle (degree).</param>
+            <param name="rotY">Yaw angle (degree).</param>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.FocusObject">
+            <summary>
+            Change Editor's render view's camera to focus the previewed object.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.GetPreviewSettings``1">
+            <summary>
+            Get the <see cref="T:Keen.VRage.Library.Serialization.IAccessible"/> setting of the currently previewed element.
+            </summary>
+            <returns>The settings if available, null if nothing is displayed.</returns>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.TakeScreenshot``1(System.String)">
+            <summary>
+            Take a screenshot of the render view.
+            </summary>
+            <param name="path">Relative path into the <typeparamref name="TContainer"/> folder.</param>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.PreviewAsset(System.Guid)">
+            <summary>
+            Open and preview an asset in the render view.
+            </summary>
+            <returns>If the asset was successfully opened.</returns>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.ClearPreview">
+            <summary>
+            Clear any preview from the render view.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.GetViewport">
+            <inheritdoc cref="T:Keen.VRage.Plugin.Editor.Services.IRenderViewport"/>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewService.DeclareGizmo(Keen.VRage.Game.Client.Gizmos.IGizmo)">
+            <summary>
+            Make a <see cref="T:Keen.VRage.Game.Client.Gizmos.IGizmo"/> available to user.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate">
+            <summary>
+            Categories of framerate that can be requested.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate.Disabled">
+            <summary>
+            Render view is not accessible.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate.Background">
+            <summary>
+            Editor application is not used by user and could sleep.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate.Foreground">
+            <summary>
+            Editor application is used by the user but render view is not used.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate.Interacted">
+            <summary>
+            Editor application is used by the user and render view is used.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate.Test60FPS">
+            <summary>
+            Override framerate for test purposes.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.IRenderViewService.Framerate.Test30FPS">
+            <summary>
+            Override framerate for test purposes.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.IDeclaredGizmo">
+            <summary>
+            <see cref="T:Keen.VRage.Game.Client.Gizmos.IGizmo"/> declared to editor.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Services.IDeclaredGizmo.Enabled">
+            <summary>
+            Enable the gizmo in the render view.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Services.IDeclaredGizmo.Gizmo">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.IRenderViewport">
+            <summary>
+            Viewport of the Render View.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewport.GetUIBounds">
+            <summary>
+            Get the bound of the <see cref="M:Keen.VRage.Plugin.Editor.Services.IRenderViewport.GetContainer"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewport.Resize(System.Int32,System.Int32)">
+            <summary>
+            Resize the render view viewport to a fixed size.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewport.Focus">
+            <summary>
+            <see cref="M:Keen.VRage.Plugin.Editor.Services.IRenderViewport.RaiseEvent(Avalonia.Interactivity.RoutedEventArgs)"/> with <see cref="T:Avalonia.Input.GotFocusEventArgs"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewport.RaiseEvent(Avalonia.Interactivity.RoutedEventArgs)">
+            <summary>
+            Raise an Avalonia event on the render view.
+            </summary>
+            <remarks>This event is not propagated to Avalonia.</remarks>
+        </member>
+        <member name="M:Keen.VRage.Plugin.Editor.Services.IRenderViewport.GetContainer">
+            <summary>
+            <see cref="T:Avalonia.Controls.Control"/> that hold the render view.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults">
+            <summary>
+            How far the editor was able to go to open an asset.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Success">
+            <inheritdoc cref="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.Successful"/>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.AssetNotFound">
+            <inheritdoc cref="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.AssetNotFound"/>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.PreviewNotAvailable">
+            <inheritdoc cref="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.PreviewNotAvailable"/>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.State">
+            <inheritdoc cref="T:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result"/>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Errors">
+            <summary>
+            Error messages.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.IsSuccessful">
+            <inheritdoc cref="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.Successful"/>
+        </member>
+        <member name="T:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result">
+            <summary>
+            How far the editor was able to go to open an asset.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.AssetNotFound">
+            <summary>
+            No asset with given GUID was found.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.PreviewNotAvailable">
+            <summary>
+            No plugin is providing preview
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.SessionNotLoaded">
+            <summary>
+            Session configuration failed.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.PreviewEntityNotCreated">
+            <summary>
+            Preview entity data was not created.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.Invalid">
+            <summary>
+            Preview was available but object could not be added.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Plugin.Editor.Services.PreviewAssetResults.Result.Successful">
+            <summary>
+            Asset was successfully opened.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2358 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.ModelsBase</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelsBase#AnimationClipInfo}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.NameAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Object,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Byte@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo.TypeInfoHolder.DurationAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.AnimationTransformKeysMerger">
+            <summary>
+            Merges position and rotation keys into a list of keyframes.
+            If 
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.AnimationTransformKeysMerger.MergeIntoKeyframes(System.Collections.Generic.SortedDictionary{System.Double,Keen.VRage.Library.Mathematics.Quaternion},System.Collections.Generic.SortedDictionary{System.Double,Keen.VRage.Library.Mathematics.Vector3})">
+            <summary>
+            Merge different types of transformation keys at any time frame into a list of keyframes.
+            The transformation at each keyframe is calculated by interpolating the transformations from neighbour keys.
+            In case of keyframes out of bound of given transformation keys, the edge key is used.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Bone">
+            <summary>
+            </summary>
+            <autogeneratedoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Bone.Name">
+            <summary>
+            </summary>
+            <autogeneratedoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Bone.LocalTransform">
+            <summary>
+            Local matrix transform
+            </summary>
+            <autogeneratedoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Bone.Parent">
+            <summary>
+            Parent bone reference
+            </summary>
+            <autogeneratedoc />        
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Bone.Children">
+            <summary>
+            Child bone references.
+            </summary>
+            <autogeneratedoc />        
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Bone.#ctor(System.String)">
+            <summary>
+            </summary>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Bone.ToString">
+            <summary>
+            </summary>
+            <autogeneratedoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Editor.ModelAssetInterface">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.FBXAsset">
+            <summary>
+            Represents a .fbx asset in ResourceHandles
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.FBXAssetType">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters">
+            <summary>
+            LOD related parameters.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelsBase#LODModelProcessorParameters}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters.TypeInfoHolder.ModelAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.MathematicsConversionsHelper.AsVRAGEMatrix(System.Numerics.Matrix4x4)">
+            <remarks>
+            Do not confuse with <see cref="M:Keen.VRage.ContentPipeline.ModelsBase.MathematicsConversionsHelper.GetNETMatrixFromAssimp(System.Numerics.Matrix4x4)"/>.
+            When retreiving matrices from Assimp, use this method on the result of the mentioned method.
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.MathematicsConversionsHelper.GetNETQuaternionFromAssimp(System.Numerics.Quaternion)">
+            <summary>
+            Quaternion must be first relayed through this method when retreived from Assimp.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.MathematicsConversionsHelper.GetNETMatrixFromAssimp(System.Numerics.Matrix4x4)">
+            <summary>
+            Matrix must be first relayed through this method when retreived from Assimp.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.MeshAttributes">
+            <summary>
+            Represents different tags (implemented by strings) that can be attached to meshes in a model.
+            Use this to retrieve tags from meshes that were added on a modeling software (imported as mesh metadata).
+            Tags do not have value, they are either present on a mesh or not.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.MeshAttributes.FractureGroupTag">
+            <summary>
+            Informs that the mesh is a fracture.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.MeshAttributes.SectionTag">
+            <summary>
+            Informs that the mesh has a section
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.MeshAttributes._tags">
+            <summary>
+            All tags for extracting them from mesh attributes.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.MeshAttributes.Filter(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Gets a collection of tags from mesh attributes (metadata), searching by their name.
+            </summary>
+            <param name="meshAttributes">The mesh attributes (metadata) from an imported mesh</param>
+            <returns>The collection of tags that were found on the given attributes</returns>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.MeshGeometryMetadata">
+            <summary>
+            Holds vertices, normals and other geometry data of single mesh part
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.MeshGeometryMetadata.MeshVertexWeightsPerBone">
+            <summary>
+            List of bones influences to the mesh vertices
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.MeshGroup">
+            <summary>
+            Identifier of a group of mesh parts, with a name and type
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.MeshGroupType">
+            <summary>
+            The type of mesh group
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Migrations.Versions">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelsBase#ModelAnimationClipsInfo}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#AnimationClipInfo}}#Set(System.Object,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#AnimationClipInfo}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#AnimationClipInfo}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#AnimationClipInfo}}#Set(System.Byte@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.AnimationClipInfo}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo.TypeInfoHolder.AnimationClipsAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationClipsInfo@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationsData">
+            <summary>
+            Model animations, keyframes
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.FileHash">
+            <summary>
+            The hash of the file for which these information are relevant, if the file has different hash
+            than this, the cached info is not valid.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.HasAnyMesh">
+            <summary>
+            Whether the model has any mesh/geometry
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelsBase#ModelCachedInfoMetaDataItem}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.FileHashAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem.TypeInfoHolder.HasAnyMeshAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelCachedInfoMetaDataItem@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelData">
+            <summary>
+            Container for all information about the model
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelDataExtensions">
+            <summary>
+            Extension methods for information regarding extracted model data
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter">
+            <summary>    
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter.#ctor(System.String)">
+            <summary>
+            c-tor
+            </summary>        
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter.Dispose">
+            <summary>
+            Close
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter.ExportData``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Int32},System.Action{System.IO.BinaryWriter,``0})">
+            <summary>    
+            </summary>    
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter.ExportArray``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Int32},System.Action{System.IO.BinaryWriter,``0})">
+            <summary>    
+            </summary>    
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter.ExportArray``1(System.String,System.Object,System.Action{System.IO.BinaryWriter,``0})">
+            <summary>    
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter.ExportDictionary``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Int32},System.Action{System.IO.BinaryWriter,``0})">
+            <summary>    
+            </summary>    
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter.ExportDictionary``1(System.String,System.Object,System.Action{System.IO.BinaryWriter,``0})">
+            <summary>    
+            </summary>    
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter.ExportModelData(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.List{Keen.VRage.ContentPipeline.Project.Features.AssetProcessing.ProcessingProblem},System.Boolean)">
+            <summary>    
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelGeometryData">
+            <summary>
+            Holds vertices, normals and other geometry data of the model
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelPhysicsData">
+            <summary>
+            Describes collision shapes of a model.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelPhysicsData.GeneratePreciseCollider(Keen.VRage.Library.Utils.HalfVector4[],System.Collections.Generic.List{Keen.VRage.Core.Model.MeshPartInfo})">
+            <summary>
+            Create a precise mesh collider from the input vertices and parts
+            </summary>
+            <param name="vertices">the mesh vertices</param>
+            <param name="parts">mesh parts used to determine triangles</param>
+            <returns>
+            - The serialized precise mesh collider
+            - The materials IDs corresponding to material index in raycast hit info
+            </returns>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorAdapter">
+            <summary>
+            Class that converts <see cref="T:Keen.VRage.ContentPipeline.ModelsBase.ModelData"/> into a data structures to be exported using an <see cref="T:Keen.VRage.ContentPipeline.ModelsBase.ModelExporter"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorAdapter.ResolveModelStubDataToExportTags(Keen.VRage.ContentPipeline.ModelsBase.ModelData,System.Boolean,Keen.VRage.ContentPipeline.ModelsBase.ModelPhysicsData,System.Guid,Keen.VRage.Core.Model.LODDescriptor[],System.Collections.Generic.Dictionary{System.String,System.Guid},System.Collections.Generic.Dictionary{System.String,System.Guid},Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData@)">
+            <summary>
+            This should be used to generate the engine model stub file only.
+            The stub file is a companion file for models, the geometry 
+            is stored in the respective LOD files only, stub files does not contain any geometry,
+            should not contain any animations etc., on the other hand it should contain
+            material assignments, lod descriptors, collision shape,...
+            
+            However some tags need to be computed from LOD0 geometry, so that is passed here as well
+            including some parameters influencing how the LOD0 geometry was constructed (<paramref name="lod0RemoveDegeneratedTriangles"/>)
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorAdapter.ResolveModelGeometryDataToExportTags(Keen.VRage.ContentPipeline.ModelsBase.ModelData,Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData,System.Boolean,System.Boolean)">
+            <summary>
+            Create LOD file of the model, mainly containing geometry
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorAdapter.ResolveDataToExportTagsInternal(Keen.VRage.ContentPipeline.ModelsBase.ModelData,Keen.VRage.ContentPipeline.ModelsBase.ModelPhysicsData,System.Guid,Keen.VRage.Core.Model.LODDescriptor[],System.Collections.Generic.Dictionary{System.String,System.Guid},System.Collections.Generic.Dictionary{System.String,System.Guid},Keen.VRage.ContentPipeline.ModelsBase.ReferenceTransformProvider,Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData@,System.Boolean,System.Boolean)">
+            <summary>
+            </summary>
+            <remarks>
+            TODO: exporting tags should be revisited, right now the LOD, MaterialAssignments tags are present in all MWM including LODs...
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorAdapter.IsDegenerateTriangle(Keen.VRage.Library.Mathematics.Vector3,Keen.VRage.Library.Mathematics.Vector3,Keen.VRage.Library.Mathematics.Vector3)">
+            <summary>
+            Checks whether the triangle is degenerated, as in one of the vertices merges with another
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorAdapter.IsCollinearTriangle(Keen.VRage.Library.Mathematics.Vector3,Keen.VRage.Library.Mathematics.Vector3,Keen.VRage.Library.Mathematics.Vector3)">
+            <summary>
+            Returns whether one of the triangle's vertices lies on the opposite edge
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorAdapter.CreateAnimationsForExport(Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationsData,Keen.VRage.ContentPipeline.ModelsBase.Bone,System.Collections.Generic.Dictionary{System.String,Keen.VRage.Library.Mathematics.Matrix},Keen.VRage.Library.Collections.ListDictionary{System.String,System.String},Keen.VRage.ContentPipeline.ModelsBase.ReferenceTransformProvider,System.Boolean)">
+            <summary>
+            Converts raw animation data extracted into expected format. Adjusts keyframe transforms for bones that were previously re-parented during
+            removal of system bones.
+            </summary>
+            <param name="modelAnimationsData">The animation data to be adapted</param>
+            <param name="originalSkeletonRoot"></param>
+            <param name="keyframeTransformations">Transforms to apply to bone with given name to correct it after parent system bone removal.</param>
+            <param name="systemBonesMapping">Name of system bones to also accumulate keyframe transforms for given bone,
+            used to account for animation keyframes stored on system bones. The order of system bones is preserved from hierarchical ordering.</param>
+            <param name="referenceTransformProvider">Provider for reference bone transforms</param>
+            <param name="skipProcessingMissingBones">Hack, To be removed</param>
+            <returns></returns>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.GeometryForExport">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.GeometryForExport.#ctor(Keen.VRage.Library.Mathematics.Vector3[],Keen.VRage.Library.Mathematics.Vector3[],Keen.VRage.Library.Mathematics.Vector3[],Keen.VRage.Library.Mathematics.Vector3[],Keen.VRage.Library.Mathematics.Vector2[],Keen.VRage.Library.Mathematics.Vector2[],Keen.VRage.Library.Mathematics.BoundingBox,Keen.VRage.Library.Mathematics.BoundingSphere,Keen.VRage.Core.Model.MeshPartInfo[],Keen.VRage.Core.Model.MeshSectionInfo[])">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ExportTagsData">
+            <summary>
+            </summary>
+            <param name="ExportTags">Tags-mapped data of the model, used for MWM file format</param>
+            <param name="GeometryForExport">Compiled data of the model</param>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ExportTagsData.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object},Keen.VRage.ContentPipeline.ModelsBase.GeometryForExport)">
+            <summary>
+            </summary>
+            <param name="ExportTags">Tags-mapped data of the model, used for MWM file format</param>
+            <param name="GeometryForExport">Compiled data of the model</param>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ExportTagsData.ExportTags">
+            <summary>Tags-mapped data of the model, used for MWM file format</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ExportTagsData.GeometryForExport">
+            <summary>Compiled data of the model</summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.GeometryForExportCompilationResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ResolveToExportTagsResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelAnimationsExportResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.VertexBoneWeightExportResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader">
+            <summary>
+            Purpose of this class is to load a model from importer library and store it into data not dependent on the importer used.
+            The data is loaded without any additional transformations or changes of basis.
+            </summary>
+            <autogeneratedoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.RESHAPE_AJUST_CYLINDER_RADIUS">
+            <summary>
+            0 = Disabled
+            1 = Keep min radius
+            2 = Limit max penetration
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.LoadModel(System.String)">
+            <summary>
+            Loads the model from a given filename
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.LoadModelPhysicsData(System.String,Keen.VRage.ContentPipeline.ModelsBase.ModelGeometryData,System.Collections.Immutable.ImmutableDictionary{Keen.VRage.Library.Utils.StringId,System.Collections.Immutable.ImmutableArray{Keen.VRage.Library.Utils.StringId}}@)">
+            <summary>
+            Loads model physics data, requires geometry data from LOD0 for breakable colliders.
+            </summary>
+            <param name="filepath">File path of the collision shapes file (.hkt)</param>
+            <param name="lod0modelData">Geometry data of the LOD0 of the model</param>
+            <param name="groupsByFracture">The mesh groups by each fracture if the model contains a breakable collider</param>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.ConstructModelPhysicsData(Keen.VRage.Physics.IVRagePhysics,System.String,Keen.VRage.ContentPipeline.ModelsBase.ModelGeometryData,System.Collections.Immutable.ImmutableDictionary{Keen.VRage.Library.Utils.StringId,System.Collections.Immutable.ImmutableArray{Keen.VRage.Library.Utils.StringId}}@)">
+            <summary>
+            Construct <see cref="T:Keen.VRage.ContentPipeline.ModelsBase.ModelPhysicsData"/> from a collision shapes file if possible. This method accepts <see langword="null"/>
+            as <paramref name="filename"/>, in that case no colliders are collected for the model.
+            </summary>
+            <param name="physics"></param>
+            <param name="filename">The name of the colliders file, or <see langword="null"/> if no such file is available</param>
+            <param name="modelData">Model's LOD0 geometry data</param>
+            <param name="groupsByFracture">The mesh groups by each fracture if the model contains a breakable collider</param>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.CollectBreakableCollider(Keen.VRage.Physics.IPhysicsColliders,Keen.VRage.Library.Memory.BufferReference{System.ValueTuple{Keen.VRage.Physics.Colliders.IPhysicsCollider,System.String}},Keen.VRage.ContentPipeline.ModelsBase.ModelGeometryData,System.Collections.Immutable.ImmutableDictionary{Keen.VRage.Library.Utils.StringId,System.Collections.Immutable.ImmutableArray{Keen.VRage.Library.Utils.StringId}}@)">
+            <summary>
+            Consumes colliders that are part of a breakable collider and creates a breakable collider, appending it to the collider collection
+            </summary>
+            <param name="processor">A processor to serialize the breakable collider</param>
+            <param name="colliders">A collection of colliders found in the file. Colliders are removed if they are part of the breakable collider.
+            The breakable collider is added in case that there are fractures</param>
+            <param name="modelData">The data from the model to match fractures to mesh parts</param>
+            <param name="groupsByFracture">The mesh groups by each fracture that the method will use to embed mesh parts</param>
+            <returns>Result where success's <see langword="true"/> means breakable colliders were collected (present in the collision shape data)</returns>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.LoadCollidersResult">
+            <seealso cref="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.LoadColliders(System.String,Keen.VRage.Library.Memory.BufferReference{System.ValueTuple{Keen.VRage.Physics.Colliders.IPhysicsCollider,System.String}})"/>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.CollectBreakableCollidersResult">
+            <seealso cref="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.CollectBreakableCollider(Keen.VRage.Physics.IPhysicsColliders,Keen.VRage.Library.Memory.BufferReference{System.ValueTuple{Keen.VRage.Physics.Colliders.IPhysicsCollider,System.String}},Keen.VRage.ContentPipeline.ModelsBase.ModelGeometryData,System.Collections.Immutable.ImmutableDictionary{Keen.VRage.Library.Utils.StringId,System.Collections.Immutable.ImmutableArray{Keen.VRage.Library.Utils.StringId}}@)"/>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.AssimpGetMaterialStringWrapper(Silk.NET.Assimp.Assimp,Silk.NET.Assimp.Material*,System.String,System.UInt32,System.UInt32,Silk.NET.Assimp.AssimpString@)">
+            <summary>
+            Duplicates behavior of
+            <see cref="M:Silk.NET.Assimp.Assimp.GetMaterialString(Silk.NET.Assimp.Material*,System.String,System.UInt32,System.UInt32,Silk.NET.Assimp.AssimpString@)"/>
+            but works around a bug in the original method (does not translate the pKey pointer back to string).
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.GetAssimpString(Silk.NET.Assimp.AssimpString@)">
+            <summary>
+            Get string from AssimpString with validation that the returned data is correct
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.LoadBasicFbxInfoResult">
+            <seealso cref="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.TryGetFBXBasicInformation(System.String)"/>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelPhysicsConstructionResult">
+            <seealso cref="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorLoader.ConstructModelPhysicsData(Keen.VRage.Physics.IVRagePhysics,System.String,Keen.VRage.ContentPipeline.ModelsBase.ModelGeometryData,System.Collections.Immutable.ImmutableDictionary{Keen.VRage.Library.Utils.StringId,System.Collections.Immutable.ImmutableArray{Keen.VRage.Library.Utils.StringId}}@)"/>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelLoadResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ExtractGeometryResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ExtractAnimationsResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ExtractSkeletonResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Translation">
+            <summary>    
+            The translation of the Model
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Rotation">
+            <summary>
+            The rotation of the model in degrees
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Scale">
+            <summary>
+            Scale
+            </summary>    
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.LODsSettings">
+            <summary>    
+            Model processor default properties must not be available in our processor, so we hide them and they will not be visible in properties tab
+            </summary>        
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialOverrides">
+            <summary>
+            Override <see cref="T:Keen.VRage.Render.Materials.MaterialStateDefinition"/> of assigned materials
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialAssignment}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MeshPartIdDisplayAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment.TypeInfoHolder.MaterialReferenceAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride">
+            <summary>
+            Override <see cref="T:Keen.VRage.Render.Materials.MaterialStateDefinition"/> of assigned materials
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialStateOverride}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.FromStateAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride.TypeInfoHolder.ToStateAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.TranslationAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.RotationAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder._scaleAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.ScaleAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#LODModelProcessorParameters}}#Set(System.Object,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#LODModelProcessorParameters}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#LODModelProcessorParameters}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#LODModelProcessorParameters}}#Set(System.Byte@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.LODModelProcessorParameters}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.LODsSettingsAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialAssignment}}#Set(System.Object,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialAssignment}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialAssignment}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialAssignment}}#Set(System.Byte@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialAssignment}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialAssignmentsAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialStateOverride}}#Set(System.Object,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialStateOverride}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialStateOverride}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#ModelsBase#ModelProcessorParameters#MaterialStateOverride}}#Set(System.Byte@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Set(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.MaterialStateOverride}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters.TypeInfoHolder.MaterialOverridesAccessor.Get(Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorTransformer">
+            <summary>
+            This class is used to apply transformations on the model data.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorTransformer.ChangeModelSpaceBasis(Keen.VRage.ContentPipeline.ModelsBase.ModelData,Keen.VRage.Library.Mathematics.Matrix)">
+            <summary>
+            Every transformations included in the model data will be converted to the new basis.
+            That means the skeleton (bones relative orientation as well as the whole skeleton posture), and skeletal animations.
+            </summary>
+            <param name="originalModelData">Model data that will be transformed using this method</param>
+            <param name="newBasis">Matrix representing the new basis the model space will be converted to. Must be orthonormal, rotation only.</param>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorTransformer.ChangeModelSkeletonBonesBasis(Keen.VRage.ContentPipeline.ModelsBase.ModelSkeletonData,Keen.VRage.Library.Mathematics.Matrix)">
+            <summary>
+            This method modifies only local transforms of the nodes but has no effect on the absolute translation of the skeleton nodes.
+            Meaning the orientation of bones is transformed but the translation part is adjusted accordingly.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorTransformer.TransformModel(Keen.VRage.ContentPipeline.ModelsBase.ModelData@,System.Single,Keen.VRage.Library.Mathematics.Matrix,Keen.VRage.Library.Mathematics.Vector3)">
+            <summary>
+            Apply scale, rotation and translation to the model
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ModelProcessorTransformer.TransformPhysicsData(Keen.VRage.ContentPipeline.ModelsBase.ModelPhysicsData,System.Single,Keen.VRage.Library.Mathematics.Matrix,Keen.VRage.Library.Mathematics.Vector3)">
+            <summary>
+            Apply scale, rotation and translation to the model
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ModelSkeletonData">
+            <summary>
+            Bones for skinned mesh animations
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.ReferenceTransformProvider">
+            <summary>
+            Provides reference transforms for bones.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.ReferenceTransformProvider.Default">
+            <summary>
+            Default instance to be used when reference transforms are not available.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.ReferenceTransformProvider.GetReferenceTransform(System.String)">
+            <summary>
+            Get reference transform for given node.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.BonesPerLodData">
+            <summary>
+            Helper class for obtaining LOD presence for individual bones.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.BonesPerLodData.GetBoneMaxLod(System.String)">
+            <summary>
+            Get the max LOD index of the bone in the LOD skeletons.
+            When model has bone A in both LOD0 and LOD1, and bone B only in LOD0 (not present in less detailed skeleton),
+            the result will be { A: 1, B: 0 }
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.BonesPerLodData.TryCreateFromReferenceSkeletonAndLods(Keen.VRage.ContentPipeline.ModelsBase.Bone[],Keen.VRage.ContentPipeline.ModelsBase.Bone[],Keen.VRage.ContentPipeline.ModelsBase.Skeleton.BonesPerLodData@,Keen.VRage.ContentPipeline.ModelsBase.Skeleton.InvalidLodHierarchyBone[]@)">
+            <param name="referenceSkeletonBones">
+            Reference skeleton bones, for which the bones are considered. Bones present in LODs but not present in
+            reference skeleton are ignored.
+            </param>
+            <param name="lodSkeletonsRoots">
+            Root bones of skeletons of all LODs, including LOD0 (that might be equal to <paramref name="referenceSkeletonBones"/>).
+            Order matches LOD index, meaning first item in array is LOD0.
+            </param>
+            <param name="bonesPerLodData"></param>
+            <param name="invalidChildren"></param>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.InvalidLodHierarchyBone">
+            <summary>
+            Record with information about bone such that it is present in less detailed LOD but its parent is not.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.InvalidLodHierarchyBone.#ctor(Keen.VRage.ContentPipeline.ModelsBase.Bone,System.Int32,System.Int32)">
+            <summary>
+            Record with information about bone such that it is present in less detailed LOD but its parent is not.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.BoneTopologicalAndLodAwareComparer">
+            <summary>
+            Compares bones so that there is no bone whose parent is present later in ordering (topological ordering),
+            and no bone appearing in more detailed LOD is followed by bone not appearing in that LOD (LOD-aware ordering).
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.BoneTopologicalAndLodAwareComparer.CompareLodAware(Keen.VRage.ContentPipeline.ModelsBase.Bone,Keen.VRage.ContentPipeline.ModelsBase.Bone)">
+            <returns>
+            Value less than zero if <paramref name="a"/> is in more detail LOD than <paramref name="b"/>,
+            zero if both are in the same LOD or one of the bones is unidentified by name,
+            value greater than zero otherwise
+            </returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.BoneTopologicalAndLodAwareComparer.CompareTopological(Keen.VRage.ContentPipeline.ModelsBase.Bone,Keen.VRage.ContentPipeline.ModelsBase.Bone)">
+            <returns>
+            Value less than zero if <paramref name="a"/> is parent of <paramref name="b"/>,
+            zero if incomparable (none is transitive parent of the other),
+            value greater than zero otherwise
+            </returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.BoneTopologicalAndLodAwareComparer.IsTransitiveParentOf(Keen.VRage.ContentPipeline.ModelsBase.Bone,Keen.VRage.ContentPipeline.ModelsBase.Bone)">
+            <returns>If traversing parents up from <paramref name="child"/> we reach <paramref name="parent"/></returns>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.ModelSkeletonUtils">
+            <summary>
+            Utilities for working with skeletons (and their LOD variants) in models.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.ModelSkeletonUtils.GetFilteredReparentedSkeleton(Keen.VRage.ContentPipeline.ModelsBase.Bone)">
+            <summary>
+            Filters out system bones, reparents and updates transforms.
+            Provide correction transformations for bones to be used for animation keyframes
+            and list of filtered out system bones (in an order from furthest to nearest).
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonExportResult">
+            <summary>
+            Result of exporting skeleton data from model
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData">
+            <summary>
+            Data used to export model skeleton information
+            </summary>
+            <param name="LodSkeletonBonesCount">Number of bones that are present for given model skeleton LOD</param>
+            <param name="Bones">Bones in the model skeleton</param>
+            <param name="BoneNameToIndex">Mapping from bone name to index in collection of bones</param>
+            <param name="KeyframeTransformations">Per bone keyframe transformation corrections after decimating system bones from skeleton</param>
+            <param name="SystemBonesMapping">Mapping from non-system bone to related system bones</param>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData.#ctor(System.Int32[],Keen.VRage.Core.Model.ModelBone[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Collections.Generic.Dictionary{System.String,Keen.VRage.Library.Mathematics.Matrix},Keen.VRage.Library.Collections.ListDictionary{System.String,System.String})">
+            <summary>
+            Data used to export model skeleton information
+            </summary>
+            <param name="LodSkeletonBonesCount">Number of bones that are present for given model skeleton LOD</param>
+            <param name="Bones">Bones in the model skeleton</param>
+            <param name="BoneNameToIndex">Mapping from bone name to index in collection of bones</param>
+            <param name="KeyframeTransformations">Per bone keyframe transformation corrections after decimating system bones from skeleton</param>
+            <param name="SystemBonesMapping">Mapping from non-system bone to related system bones</param>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData.LodSkeletonBonesCount">
+            <summary>Number of bones that are present for given model skeleton LOD</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData.Bones">
+            <summary>Bones in the model skeleton</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData.BoneNameToIndex">
+            <summary>Mapping from bone name to index in collection of bones</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData.KeyframeTransformations">
+            <summary>Per bone keyframe transformation corrections after decimating system bones from skeleton</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ModelsBase.Skeleton.SkeletonsExportData.SystemBonesMapping">
+            <summary>Mapping from non-system bone to related system bones</summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.Utils">
+            <summary>    
+            </summary>
+            <autogeneratedoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Utils.TraverseModelSkeletonDFS(Keen.VRage.ContentPipeline.ModelsBase.Bone,System.Action{Keen.VRage.ContentPipeline.ModelsBase.Bone})">
+            <summary>
+            Do DFS traversal on the given tree and calls <paramref name="nodeAction"/> for each entered node
+            before recursion into child nodes.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsBase.Utils.EnumerateModelSkeletonDFS(Keen.VRage.ContentPipeline.ModelsBase.Bone)">
+            <summary>
+            Do DFS traversal on the given tree
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsBase.VertexWeight">
+            <summary>
+            Defines how much bone affects particular vertex. 
+            </summary>
+        </member>
+    </members>
+</doc>

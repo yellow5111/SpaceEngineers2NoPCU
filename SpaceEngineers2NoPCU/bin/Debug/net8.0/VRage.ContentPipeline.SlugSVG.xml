@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.SlugSVG</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.SlugSVG.SlugSVGProcessor">
+            <summary>
+            </summary>
+        </member>
+    </members>
+</doc>

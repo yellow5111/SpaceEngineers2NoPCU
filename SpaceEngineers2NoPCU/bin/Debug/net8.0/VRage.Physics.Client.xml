@@ -1,0 +1,1266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.Physics.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.Physics.Client.Data.PhysicsDebugEntityData">
+            <summary>
+            Instance data for Physics debug draw objects.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Data.PhysicsDebugEntityData.Scale">
+            <summary>
+            Non uniform scale of the debug object. This scale is not being counted with during the culling. The bounding box of the rendered
+            mesh should be inflated by this scale, otherwise the culling will not work correctly.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Data.PhysicsDebugEntityData.Texture">
+            <summary>
+            Optional texture of the debug object. If null, the object will be rendered with the default color.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Data.PhysicsDebugEntityData.InstanceColor">
+            <summary>
+            Per instance color of the debug object. Final color is computed as VertexColor * TextureColor * InstanceColor.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Data.PhysicsDebugEntityData.GPUImprintSize">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Data.PhysicsDebugEntityData.Convert(Keen.VRage.Render.Data.IGPUDataConvertor)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Physics.Client.Data.VertexFormatPhysicsDebug">
+            <summary>
+            Vertex format used by physics debug objects 
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration">
+            <summary>
+            Configuration contains materials for rendering all types of Havok debug geometry
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.LineList">
+            <summary>
+            Material for rendering of line debug Havok geometry 
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.FilledTriangleListOpaque">
+            <summary>
+            Material for rendering of filled opaque Havok geometry 
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.FilledTriangleListTransparent">
+            <summary>
+            Material for rendering of filled transparent Havok geometry 
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.WireframeTriangleListOpaque">
+            <summary>
+            Material for rendering of wire opaque Havok geometry 
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.WireframeTriangleListTransparent">
+            <summary>
+            Material for rendering of wire transparent Havok geometry 
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.BillboardedTriangleListOpaque">
+            <summary>
+            Material for rendering of billboarded opaque Havok geometry
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.BillboardedTriangleListTransparent">
+            <summary>
+            Material for rendering of billboarded transparent Havok geometry 
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.GetMaterial(Keen.VRage.Physics.Havok.PrimitiveType,System.Boolean)">
+            <summary>
+            Returns material for specified primitive type and transparency
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#Physics#Client#Definitions#PhysicsDebugMaterialsConfiguration}#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#Physics#Client#Definitions#PhysicsDebugMaterialsConfiguration}#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,System.Object@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Physics#Client#Definitions#PhysicsDebugMaterialsConfiguration}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.LineListAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.FilledTriangleListTransparentAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.LineList">
+            <summary>
+            Material for rendering of line debug Havok geometry 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.FilledTriangleListOpaque">
+            <summary>
+            Material for rendering of filled opaque Havok geometry 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.FilledTriangleListTransparent">
+            <summary>
+            Material for rendering of filled transparent Havok geometry 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.WireframeTriangleListOpaque">
+            <summary>
+            Material for rendering of wire opaque Havok geometry 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.WireframeTriangleListTransparent">
+            <summary>
+            Material for rendering of wire transparent Havok geometry 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.BillboardedTriangleListOpaque">
+            <summary>
+            Material for rendering of billboarded opaque Havok geometry
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.BillboardedTriangleListTransparent">
+            <summary>
+            Material for rendering of billboarded transparent Havok geometry 
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Physics#Client#Definitions#PhysicsDebugMaterialsConfigurationObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.LineListAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListOpaqueAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.FilledTriangleListTransparentAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListOpaqueAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.WireframeTriangleListTransparentAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListOpaqueAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Set(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder.TypeInfoHolder.BillboardedTriangleListTransparentAccessor.Get(Keen.VRage.Physics.Client.Definitions.PhysicsDebugMaterialsConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent">
+            <summary>
+            Default implementation for <see cref="T:Keen.VRage.Physics.Havok.IPhysicsDebugDraw"/>
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent._indexBuffers">
+            <summary>
+            Contains indices for triangle meshes.
+            The first element is an IndexBuffer that contains sequential indices (0-1, 2-3, 4-5) for line rendering,
+            and it is disposed on <see cref="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.Destroy"/>. 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent._cachedMeshes">
+            <summary>
+            Meshes containing a pair of VertexBuffer/IndexBuffer plus render objects.
+            Keys are pairs (indexBufferIndexOnFreeList|vertexBufferIndexOnFreeList).
+            Note that for sequential index buffers its 
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent._meshesToDispose">
+            <summary>
+            Meshes that are marked for disposal.
+            Do not dispose them right away when a VertexBuffer/IndexBuffer is disposed,
+            that would cause them to not render. Instead, wait a frame and dispose them after that.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent._render">
+            <summary>
+            Dependency. When the application ends, this is guaranteed to dispose before Render,
+            so any remaining meshes will be disposed before Render disposes.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.DisposeMeshes(Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent)">
+            <summary>
+            Dispose meshes before next step (Draw and VB/IB/Texture disposal happen during Step).
+            This is done so meshes last at least a frame for Render to pick them up.
+            </summary>
+            <param name="self">Self reference to get class variables</param>
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.ClearNotDrawnMeshes(Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent)">
+            <summary>
+            Clear meshes that were not drawn last frame.
+            Just dispose their internal entities so they are not drawn,
+            they will be reconstructed next time they are drawn. 
+            </summary>
+            <param name="self">Self reference to get class variables</param>
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.ClearMeshes(System.Int32,System.Int32)">
+            <summary>
+            Clear meshes when their Vertex Buffer or Index Buffer is marked for deletion.
+            Use int.MinValue to prevent from fetching meshes with -1 on their indexBufferId,
+            which can happen if the mesh uses a runtime index buffer. 
+            </summary>
+            <param name="indexBufferId">An index buffer to look for in meshes</param>
+            <param name="vertexBufferId">A vertex buffer to look for in meshes</param>
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.FromHk(System.IntPtr)">
+            <summary>
+            Returns an index to a free-list containing the buffer/texture or -1 if the pointer is null.
+            This is to differentiate buffers and textures when drawing meshes.
+            </summary>
+            <param name="bufferIdPtr">The pointer that was received from Havok that identifies either a buffer or a texture</param>
+            <returns>An integer that points to a buffer/texture on a free list or -1 if the pointer is null</returns>
+            <remarks>A</remarks>
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.VertexStream0Type">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.VertexStream1Type">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.VertexStream2Type">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.DebugName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.AABB">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.GetIndices">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.GetSubParts">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.GetBones">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.GetVertexStream0Data(System.ReadOnlySpan{System.Byte}@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.GetVertexStream1Data(System.ReadOnlySpan{System.Byte}@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Physics.Client.EngineComponents.PhysicsDebugDrawEngineComponent.MeshData.GetVertexStream2Data(System.ReadOnlySpan{System.Byte}@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Physics.Client.Extensions.EngineBuilderExtensions">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

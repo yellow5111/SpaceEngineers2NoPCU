@@ -1,0 +1,2329 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.AI</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.AI.AISceneSettings">
+            <summary>
+            Scene settings relevant to AI.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.AI.AISceneSettings.StepFrequency">
+            <summary>
+            Step frequency in Hz.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Debugging.AIDebugSessionComponent">
+            <summary>
+            Server-side debug Component for AI.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Definitions.AIDebugConfiguration">
+            <summary>
+            Debug settings related to AI.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.AIDebugCameraObserverTag">
+            <summary>
+            Observer tag used by AI to access camera transform.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#AI#Definitions#AIDebugConfiguration}#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#AI#Definitions#AIDebugConfiguration}#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,Keen.VRage.AI.Definitions.AIDebugConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,System.Object@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Definitions.AIDebugConfiguration.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#AI#Definitions#AIDebugConfiguration}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Set(System.Object,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Set(System.Byte@,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Set(Keen.VRage.AI.Definitions.AIDebugConfiguration@,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfiguration.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Get(Keen.VRage.AI.Definitions.AIDebugConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.AIDebugCameraObserverTag">
+            <summary>
+            Observer tag used by AI to access camera transform.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#AI#Definitions#AIDebugConfigurationObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Set(System.Object,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Set(System.Byte@,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Set(Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder.TypeInfoHolder.AIDebugCameraObserverTagAccessor.Get(Keen.VRage.AI.Definitions.AIDebugConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Extensions.EngineBuilderExtensions">
+            <summary>
+            Allows adding the AI Engine Component to the <see cref="T:Keen.VRage.Core.EngineBuilder"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.IAI">
+            <summary>
+            Session-level AI instance.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IAI.InvalidateArea(Keen.VRage.Library.Mathematics.BoundingBoxD)">
+            <summary>
+            Invalidates an area which marks it for regeneration for whichever navigation structure is using it.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IAI.AddAgent(Keen.VRage.DCS.Accessors.DEntity)">
+            <summary>
+            Register entity as a new agent with the AI system
+            AIAgentTag will be added to this entity data
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IAI.RemoveAgent(Keen.VRage.DCS.Accessors.DEntity)">
+            <summary>
+            Unregister entity as an agent with the AI system
+            AIAgentTag will be removed from this entity data
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IAI.SetObstacle(Keen.VRage.DCS.Accessors.DEntity,System.Boolean)">
+            <summary>
+            Set whether or not this agent's bounds should be considered 
+            as an obstactable for other agents
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IAI.SetMovementType(Keen.VRage.DCS.Accessors.DEntity,Keen.VRage.AI.AIMovementType)">
+            <summary>
+            Change agent movement type (flying/grounded)
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IAI.MoveTo(Keen.VRage.DCS.Accessors.DEntity,Keen.VRage.Library.Mathematics.Vector3D)">
+            <summary>
+            Request the agent to move toward the target destination, 
+            or update its current move target if it already has one.
+            AIMoveRequest will be added to entity
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IAI.StopMove(Keen.VRage.DCS.Accessors.DEntity)">
+            <summary>
+            Stop/cancel a movement in progress
+            AIMoveRequest will be removed from entity
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.AIAgentTag">
+            <summary>
+            Mark an entity has a registered AI agent
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.AIMoveData">
+            <summary>
+            AI Agent movement/steering data to apply to this entity this frame
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.AI.AIMoveData.GoalPosition">
+            <summary>
+            The world position we're trying to reach
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.AI.AIMoveData.ForwardDir">
+            <summary>
+            Ideal facing direction (world space)
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.AI.AIMoveData.UpDir">
+            <summary>
+            Ideal up direction (world space)
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.AI.AIMoveData.Velocity">
+            <summary>
+            Ideal movement velocity to match (world space)
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.AIMovementType">
+            <summary>
+            Types of movements that AI supports
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.BeforeAIUpdate">
+            <summary>
+            Jobs that should run before AI middleware ticks
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.AIUpdateJobGroup">
+            <summary>
+            When the AI middleware should tick
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.AgentMovementProcessingJobGroup">
+            <summary>
+            Jobs that process agent movement data should run in this group
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.AIStubComponent">
+            <summary>
+            A stub implementation for IAI interface
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.IGeometryCollector">
+            <summary>
+            Interface for collecting geometry from the game.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IGeometryCollector.FillBoxGeometry(Keen.VRage.DCS.Accessors.DEntity,Keen.VRage.Library.Mathematics.BoundingBoxD,System.Collections.Generic.ICollection{Keen.VRage.Library.Mathematics.Vector3},Keen.VRage.Library.Mathematics.BoundingBox@)">
+            <summary>
+            Fill box geometry for a given entity
+            Returns the number of boxes filled, 
+            and the local bounds of the overall mesh formed by all the boxes
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.IVRageAI">
+            <summary>
+            Engine-level AI interface.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.IVRageAI.AddToSession(Keen.VRage.DCS.Builders.SceneBuilder@,Keen.VRage.DCS.Builders.EntityBuilder@,Keen.VRage.AI.AISceneSettings)">
+            <summary>
+            Adds necessary components to starting Session.
+            It is expected that created <see cref="T:Kyt.Entity"/> implements <see cref="T:Keen.VRage.AI.IVRageAI"/> feature after this call.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.VRageAIStubComponent">
+            <summary>
+            Stub implementation for IVRageAI interface
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen">
+            <summary>
+            Debug screen showing information about the current Kythera instance.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.VersionAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.StatusAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DebugDrawEnabledAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.GeneratingAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.MainOctreeAvailableAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Object,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Byte@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeSizeAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeCellSizeAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#AI#Kythera#KytheraSessionComponent#OctreeDebugDrawType}#Set(System.Object,Keen.VRage.AI.Kythera.KytheraSessionComponent.OctreeDebugDrawType@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#AI#Kythera#KytheraSessionComponent#OctreeDebugDrawType}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#AI#Kythera#KytheraSessionComponent#OctreeDebugDrawType}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#AI#Kythera#KytheraSessionComponent#OctreeDebugDrawType}#Set(System.Byte@,Keen.VRage.AI.Kythera.KytheraSessionComponent.OctreeDebugDrawType@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,Keen.VRage.AI.Kythera.KytheraSessionComponent.OctreeDebugDrawType@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.OctreeDebugDrawRangeAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Object,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Boolean}#Set(System.Byte@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,System.Boolean@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder.DrawInvalidatedAreasAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#AI#Kythera#KytheraSessionComponent}#Set(System.Object,Keen.VRage.AI.Kythera.KytheraSessionComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#AI#Kythera#KytheraSessionComponent}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#AI#Kythera#KytheraSessionComponent}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#AI#Kythera#KytheraSessionComponent}#Set(System.Byte@,Keen.VRage.AI.Kythera.KytheraSessionComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,Keen.VRage.AI.Kythera.KytheraSessionComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._kytheraSessionAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Core#Game#GameSystems#Observers#IObservers}#Set(System.Object,Keen.VRage.Core.Game.GameSystems.Observers.IObservers@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Core#Game#GameSystems#Observers#IObservers}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Core#Game#GameSystems#Observers#IObservers}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Core#Game#GameSystems#Observers#IObservers}#Set(System.Byte@,Keen.VRage.Core.Game.GameSystems.Observers.IObservers@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Set(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@,Keen.VRage.Core.Game.GameSystems.Observers.IObservers@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen.TypeInfoHolder._observersAccessor.Get(Keen.VRage.AI.Kythera.Debugging.KytheraDebugScreen@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration">
+            <summary>
+            Configuration for Kythera-related settings.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.BehaviorTreeFiles">
+            <summary>
+            Resource handles for all behavior trees that Kythera will load.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.DefaultOctree">
+            <summary>
+            Pregenerated octree that can be loaded at runtime via debug screen
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#AI#Kythera#Definitions#KytheraConfiguration}#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#AI#Kythera#Definitions#KytheraConfiguration}#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,System.Object@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#AI#Kythera#Definitions#KytheraConfiguration}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Immutable#ImmutableArray{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#BehaviorTreeAsset}}}#Set(System.Object,System.Collections.Immutable.ImmutableArray{Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.BehaviorTreeAsset}}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Immutable#ImmutableArray{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#BehaviorTreeAsset}}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Immutable#ImmutableArray{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#BehaviorTreeAsset}}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Immutable#ImmutableArray{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#BehaviorTreeAsset}}}#Set(System.Byte@,System.Collections.Immutable.ImmutableArray{Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.BehaviorTreeAsset}}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Set(Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration@,System.Collections.Immutable.ImmutableArray{Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.BehaviorTreeAsset}}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.BehaviorTreeFilesAccessor.Get(Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#OctreeAsset}}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.OctreeAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#OctreeAsset}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#OctreeAsset}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#OctreeAsset}}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.OctreeAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Set(Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.OctreeAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration.TypeInfoHolder.DefaultOctreeAccessor.Get(Keen.VRage.AI.Kythera.Definitions.KytheraConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration">
+            <summary>
+            Core Configuration for Kythera-related settings.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.NumberOfJobThreads">
+            <summary>
+            Number of job threads that Kythera will run with.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#AI#Kythera#Definitions#KytheraCoreConfiguration}#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#AI#Kythera#Definitions#KytheraCoreConfiguration}#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,System.Object@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#AI#Kythera#Definitions#KytheraCoreConfiguration}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Set(Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration.TypeInfoHolder.NumberOfJobThreadsAccessor.Get(Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.BehaviorTreeFiles">
+            <summary>
+            Resource handles for all behavior trees that Kythera will load.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.DefaultOctree">
+            <summary>
+            Pregenerated octree that can be loaded at runtime via debug screen
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#AI#Kythera#Definitions#KytheraConfigurationObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Collections#MergeableList{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#BehaviorTreeAsset}}}#Set(System.Object,Keen.VRage.Library.Collections.MergeableList{Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.BehaviorTreeAsset}}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Collections#MergeableList{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#BehaviorTreeAsset}}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Collections#MergeableList{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#BehaviorTreeAsset}}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Collections#MergeableList{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#BehaviorTreeAsset}}}#Set(System.Byte@,Keen.VRage.Library.Collections.MergeableList{Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.BehaviorTreeAsset}}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Set(Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Collections.MergeableList{Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.BehaviorTreeAsset}}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.BehaviorTreeFilesAccessor.Get(Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#OctreeAsset}}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.OctreeAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#OctreeAsset}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#OctreeAsset}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#AI#Kythera#Utils#OctreeAsset}}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.OctreeAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Set(Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.AI.Kythera.Utils.OctreeAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder.TypeInfoHolder.DefaultOctreeAccessor.Get(Keen.VRage.AI.Kythera.Definitions.KytheraConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.NumberOfJobThreads">
+            <summary>
+            Number of job threads that Kythera will run with.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#AI#Kythera#Definitions#KytheraCoreConfigurationObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Set(Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder.TypeInfoHolder.NumberOfJobThreadsAccessor.Get(Keen.VRage.AI.Kythera.Definitions.KytheraCoreConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.KytheraEngineComponentObjectBuilder">
+            <summary>
+            <see cref="T:Keen.VRage.AI.Kythera.KytheraEngineComponent"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.KytheraSessionComponentObjectBuilder">
+            <summary>
+            <see cref="T:Keen.VRage.AI.Kythera.KytheraSessionComponent"/>.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.KytheraSessionComponentObjectBuilder.StepFrequency">
+            <summary>
+            Step frequency in Hz.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.KytheraSessionComponentObjectBuilder.Kythera">
+            <summary>
+            Engine-level Kythera Component.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#AI#Kythera#OctreeManager#OctreeSaveData}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBoxD}#Set(System.Object,Keen.VRage.Library.Mathematics.BoundingBoxD@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBoxD}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBoxD}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBoxD}#Set(System.Byte@,Keen.VRage.Library.Mathematics.BoundingBoxD@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Set(Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,Keen.VRage.Library.Mathematics.BoundingBoxD@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.BoundingBoxAccessor.Get(Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Byte[]}#Set(System.Object,System.Byte[]@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Byte[]}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Byte[]}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Byte[]}#Set(System.Byte@,System.Byte[]@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Set(Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@,System.Byte[]@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData.TypeInfoHolder.OctreeDataAccessor.Get(Keen.VRage.AI.Kythera.OctreeManager.OctreeSaveData@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Utils.BehaviorTreeAsset">
+            <summary>
+            Asset for Kythera behavior trees
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Utils.BehaviorTreeAssetType">
+            <summary>
+            Asset type for Kythera behavior trees
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Utils.OctreeAsset">
+            <summary>
+            Asset for Kythera octrees
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.Utils.OctreeAssetType">
+            <summary>
+            Asset type for Kythera octrees
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AI.Kythera.VRageKythera">
+            <summary>
+            Kythera implementation of VRage AI.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AI.Kythera.VRageKythera.Create(System.Action{Keen.VRage.Library.Diagnostics.LogSeverity,System.String})">
+            <summary>
+            Bootstrap the AI engine's basic functions.
+            </summary>
+            <param name="customLogger"></param>
+        </member>
+        <member name="T:Keen.VRage.AI.VRageAI">
+            <summary>
+            Holder of a singleton instance of the AI subsystem.
+            </summary>
+            <remarks>The AI subsystem has to be initialized elsewhere (via registration to the <see cref="T:Keen.VRage.Library.Utils.SingletonManager"/>)
+            before it can be used here. <see cref="M:Keen.VRage.AI.Kythera.VRageKythera.Create(System.Action{Keen.VRage.Library.Diagnostics.LogSeverity,System.String})"/> does that automatically.</remarks>
+        </member>
+        <member name="P:Keen.VRage.AI.VRageAI.Instance">
+            <summary>
+            Shared instance of the physics engine implementation.
+            </summary>
+        </member>
+        <member name="T:Kyt.KytPos">
+            <summary>
+            Kythera = LHS
+             X = forward
+             Y = right
+             Z = up
+            SE2 uses RHS coord system with X/Y/Z right/up/forward (Z+ toward camera)
+            convert from SE2 to Kythera           => (-Z,  X,  Y)
+            convert from Kythera to SE2           => ( Y,  Z, -X) 
+            </summary>
+        </member>
+        <member name="T:Kyt.EBlackboardValueType">
+            <summary>////////////////////////////////////</summary>
+        </member>
+        <member name="M:Kyt.IAPI_KytheraDebugDraw.DrawCone(Kyt.KytPos,Kyt.KytVec3,System.Single,System.Single,Kyt.KytColor)">
+            <summary>/ Higher level primitives ////</summary>
+        </member>
+        <member name="M:Kyt.IAPI_KytheraDebugDrawInternal.DrawCone(Kyt.KytPos,Kyt.KytVec3,System.Single,System.Single,Kyt.KytColor)">
+            <summary>/ Higher level primitives ////</summary>
+        </member>
+        <member name="M:Kyt.CSharpNavigationExports.GetVertexAtIndex(Kyt.NavOctree.OctreeDebugDrawData,System.UInt32)">
+            <summary>
+            <para>currently there isn't an easy way to loop through an array where a pointer and</para>
+            <para>size are provided (as it is being done in Unreal and Lumberyard). We're providing</para>
+            <para>these functions for simple access to those cases in the Octree implementation.</para>
+            </summary>
+        </member>
+        <member name="T:Kyt.CharacterMotionController.SMotionGoal">
+            <summary>/ EXTERNAL INTERFACE ////</summary>
+        </member>
+        <member name="M:Kyt.CharacterMotionController.Init">
+            <summary>/ INTERNAL INTERFACE ////</summary>
+        </member>
+        <member name="M:Kyt.Nav3DPath.#ctor">
+            <summary>/ INTERNAL INTERFACE ////</summary>
+        </member>
+        <member name="M:Kyt.CSharpBTNode.InitNative(System.IntPtr)">
+            <summary>
+            Manually initialize the native instance. We allocate the node on the C++ side
+            in the BTArena and then use the returned pointer here to set up the node.
+            </summary>
+        </member>
+        <member name="T:Glm.Qualifier">
+            <summary>Qualify GLM types in term of alignment (packed, aligned) and precision in term of ULPs (lowp, mediump, highp)</summary>
+        </member>
+        <member name="F:Glm.Qualifier.PackedHighp">
+            <summary>Typed data is tightly packed in memory and operations are executed with high precision in term of ULPs</summary>
+        </member>
+        <member name="F:Glm.Qualifier.PackedMediump">
+            <summary>Typed data is tightly packed in memory  and operations are executed with medium precision in term of ULPs for higher performance</summary>
+        </member>
+        <member name="F:Glm.Qualifier.PackedLowp">
+            <summary>Typed data is tightly packed in memory  and operations are executed with low precision in term of ULPs to maximize performance</summary>
+        </member>
+        <member name="F:Glm.Qualifier.AlignedHighp">
+            <summary>Typed data is aligned in memory allowing SIMD optimizations and operations are executed with high precision in term of ULPs</summary>
+        </member>
+        <member name="F:Glm.Qualifier.AlignedMediump">
+            <summary>Typed data is aligned in memory allowing SIMD optimizations and operations are executed with high precision in term of ULPs for higher performance</summary>
+        </member>
+        <member name="F:Glm.Qualifier.Aligned">
+            <summary>By default aligned qualifier is also high precision</summary>
+        </member>
+        <member name="F:Glm.Qualifier.Highp">
+            <summary>By default highp qualifier is also packed</summary>
+        </member>
+        <member name="F:Glm.Qualifier.Mediump">
+            <summary>By default mediump qualifier is also packed</summary>
+        </member>
+        <member name="F:Glm.Qualifier.Lowp">
+            <summary>By default lowp qualifier is also packed</summary>
+        </member>
+        <member name="F:Glm.Qualifier.Packed">
+            <summary>By default packed qualifier is also high precision</summary>
+        </member>
+        <member name="M:Glm.common.FloatBitsToInt(System.Single)">
+            <summary>
+            <para>Returns a signed integer value representing</para>
+            <para>the encoding of a floating-point value. The floating-point</para>
+            <para>value's bit-level representation is preserved.</para>
+            </summary>
+            <remarks>
+            <para>GLSL floatBitsToInt man page</para>
+            <para>GLSL 4.20.8 specification, section 8.3 Common Functions</para>
+            </remarks>
+        </member>
+        <member name="M:Glm.common.FloatBitsToUint(System.Single)">
+            <summary>
+            <para>Returns a unsigned integer value representing</para>
+            <para>the encoding of a floating-point value. The floatingpoint</para>
+            <para>value's bit-level representation is preserved.</para>
+            </summary>
+            <remarks>
+            <para>GLSL floatBitsToUint man page</para>
+            <para>GLSL 4.20.8 specification, section 8.3 Common Functions</para>
+            </remarks>
+        </member>
+        <member name="M:Glm.common.IntBitsToFloat(System.Int32)">
+            <summary>
+            <para>Returns a floating-point value corresponding to a signed</para>
+            <para>integer encoding of a floating-point value.</para>
+            <para>If an inf or NaN is passed in, it will not signal, and the</para>
+            <para>resulting floating point value is unspecified. Otherwise,</para>
+            <para>the bit-level representation is preserved.</para>
+            </summary>
+            <remarks>
+            <para>GLSL intBitsToFloat man page</para>
+            <para>GLSL 4.20.8 specification, section 8.3 Common Functions</para>
+            </remarks>
+        </member>
+        <member name="M:Glm.common.UintBitsToFloat(System.UInt32)">
+            <summary>
+            <para>Returns a floating-point value corresponding to a</para>
+            <para>unsigned integer encoding of a floating-point value.</para>
+            <para>If an inf or NaN is passed in, it will not signal, and the</para>
+            <para>resulting floating point value is unspecified. Otherwise,</para>
+            <para>the bit-level representation is preserved.</para>
+            </summary>
+            <remarks>
+            <para>GLSL uintBitsToFloat man page</para>
+            <para>GLSL 4.20.8 specification, section 8.3 Common Functions</para>
+            </remarks>
+        </member>
+        <member name="M:Glm.func_common.FloatBitsToInt1(System.Single)">
+            <summary>
+            <para>Returns a signed integer value representing</para>
+            <para>the encoding of a floating-point value. The floating-point</para>
+            <para>value's bit-level representation is preserved.</para>
+            </summary>
+            <remarks>
+            <para>GLSL floatBitsToInt man page</para>
+            <para>GLSL 4.20.8 specification, section 8.3 Common Functions</para>
+            </remarks>
+        </member>
+        <member name="M:Glm.func_common.FloatBitsToUint1(System.Single)">
+            <summary>
+            <para>Returns a unsigned integer value representing</para>
+            <para>the encoding of a floating-point value. The floatingpoint</para>
+            <para>value's bit-level representation is preserved.</para>
+            </summary>
+            <remarks>
+            <para>GLSL floatBitsToUint man page</para>
+            <para>GLSL 4.20.8 specification, section 8.3 Common Functions</para>
+            </remarks>
+        </member>
+        <member name="M:Glm.func_common.IntBitsToFloat1(System.Int32)">
+            <summary>
+            <para>Returns a floating-point value corresponding to a signed</para>
+            <para>integer encoding of a floating-point value.</para>
+            <para>If an inf or NaN is passed in, it will not signal, and the</para>
+            <para>resulting floating point value is unspecified. Otherwise,</para>
+            <para>the bit-level representation is preserved.</para>
+            </summary>
+            <remarks>
+            <para>GLSL intBitsToFloat man page</para>
+            <para>GLSL 4.20.8 specification, section 8.3 Common Functions</para>
+            </remarks>
+        </member>
+        <member name="M:Glm.func_common.UintBitsToFloat1(System.UInt32)">
+            <summary>
+            <para>Returns a floating-point value corresponding to a</para>
+            <para>unsigned integer encoding of a floating-point value.</para>
+            <para>If an inf or NaN is passed in, it will not signal, and the</para>
+            <para>resulting floating point value is unspecified. Otherwise,</para>
+            <para>the bit-level representation is preserved.</para>
+            </summary>
+            <remarks>
+            <para>GLSL uintBitsToFloat man page</para>
+            <para>GLSL 4.20.8 specification, section 8.3 Common Functions</para>
+            </remarks>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

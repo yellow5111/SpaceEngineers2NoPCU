@@ -1,0 +1,646 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.CodeAnalysis</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.CodeAnalysis.AttributeInfo">
+            <summary>
+            Holds information about an attribute placed on a symbol.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.AttributeMap">
+            <summary>
+            Identifies the metadata attribute should be mapped to the annotated internal attribute.
+            </summary>
+            <remarks>
+            This is used when an application attribute has <see cref="T:System.Type" /> references, we must provide an alternative
+            implementation of the attribute with <see cref="T:Microsoft.CodeAnalysis.ITypeSymbol" /> instead.
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.AttributeMap.#ctor(System.Type)">
+            <summary>
+            Identifies the annotated types as being a proxy for <paramref name="metadataAttributeType" />.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.CommonFormats">
+            <summary>
+            <see cref="T:Microsoft.CodeAnalysis.SymbolDisplayFormat"/>s commonly used for symbols.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.CommonFormats.Declaration">
+            <summary>
+            The <see cref="T:Microsoft.CodeAnalysis.SymbolDisplayFormat"/> that returns type name as it appears in its declaration.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.CommonFormats.NameOnly">
+            <summary>
+            The <see cref="T:Microsoft.CodeAnalysis.SymbolDisplayFormat"/> that returns only type's name (without type arguments).
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.CommonFormats.FullFormat">
+            <summary>
+            The <see cref="T:Microsoft.CodeAnalysis.SymbolDisplayFormat"/> that returns full type name without nullable reference type modifiers.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.CommonFormats.FullNullableFormat">
+            <summary>
+            The <see cref="T:Microsoft.CodeAnalysis.SymbolDisplayFormat"/> that returns full type name including nullable reference type modifiers.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext">
+            <summary>
+            Represents an initialization context used by custom source generators that is passed to <see cref="M:Keen.VRage.CodeAnalysis.ICustomGenerator.Initialize(Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext)"/>.
+            </summary>
+            <remarks>
+            Acts as a wrapper for <see cref="T:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext"/> but also allows outputs of one generator
+            to flow into the other.
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext.CreateSyntaxProvider``1(System.Type,System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean},System.Func{Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SemanticModel,System.Threading.CancellationToken,``0})">
+            <summary>
+            Creates an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1"/> that can provide a transform over <see cref="T:Microsoft.CodeAnalysis.SyntaxNode"/>s
+            </summary>
+            <remarks>
+            This will also contain other generators' output if it is relevant to this generator.
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext.RegisterPostInitializationOutput(System.Action{Microsoft.CodeAnalysis.IncrementalGeneratorPostInitializationContext})">
+            <summary>
+            Allows a generator to provide source code immediately after initialization has run.
+            </summary>
+            <remarks>
+            It takes no inputs, and so cannot refer to any source code written by the user, or any other compiler inputs.
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext.RegisterSourceOutput``1(Microsoft.CodeAnalysis.IncrementalValueProvider{``0},System.Action{Keen.VRage.CodeAnalysis.CustomSourceProductionContext,``0},System.Type,Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind)">
+            <summary>
+            Allows a generator to produce source files and diagnostics that will be included in the user's compilation.
+            </summary>
+            <param name="provider"></param>
+            <param name="action"></param>
+            <param name="generatorType"> The type of the generator that registers this output. If no generators will depend on it, the type can be omitted. </param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext.RegisterSourceOutput``1(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Action{Keen.VRage.CodeAnalysis.CustomSourceProductionContext,``0},System.Type,Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind)">
+            <summary>
+            Allows a generator to produce source files and diagnostics that will be included in the user's compilation.
+            </summary>
+            <param name="provider"></param>
+            <param name="action"></param>
+            <param name="generatorType"> The type of the generator that registers this output. If no generators will depend on it, the type can be omitted. </param>
+            <param name="kind"></param>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.CustomSourceProductionContext">
+            <summary>
+            Represents a context used by <see cref="T:Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext"/> to collect output source and diagnostics.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.CustomSourceProductionContext.AddSource(Keen.VRage.CodeAnalysis.SourceOutput)">
+            <summary>
+            Adds source code in the form of a <see cref="T:Keen.VRage.CodeAnalysis.SourceOutput"/> to the compilation.
+            It may also be visible by other generators.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.CustomSourceProductionContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)">
+            <summary>
+            Adds a <see cref="T:Microsoft.CodeAnalysis.Diagnostic"/> to the user's compilation.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Diagnostics.GenerationException">
+            <summary>
+            Base class for exceptions produced by source generators.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Diagnostics.GenerationException.CreateDiagnostic">
+            <summary>
+            Get the diagnostic descriptor that matches this exception.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Diagnostics.GeneratorDiagnostics">
+            <summary>
+            Diagnostic messages for source generators.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Diagnostics.MetadataException">
+            <summary>
+            Generation exception caused by metadata issues.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.NameExtensions.GetFullNameComponents(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax@,Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax[]@)">
+            <summary>
+            Get all of the components of a class' full name.
+            </summary>
+            <remarks>
+            The first component is always the namespace, even if empty;
+            The last component is the actual class name;
+            The remaining components are the names of other types the class is nested inside.
+            </remarks>
+            <param name="class"></param>
+            <param name="namespace">The namespace syntax that encloses the top most type in the nesting hierarchy.</param>
+            <param name="enclosingTypes">The list of types enclosing the class declaration syntax. Types are ordered from outermost to innermost.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.IsSameName``1(Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)">
+            <summary>
+            Whether the current type has the same <see cref="P:System.Type.FullName"/> as <typeparamref name="T"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.IsSameName(Microsoft.CodeAnalysis.ITypeSymbol,Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName,System.Boolean)">
+            <summary>
+            Whether the current type has the same <see cref="P:System.Type.FullName"/> as <paramref name="type"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.IsSameName(Microsoft.CodeAnalysis.ITypeSymbol,System.Type,System.Boolean)">
+            <summary>
+            Whether the current type has the same <see cref="P:System.Type.FullName"/> as <paramref name="type"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.IsSameName(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)">
+            <summary>
+            Whether the current type has the same <see cref="P:System.Type.FullName"/> as <paramref name="other"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.GetCompatibleNameHashCode(System.Type)">
+            <summary>
+            Calculate the hash code of a type in the same manner as <see cref="T:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.TryGetGenericInterfaceImplementation(Microsoft.CodeAnalysis.ITypeSymbol,System.Type,Microsoft.CodeAnalysis.INamedTypeSymbol@)">
+            <summary>
+            Get the concrete implementation of a generic interface.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.GetTypeArgument(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.ITypeParameterSymbol)">
+            <summary>
+            Get the type argument from a constructed generic symbol that matches the provided type <paramref name="parameter"/> from it's original definition.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.GetFields(Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean,System.Boolean)">
+            <summary>
+            Get all members of a type that are fields.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.GetProperties(Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean,System.Boolean)">
+            <summary>
+            Get all members of a type that are properties.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.GetField(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String,System.Boolean)">
+            <summary>
+            Get a field by name from a type declaration, optionally also searching it's base types.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String,System.Boolean)">
+            <summary>
+            Get a field by name from a type declaration, optionally also searching it's base types.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.IsAccessible(Microsoft.CodeAnalysis.ITypeSymbol)">
+            <summary>
+            Whether the type symbol can be accessed from the same assembly.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SymbolExtensions.IsNumeric(Microsoft.CodeAnalysis.ITypeSymbol)">
+            <summary>
+            Whether the type symbol is numeric.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SyntaxExtensions.CanAddPart(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)">
+            <summary>
+            Whether a new part can be added to the type. 
+            </summary>
+            <remarks>A part can be added if both the type and all enclosing types are partial.</remarks>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SyntaxExtensions.FindAbove``1(Microsoft.CodeAnalysis.SyntaxNode,System.Boolean)">
+            <summary>
+            Search up the node tree for a node of the specified type.
+            </summary>
+            <param name="node"></param>
+            <param name="includeSelf">Whether to also check the current node.</param>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Extensions.SyntaxTreeExtensions.EnumerateTypes(Microsoft.CodeAnalysis.SyntaxTree)">
+            <inheritdoc cref="T:Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax"/>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.ICustomGenerator">
+            <summary>
+            Represents a custom incremental generator.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.ICustomGenerator.AffectedGenerators">
+            <summary>
+            The set of generators that are affected by the output of this generator, i.e. should consume it.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.ICustomGenerator.Initialize(Keen.VRage.CodeAnalysis.CustomGeneratorInitializationContext)">
+            <summary>
+            Called to initialize the generator and register generation steps via callbacks
+            on the <paramref name="context"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.IIncrementalPolymorphicTypeCollector`1">
+            <summary>
+            Allows to collect information about types marked with the specified <typeparamref name="TAttribute"/> or an attribute derived from it.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.IIncrementalPolymorphicTypeCollector`1.ProcessTypes(Microsoft.CodeAnalysis.IncrementalValuesProvider{System.ValueTuple{Microsoft.CodeAnalysis.AttributeData,Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax,Microsoft.CodeAnalysis.SemanticModel}}@)">
+            <summary>
+            Process all <see cref="T:Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax"/> nodes that are marked with <typeparamref name="TAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.IIncrementalTypeCollector`1">
+            <summary>
+            Allows to collect information about types marked with the specified <typeparamref name="TAttribute"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.IIncrementalTypeCollector`1.ProcessTypes(Microsoft.CodeAnalysis.IncrementalValuesProvider{System.ValueTuple{`0,Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax,Microsoft.CodeAnalysis.SemanticModel}}@)">
+            <summary>
+            Process all <see cref="T:Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax"/> nodes that are marked with <typeparamref name="TAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.ImmutableArrayEqualityComparer`1">
+            <summary>
+            <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> used to compare immutable array's content by element.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.LoadedAssemblyIndexer">
+            <summary>
+            Indexes all assemblies loaded into <see cref="P:System.AppDomain.CurrentDomain"/> by name.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.ModuleIncrementalGeneratorsAttribute">
+            <summary>
+            Lists custom incremental generators provided by a module.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.ImportHelper">
+            <summary>
+            Extensions for nesting pages together.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.Page">
+            <summary>
+            Base class that all razor pages should inherit.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.Page`1">
+            <inheritdoc cref="T:Keen.VRage.CodeAnalysis.Razor.Page" />
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.PageManager">
+            <summary>
+            Class responsible for indexing, creating and rendering <see cref="T:Keen.VRage.CodeAnalysis.Razor.Page`1"/>s.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.PageManager.CreatePage``1(``0)">
+            <summary>
+            Create a page instance from it's model.
+            </summary>
+            <remarks>
+            <para>Pages are generated in internal, hidden classes, we then identify each page by a unique model type. All pages must derive from
+            <see cref="T:Keen.VRage.CodeAnalysis.Razor.Page`1"/> where TModel is their model type.</para>
+            <para>Much like in VRage.UI we enforce page isolation here, the page class should not be interacted with directly, instead all information it
+            needs should come through the model.</para></remarks>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.PageManager.Render(Keen.VRage.CodeAnalysis.Razor.Page,System.IO.TextWriter)">
+            <summary>
+            Render a page to a user provided <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.PageManager.Render(Keen.VRage.CodeAnalysis.Razor.Page)">
+            <summary>
+            Render a page to a <c>string</c>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.PageRenderingContext.PushIndent(System.String)">
+            <summary>Increase the indent</summary>
+            <param name="indent">indent string</param>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.PageRenderingContext.PopIndent">
+            <summary>Remove the last indent that was added with PushIndent</summary>
+            <returns>The removed indent string</returns>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.PageRenderingContext.ClearIndent">
+            <summary>Remove any indentation</summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.Razor.Pages.FileModel.BodyModel">
+            <summary>
+            Model for the page that contains the main body of the file.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.RenderingExtensions">
+            <summary>
+            Extensions to help with page rendering.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.SourceWriter">
+            <summary>
+            Writer of source text.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.CodeAnalysis.Razor.SourceWriter._mAtLineEnd">
+            <summary>Whether the current writer stands at a line ending.</summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.SourceWriter.PushIndent(System.String)">
+            <summary>Increase the indent</summary>
+            <param name="indent">indent string</param>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.SourceWriter.PopIndent">
+            <summary>Remove the last indent that was added with PushIndent</summary>
+            <returns>The removed indent string</returns>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.SourceWriter.ClearIndent">
+            <summary>Remove any indentation</summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.Templates.RazorFileTemplate">
+            <summary>
+            Base template for all razor pages that represents a single source file.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.Templates.RazorFileTemplate.UsingSortOrderComparer.Compare(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.Templates.RazorSiblingTypeTemplate">
+            <summary>
+            A template used to add another type next to an already existing one.
+            </summary>
+            <remarks>
+            They would have the same namespace and same containing type (if any).
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Razor.Templates.RazorTypePartTemplate">
+            <summary>
+            A template used to add part to an existing type.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Razor.Templates.RazorTypePartTemplate.CollectPartialTypeTree(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.INamedTypeSymbol@)">
+            <summary>
+            Collect the partial type tree of a given symbol.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.SourceOutput">
+            <summary>
+            Represents a source output.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.SourceOutput.HintName">
+            <summary>
+            The unique name of this output.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.SourceOutput.Source">
+            <summary>
+            The source code of this output.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Templates.FileTemplate.UsingSortOrderComparer.Compare(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Templates.PartialType.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Templates.TemplateLoadException.#ctor(Scriban.Template)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Templates.TemplateManager">
+            <summary>
+            Manager and cache for Scriban templates.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Templates.TemplateManager.Context.GetMemberAccessorImpl(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.CodeAnalysis.Templates.TypePartTemplate.Interfaces">
+            <summary>
+            Interfaces for the most nested type.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.CodeAnalysis.Templates.TypePartTemplate.Attributes">
+            <summary>
+            Interfaces for the most nested type.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Templates.TypePartTemplate.CollectPartialTypeTree(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.INamedTypeSymbol@)">
+            <summary>
+            Collect the partial type tree of a given symbol.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.TypeCollectorProviderEqualityComparer`1">
+            <summary>
+            <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> that can be used for <see cref="M:Keen.VRage.CodeAnalysis.IIncrementalTypeCollector`1.ProcessTypes(Microsoft.CodeAnalysis.IncrementalValuesProvider{System.ValueTuple{`0,Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax,Microsoft.CodeAnalysis.SemanticModel}}@)"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.TypeCollectorProviderEqualityComparer">
+            <summary>
+            <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> that can be used for <see cref="M:Keen.VRage.CodeAnalysis.IIncrementalPolymorphicTypeCollector`1.ProcessTypes(Microsoft.CodeAnalysis.IncrementalValuesProvider{System.ValueTuple{Microsoft.CodeAnalysis.AttributeData,Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax,Microsoft.CodeAnalysis.SemanticModel}}@)"/>.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.TypeDeclarationWithModelEqualityComparer">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Utils.Hash">
+            <summary>
+            Hashing utilities.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.Hash.Combine(System.Int32,System.Int32)">
+            <summary>
+            Combine two hashes.
+            </summary>
+            Stolen from Roslyn (Roslyn.Utilities.Hash)
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.Hash.ComputeHash32(System.ReadOnlySpan{System.Char})">
+            <summary>
+            Compute a Marvin hash and collapse it into a 32-bit hash.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.Hash.ComputeHash32(System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Compute a Marvin hash and collapse it into a 32-bit hash.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.Hash.ComputeHash32(System.ReadOnlySpan{System.Byte},System.UInt64)">
+            <summary>
+            Compute a Marvin hash and collapse it into a 32-bit hash.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.Hash.ComputeHash32(System.Byte@,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Compute a Marvin hash and collapse it into a 32-bit hash.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Utils.NameResolutionSyntaxRewriter">
+            <summary>
+            A syntax rewriter used to replace syntax nodes with <see cref="T:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax"/> ones to avoid unresolved type/member names.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName">
+            <summary>
+            Parsed qualified type name that's fast to compare for equality with symbols.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.FullName">
+            <summary>
+            Full metadata name of the type.
+            </summary>
+            <remarks>This notably does not include type arguments, to compare vs a runtime type use <see cref="M:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.IsSameName(System.Type)"/>.</remarks>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.ContainingType">
+            <summary>
+            Type that contains this instance.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.ElementType">
+            <summary>
+            Element type for arrays or pointers.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.#ctor(Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName,System.Int32)">
+            <summary>
+            Constructor for declaring arrays
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.#ctor(Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName)">
+            <summary>
+            Constructor for declaring pointers.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.#ctor(System.String,System.Collections.Immutable.ImmutableArray{Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName})">
+            <summary>
+            Constructor for named types.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.FromType(System.Type)">
+            <summary>
+            Create a <see cref="T:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName"/> from a <see cref="T:System.Type"/>.
+            </summary>
+            <remarks>This method supports generic, array, and pointer types.</remarks>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName.FromName(System.String)">
+            <summary>
+            Create a <see cref="T:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName"/> from a full metadata name (without assembly).
+            </summary>
+            <remarks>This method only supports named types that are not constructed generic types.</remarks>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.SourceOutputUtils.GeneratedSymbolName(Microsoft.CodeAnalysis.INamedTypeSymbol)">
+            <summary>
+            Generate a unique symbol name that can be used as HintPath in source generators, contains symbol hash as well as its name
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Utils.SymbolNameComparer">
+            <summary>
+            Allows the comparison of two <see cref="T:Microsoft.CodeAnalysis.ISymbol"/> instances based on their name.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.SymbolNameComparer.Equals(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.SymbolNameComparer.GetHashCode(Microsoft.CodeAnalysis.ISymbol)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Utils.TypeComparison">
+            <summary>
+            Implementations for equality and hash code for <see cref="T:Microsoft.CodeAnalysis.ITypeSymbol"/>, <see cref="T:System.Type"/>, and <see cref="T:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName"/>.
+            </summary>
+            <remarks>
+            These types are all used interchangeably in the generators, so they must compare for equality with each other and most importantly have the same
+            hash code.
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Utils.TypeNameKind">
+            <summary>
+            Different kinds of types according to how their names shows up in metadata.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Utils.TypeSymbolNameComparer">
+            <summary>
+            Allows the comparison of two <see cref="T:Microsoft.CodeAnalysis.ISymbol"/> instances based on their name.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.TypeSymbolNameComparer.Equals(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.CodeAnalysis.Utils.TypeSymbolNameComparer.GetHashCode(Microsoft.CodeAnalysis.ITypeSymbol)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.CodeAnalysis.Utils.UniversalTypeName">
+            <summary>
+            Struct that allows instances of <see cref="T:Microsoft.CodeAnalysis.ITypeSymbol"/>, <see cref="T:System.Type"/>, or <see cref="T:Keen.VRage.CodeAnalysis.Utils.QualifiedTypeName"/> to all be used
+            interchangeably as a key in a dictionary or element in a set. 
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+            Reserved to be used by the compiler for tracking metadata.
+            This class should not be used by developers in source code.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.KeyValuePair.Create``2(``0,``1)">
+            Creates a new <see cref="T:System.Collections.Generic.KeyValuePair`2"/> from the given values.
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute">
+            <summary>Specifies that null is allowed as an input even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute">
+            <summary>Specifies that null is disallowed as an input even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute">
+            <summary>Specifies that an output may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute">
+            <summary>Specifies that an output will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"/>, the parameter may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter may be null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute">
+            <summary>Specifies that the output will be non-null if the named parameter is non-null.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName">
+            <summary>Gets the associated parameter name.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)">
+            <summary>Initializes the attribute with the associated parameter name.</summary>
+            <param name="parameterName">
+            The associated parameter name.  The output will be non-null if the argument to the parameter specified is non-null.
+            </param>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute">
+            <summary>Applied to a method that will never return under any circumstance.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute">
+            <summary>Specifies that the method will not return if the associated Boolean parameter is passed the specified value.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue">
+            <summary>Gets the condition parameter value.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified parameter value.</summary>
+            <param name="parameterValue">
+            The condition parameter value. Code after the method will be considered unreachable by diagnostics if the argument to
+            the associated parameter matches this value.
+            </param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1394 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.Animations</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.Editor.AnimationControllerAssetInterface">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedStateGraph}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedState}}#Set(System.Object,System.Collections.Generic.List{Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedState}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedState}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedState}}#Set(System.Byte@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.StatesAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedParameter}}#Set(System.Object,System.Collections.Generic.List{Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedParameter}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedParameter}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Collections#Generic#List{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedParameter}}#Set(System.Byte@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,System.Collections.Generic.List{Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ParametersAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Object,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Byte@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationXAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Object,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Byte@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortLocationYAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Object,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Byte@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph.TypeInfoHolder.ViewPortZoomAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedTransition}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Object,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Byte@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.SourceStateIdAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Object,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Byte@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.TargetStateIdAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Object,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Byte@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition.TypeInfoHolder.IdAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedTransition@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedState}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Object,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Byte@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationXAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Object,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Double}#Set(System.Byte@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.LocationYAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Object,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Byte@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState.TypeInfoHolder.IdAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedState@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedParameter}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.NameAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Type}#Set(System.Object,System.Type@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Type}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Type}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Type}#Set(System.Byte@,System.Type@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,System.Type@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.TypeAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Object,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Guid}#Set(System.Byte@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@,System.Guid@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter.TypeInfoHolder.IdAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedParameter@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#Animations#StateGraph#StateGraphMetadata}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedStateGraph}#Set(System.Object,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedStateGraph}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedStateGraph}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#Animations#StateGraph#SerializedStateGraph}#Set(System.Byte@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Set(Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@,Keen.VRage.ContentPipeline.Animations.StateGraph.SerializedStateGraph@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata.TypeInfoHolder.StateGraphAccessor.Get(Keen.VRage.ContentPipeline.Animations.StateGraph.StateGraphMetadata@)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

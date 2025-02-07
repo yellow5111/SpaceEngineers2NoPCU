@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "fChTfz0dK5s=",
+  "success": true,
+  "projectFilePath": "H:\\C# Projects\\SpaceEngineers2NoPCU\\SpaceEngineers2NoPCU\\SpaceEngineers2NoPCU.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amabry\\.nuget\\packages\\ilrepack\\2.0.37\\ilrepack.2.0.37.nupkg.sha512",
+    "C:\\Users\\amabry\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512",
+    "C:\\Users\\amabry\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\amabry\\.nuget\\packages\\system.text.json\\8.0.1\\system.text.json.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,1038 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.ArmorBlockSide</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Translation">
+            <summary>
+            The translation of the ArmorBlockSide mesh
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Rotation">
+            <summary>
+            The rotation of the ArmorBlockSide mesh in degrees
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Scale">
+            <summary>
+            Scale
+            </summary>    
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.MaterialVariant">
+            <summary>
+            Specifies which skin variant should be used by the side. Use for non repeating patterns.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.LockedUVs">
+            <summary>    
+            Specifies locked texture coordinates to disable procedural texture mapping.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#ContentPipeline#ArmorBlockSide#ArmorBlockSideAssetModel}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Set(System.Object,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#ContentPipeline#EditorResourceHandle{Keen#VRage#ContentPipeline#ModelsBase#FBXAsset}}#Set(System.Byte@,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.ContentPipeline.EditorResourceHandle{Keen.VRage.ContentPipeline.ModelsBase.FBXAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ModelAssetAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.TranslationAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.RotationAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder._scaleAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.ScaleAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Object,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#String}#Set(System.Byte@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,System.String@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.MaterialVariantAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Data#TextureCoordinateLock}#Set(System.Object,Keen.VRage.Render.Data.TextureCoordinateLock@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Data#TextureCoordinateLock}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Data#TextureCoordinateLock}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Data#TextureCoordinateLock}#Set(System.Byte@,Keen.VRage.Render.Data.TextureCoordinateLock@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Set(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@,Keen.VRage.Render.Data.TextureCoordinateLock@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel.TypeInfoHolder.LockedUVsAccessor.Get(Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideAssetModel@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideGenerator">
+            <summary>
+            ArmorBlockSideGenerator serves to process meshes into <see cref="N:Keen.VRage.ContentPipeline.ArmorBlockSide"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideMeshLoader">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorSideLoadResult">
+            <seealso cref="M:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideMeshLoader.TryLoad(System.String,Keen.VRage.Library.Mathematics.Vector3,Keen.VRage.Library.Mathematics.Vector3,System.Single)"/>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorBlockSideProcessor">
+            <summary>
+            Processes exported models into a armor block side
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.ArmorProcessingConstants">
+            <summary>
+            Constants for the mesh processing of armors. They are valid for processing meshes with unit equal to meter
+            and meshes sizes ranging from cm to km. 
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.Editor.ArmorBlockSideAssetInterface">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.ControlPoints">
+            <summary>
+            Control points class serves to construct control cage from a mesh. The control points are used in <see cref="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext.OptimizeBorder(g4.DMesh3,Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.ControlPoints,System.Double)"/>
+            where the vertices on same position as control points are not moved.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext">
+            <summary>
+            Extends DMesh with geometrical operations and measuring helper functions 
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext.Round(g4.DMesh3,System.Double)">
+            <summary>
+            Round up mesh vertices to the step multiples
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext.ProjectParams(g4.DMesh3,g4.DMesh3,System.Double)">
+            <summary>
+            Reprojects parameters of the vertices like normal and texture coordinates from the control mesh.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext.OptimizeBorder(g4.DMesh3,Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.ControlPoints,System.Double)">
+            <summary>
+            Performs triangle reduction on a mesh boundary. If control points are used, the vertices on same position
+            as control points are maintained.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext.CutStable(g4.DMesh3,g4.Plane3d,System.Double)">
+            <summary>
+            Cuts the mesh in stable integer fashion.
+            Vertices are converted to the integer positions using quantization step.  
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext.CutStableVolume(g4.DMesh3,g4.Plane3d,System.Double,System.Double)">
+            <summary>
+            Cuts the watertight mesh in stable integer fashion and fills resulting holes. Only axis aligned cut planes are supported.
+            </summary>
+            <param name="mesh">Mesh to cut</param>
+            <param name="plane">Cutting plane, the vertices on the negative side of the plane are kept.</param>
+            <param name="quantizationStep">Quantization step used to convert double positions to integer representation. </param>
+            <param name="emptyVolumeThreshold">If the mesh has bounds volume smaller than the threshold, the mesh is cleared</param>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext.FillPlanarHole(g4.DMesh3,g4.Plane3d,System.Boolean)">
+            <summary>
+            Fills the mesh hole in 2D space.
+            Support only single boundary loop. Otherwise returns false.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.DMesh3Ext.IsCuboid(g4.DMesh3,System.Double,System.Double)">
+            <summary>
+            Detects whether the mesh is a cuboid with some defined tolerance.
+            Does not support meshes with overlapping triangles, such meshes may produce false positive.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.G4Conversions">
+            <summary>
+            Conversions of common struct between Geometry4Sharp and VRAGE
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.MeshConversions">
+            <summary>
+            Conversions of mesh representations between g4 library and internal formats
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.MeshOperations">
+            <summary>
+            Implements splitting and merging mesh operations used for armor side mesh subdivision
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.PointUtils">
+            <summary>
+            Utility class for saving points to a file for debugging purposes.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.Triangulation2D">
+            <summary>
+            Class provide triangulation algorithm for 2D polygons.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.Triangulation2D.FillPolygon(System.ReadOnlySpan{Keen.VRage.Library.Mathematics.Vector2D},System.Boolean)">
+            <summary>
+            Fills a polygon using ear clipping algorithm. Polygon can be non-convex, but can't have crossing edges.
+            The inner holes are not supported.
+            </summary>
+            <param name="polygon">Set of clockwise or counter clockwise ordered points forming a one polygon.</param>
+            <param name="counterClockwise">If true the order of points in polygon is expected to be counterclockwise,
+            if false the order is expected to be clockwise.</param>
+            <returns>Collection of the triplets of point indices (triangles).</returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ArmorBlockSide.Utils.Triangulation2D.RemoveInvalidPolygonEars(System.ReadOnlySpan{Keen.VRage.Library.Mathematics.Vector2D},Keen.VRage.Library.Memory.BufferReference{System.Int32})">
+            <summary>
+            Removes parts of the polygon which are thin enough to cause precision issues.
+            </summary>
+        </member>
+        <member name="T:ArmorBlockSideProcessorParameters">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.Translation">
+            <summary>    
+            The translation of the ArmorBlockSide mesh
+            </summary>
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.Rotation">
+            <summary>
+            The rotation of the ArmorBlockSide mesh in degrees
+            </summary>
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.Scale">
+            <summary>
+            Scale
+            </summary>    
+        </member>
+        <member name="T:ArmorBlockSideProcessorParameters.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:ArmorBlockSideProcessorParameters.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.Keen#VRage#Library#Serialization#ISerializable{ArmorBlockSideProcessorParameters}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:ArmorBlockSideProcessorParameters.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:ArmorBlockSideProcessorParameters.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:ArmorBlockSideProcessorParameters.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Set(ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.TranslationAccessor.Get(ArmorBlockSideProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Set(ArmorBlockSideProcessorParameters@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.RotationAccessor.Get(ArmorBlockSideProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Set(ArmorBlockSideProcessorParameters@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder._scaleAccessor.Get(ArmorBlockSideProcessorParameters@)">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Set(ArmorBlockSideProcessorParameters@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ArmorBlockSideProcessorParameters.TypeInfoHolder.ScaleAccessor.Get(ArmorBlockSideProcessorParameters@)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

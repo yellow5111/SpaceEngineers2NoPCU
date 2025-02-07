@@ -1,0 +1,782 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.Scripting</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.Scripting.Analyzers.AllowedSymbolsText">
+            <summary>
+            <see cref="T:Microsoft.CodeAnalysis.AdditionalText"/> for AllowedSymbols.txt file used by <see cref="T:Keen.VRage.Scripting.Analyzers.WhitelistDiagnosticAnalyzer"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Analyzers.AnalyzerDescriptor">
+            <summary>
+            Contains analyzer information for compilation, i.e. diagnostic analyzers, source generators, and analyzer options
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Analyzers.AnalyzerDescriptor.Builder">
+            <summary>
+            Builder for <see cref="T:Keen.VRage.Scripting.Analyzers.AnalyzerDescriptor"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Analyzers.ScriptAnalyzerOptions">
+            <summary>
+            <see cref="T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions"/> used for scripting
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Analyzers.ScriptAnalyzerOptionsProvider">
+            <summary>
+            <see cref="T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider"/> used for scripting
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Analyzers.UnsafeCodeDiagnosticAnalyzer">
+            <summary>
+            Diagnostic analyzer for reporting unsafe code in scripts
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Analyzers.WhitelistDiagnosticAnalyzer">
+            <summary>
+            Diagnostic analyzer for scripting that checks the code for only using symbols available in <see cref="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Compilation.CompilationDescriptorBase">
+            <summary>
+            Base class for custom compilation descriptors
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Compilation.CompilationDescriptorDefaults">
+            <summary>
+            Default values used by <see cref="T:Keen.VRage.Scripting.Compilation.CompilationDescriptorBase"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Compilation.CompilationResult">
+            <summary>
+            Describes the result of script compilation, contains assembly and/or diagnostics
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Compilation.ICompilationDescriptor">
+            <summary>
+            Holds all necessary information needed by <see cref="T:Keen.VRage.Scripting.Compilation.ScriptCompiler"/> to parse and compile scripts
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.Compilation.ICompilationDescriptor.ParseOptions">
+            <summary>
+            Parse options used when parsing scripts
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.Compilation.ICompilationDescriptor.PreProcessors">
+            <summary>
+            Ordered script pre processors
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.Compilation.ICompilationDescriptor.PostProcessors">
+            <summary>
+            Ordered script post processors
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.Compilation.ICompilationDescriptor.CompilationOptions">
+            <summary>
+            Compilation options used when compiling syntax trees
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.Compilation.ICompilationDescriptor.MetadataReferences">
+            <summary>
+            Metadata references that are included in the compilation
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Compilation.ICompilationDescriptor.GetAnalyzers(Microsoft.CodeAnalysis.CSharp.CSharpCompilation)">
+            <summary>
+            Get necessary analyzer information once the compilation (without analyzers) has been created
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Compilation.ScriptCompiler">
+            <summary>
+            Runs script parsing and compilation
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Diagnostics.DiagnosticBag">
+            <summary>
+            Holds a collection of diagnostics, grouped by <see cref="T:Microsoft.CodeAnalysis.DiagnosticSeverity"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Diagnostics.ScriptingDiagnostics">
+            <summary>
+            Various diagnostic descriptors for scripting diagnostics
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Extensions.AnalyzerDescriptorBuilderExtensions">
+            <summary>
+            Extensions for <see cref="T:Keen.VRage.Scripting.Analyzers.AnalyzerDescriptor.Builder"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Extensions.CompilationDescriptorExtensions">
+            <summary>
+            Extensions for compilation descriptors
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Extensions.CompilationDescriptorExtensions.EnableExecutionTracking(Keen.VRage.Scripting.Compilation.CompilationDescriptorBase,System.UInt32,System.UInt32,System.Boolean)">
+            <summary>
+            Enable execution tracking for in-game scripts, this will introduce code lowering as well as inject
+            new code to track execution stats, ensure safety etc.
+            </summary>
+            <remarks>
+            Compilation time can degrade because <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpCompilation"/> may be updated multiple times before emitting <see cref="T:Keen.VRage.Scripting.Compilation.CompilationResult"/>
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Extensions.CompilationExtensions">
+            <summary>
+            Extensions for <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpCompilation"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Extensions.SyntaxExtensions">
+            <summary>
+            Extensions for Roslyn's syntax trees and nodes
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Extensions.SyntaxExtensions.WithInjectedAnnotation``1(``0)">
+            <summary>
+            Annotate this node and all its descendants with <see cref="P:Keen.VRage.Scripting.Utils.SyntaxHelper.InjectedAnnotation"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Extensions.WhitelistBuilderExtensions">
+            <summary>
+            Extensions for <see cref="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Extensions.WhitelistBuilderExtensions.AllowMethod(Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder,System.Delegate)">
+            <summary>
+            Allow a static method to the whitelist
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Extensions.WhitelistBuilderExtensions.AllowMethod``1(Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder,System.Func{``0,System.Delegate})">
+            <summary>
+            Allow an instance method to the whitelist
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Extensions.WhitelistBuilderExtensions.BanMethod(Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder,System.Delegate)">
+            <summary>
+            Ban a static method from the whitelist
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Extensions.WhitelistBuilderExtensions.BanMethod``1(Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder,System.Func{``0,System.Delegate})">
+            <summary>
+            Ban an instance method from the whitelist
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.InGameScriptConfig">
+            <summary>
+            The limits for memory usage, init, update and total accumulated memory have different settings.
+            </summary>
+            <param name="InitMemoryUsage">The amount of memory the Init call can use</param>
+            <param name="UpdateMemoryUsage">The amount of memory a Update call can use per call</param>
+            <param name="TotalAccumulatedMemoryUsage">Total amount of memory allocated accumulated over time.</param>
+            <param name="MaxMethodStackSize">The max estimated stack size of a method in the script</param>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptConfig.#ctor(System.Int64,System.Int64,System.Int64,System.UInt32)">
+            <summary>
+            The limits for memory usage, init, update and total accumulated memory have different settings.
+            </summary>
+            <param name="InitMemoryUsage">The amount of memory the Init call can use</param>
+            <param name="UpdateMemoryUsage">The amount of memory a Update call can use per call</param>
+            <param name="TotalAccumulatedMemoryUsage">Total amount of memory allocated accumulated over time.</param>
+            <param name="MaxMethodStackSize">The max estimated stack size of a method in the script</param>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptConfig.InitMemoryUsage">
+            <summary>The amount of memory the Init call can use</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptConfig.UpdateMemoryUsage">
+            <summary>The amount of memory a Update call can use per call</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptConfig.TotalAccumulatedMemoryUsage">
+            <summary>Total amount of memory allocated accumulated over time.</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptConfig.MaxMethodStackSize">
+            <summary>The max estimated stack size of a method in the script</summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.ScriptLoadArgs">
+            <summary>
+            The arguments and configuration to set up the script
+            </summary>
+            <param name="Code">Script source code</param>
+            <param name="AssemblyName">The assembly name that will be associcated with the script</param>
+            <param name="ClassName">The class name of the script entry point (Usually Program)</param>
+            <param name="CompilationDescriptor">The Compilation descriptor</param>
+            <param name="MemoryConfig">Memory configuration</param>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.ScriptLoadArgs.#ctor(System.String,System.String,System.String,Keen.VRage.Scripting.Compilation.ICompilationDescriptor,Keen.VRage.Scripting.InGame.InGameScriptConfig)">
+            <summary>
+            The arguments and configuration to set up the script
+            </summary>
+            <param name="Code">Script source code</param>
+            <param name="AssemblyName">The assembly name that will be associcated with the script</param>
+            <param name="ClassName">The class name of the script entry point (Usually Program)</param>
+            <param name="CompilationDescriptor">The Compilation descriptor</param>
+            <param name="MemoryConfig">Memory configuration</param>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.ScriptLoadArgs.Code">
+            <summary>Script source code</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.ScriptLoadArgs.AssemblyName">
+            <summary>The assembly name that will be associcated with the script</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.ScriptLoadArgs.ClassName">
+            <summary>The class name of the script entry point (Usually Program)</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.ScriptLoadArgs.CompilationDescriptor">
+            <summary>The Compilation descriptor</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.ScriptLoadArgs.MemoryConfig">
+            <summary>Memory configuration</summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.InGameScript">
+            <summary>
+            The InGameScript class contains the ScriptContext and a way to load and unload scripts.
+            The scripts will be compiled based on the ICompilationDescriptor
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScript.IsInitialized">
+            <summary>
+            Used to verify that the instance has been initialized
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScript.IsRunning">
+            <summary>
+            Check if the script is currently running.
+            If this method returns true after the ScriptRunner has completed it's because a script has run for too long.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScript.LastResult">
+            <summary>
+            The results will be updated at the end of the run, make sure you check the IsRunning flag before accessing the LastResult.
+            A script that is still running will have results from last run
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScript.Stats">
+            <summary>
+            Get the stats from the scripts executions
+            </summary>
+            <returns>A readonly reference to the stats</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScript.Finalize">
+            <summary>
+            Destructor will force unload the Script
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScript.Dispose">
+            <summary>
+            The Dispose method should only be used at shutdown. Use TryUnload to check if the script is in a state to be unloaded.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScript.InitScript">
+            <summary>
+            Call Init on the script
+            </summary>
+            <returns>The execution result</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScript.Update">
+            <summary>
+            Calls update on the script
+            </summary>
+            <returns>The execution result</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScript.IsInInternalCall">
+            <summary>
+            <inheritdoc cref="M:Keen.VRage.Scripting.InGame.InGameScriptInstance.IsInVRageCall"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScript.Terminate(Keen.VRage.Core.Scripting.ScriptInterruptedReason)">
+            <summary>
+            <inheritdoc cref="M:Keen.VRage.Scripting.InGame.InGameScriptInstance.Terminate(Keen.VRage.Core.Scripting.ScriptInterruptedReason)"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScript.ClearTerminationFlag">
+            <summary>
+            <inheritdoc cref="M:Keen.VRage.Scripting.InGame.InGameScriptInstance.ClearTerminationFlag"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScript.SetLastResult(Keen.VRage.Scripting.InGame.InGameScriptResult)">
+            <summary>
+            Override the LastResult. This can be used to set the result of a script that was never scheduled, or interrupted before it got executed.
+            </summary>
+            <param name="result">The result</param>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.InGameScriptInstance">
+            <summary>
+            The class that represents a script instance.
+            We currently support both the IScript implementation and the old reflection based implementation
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptInstance.IsInVRageCall">
+            <summary>
+            Check if the current running script is inside a callback
+            </summary>
+            <returns>True if the script is in a call back to vrage</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptInstance.Terminate(Keen.VRage.Core.Scripting.ScriptInterruptedReason)">
+            <summary>
+            Terminate the script on the next callback to ScriptContext
+            </summary>
+            <param name="reason">The reason for termination</param>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptInstance.ClearTerminationFlag">
+            <summary>
+            Clears the termination flag, this should be called when the script is scheduled.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.InGameScriptInstance.ExecutionRecorder">
+            <summary>
+            private struct to simplify stats collection even when exceptions are thrown.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.InGameScriptLoadResult">
+            <summary>
+            The result from loading an in game script
+            </summary>
+            <param name="Result">The return code for the load</param>
+            <param name="Error">An optional error message if the load failed (CompilationError for example)</param>
+            <param name="Script">The script that was loaded. Null if it fails.</param>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptLoadResult.#ctor(Keen.VRage.Scripting.InGame.InGameScriptResult,System.String,Keen.VRage.Scripting.InGame.InGameScript)">
+            <summary>
+            The result from loading an in game script
+            </summary>
+            <param name="Result">The return code for the load</param>
+            <param name="Error">An optional error message if the load failed (CompilationError for example)</param>
+            <param name="Script">The script that was loaded. Null if it fails.</param>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptLoadResult.Result">
+            <summary>The return code for the load</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptLoadResult.Error">
+            <summary>An optional error message if the load failed (CompilationError for example)</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptLoadResult.Script">
+            <summary>The script that was loaded. Null if it fails.</summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.InGameScriptResult">
+            <summary>
+            The results of a single execution of the script (Work in progress)
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.InGameScriptExecutionResult">
+            <summary>
+            The execution result from function calls inside the script.
+            </summary>
+            <param name="Result">The result code from the execution</param>
+            <param name="Exception">If there was an exception in the script (Not ScriptInterruptedException)</param>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptExecutionResult.#ctor(Keen.VRage.Scripting.InGame.InGameScriptResult,System.Exception)">
+            <summary>
+            The execution result from function calls inside the script.
+            </summary>
+            <param name="Result">The result code from the execution</param>
+            <param name="Exception">If there was an exception in the script (Not ScriptInterruptedException)</param>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptExecutionResult.Result">
+            <summary>The result code from the execution</summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.InGame.InGameScriptExecutionResult.Exception">
+            <summary>If there was an exception in the script (Not ScriptInterruptedException)</summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.InGameScriptRunner">
+            <summary>
+            The InGameScriptRunner is used to schedule in game scripts to run in parallel at a certain time in the frame.
+            It will terminate scripts that run for a long time and it will wait for any script that is terminated but is in a call back to VRage.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptRunner.ScheduleOne(Keen.VRage.Scripting.InGame.InGameScript)">
+            <summary>
+            Schedule a script for execution
+            This method is thread safe
+            </summary>
+            <param name="script">The script to be scheduled</param>
+            <returns>True if the script was scheduled</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptRunner.ScheduleMultiple(System.Span{Keen.VRage.Scripting.InGame.InGameScript})">
+            <summary>
+            Schedule multiple scripts that are on the same grid. They'll be run after eachother
+            </summary>
+            <param name="scripts">The scripts</param>
+            <returns>True if all scripts were scheduled</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptRunner.RunScripts(System.TimeSpan)">
+            <summary>
+            Start the script processing
+            </summary>
+            <param name="timeout">The timeout before scripts are cancelled</param>
+            <returns>True if all scripts finished in time</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.InGameScriptRunner.RunScripts(System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Start the script processing
+            </summary>
+            <param name="timeout">The timeout before scripts are cancelled</param>
+            <param name="vrageMaxWaitTime">The max time it will wait for a VRage call to finish</param>
+            <returns>True if all scripts finished in time</returns>
+        </member>
+        <member name="T:Keen.VRage.Scripting.InGame.OldScriptSignature">
+            <summary>
+            To support old signatures for backwards compatability
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.ScriptExecutionContext.Execute">
+            <summary>
+            Execute the script in this ScriptContext
+            </summary>
+            <returns>The next script scheduled as a synchronous call</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.InGame.ScriptExecutionContext.Interrupt">
+            <summary>
+            Interupts a running script or sets the last result to MaxExecutionTimeReached.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Lowering.LoweringPostProcessor">
+            <summary>
+            Post processor used for lowering script code
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Processors.DumpScriptsPreProcessor">
+            <summary>
+            Post processor that writes all in-game scripts to TEMP folder to facilitate debugging
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Processors.IScriptPostProcessor">
+            <summary>
+            Represents a post processor for scripts
+            </summary>
+            <remarks>
+            <para>
+            Can modify, add, remove syntax trees once they have been parsed by <see cref="T:Keen.VRage.Scripting.Compilation.ScriptCompiler"/>,
+            as well as do semantic model lookups.
+            </para>
+            <para>
+            Post processors will see any source generated code emitted during compilation.
+            </para>
+            <para>
+            Post processors are inherently heavier than pre processors because syntax tree modifications are applied to
+            existing compilation. If the logic does not need any compilation access, consider using pre processor instead.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Processors.IScriptPostProcessor.Process(Keen.VRage.Scripting.Compilation.ICompilationDescriptor,Microsoft.CodeAnalysis.CSharp.CSharpCompilation)">
+            <summary>
+            Process compilation created from <see cref="T:Keen.VRage.Scripting.Compilation.ScriptCompiler"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Processors.IScriptPreProcessor">
+            <summary>
+            Represents a pre processor for scripts
+            </summary>
+            <remarks>
+            <para>
+            Can modify, add, remove syntax trees once they have been parsed by <see cref="T:Keen.VRage.Scripting.Compilation.ScriptCompiler"/>.
+            </para>
+            <para>
+            Does not force recompilation because trees are processed before compilation is created.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Processors.IScriptPreProcessor.Process(Keen.VRage.Scripting.Compilation.ICompilationDescriptor,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree})">
+            <summary>
+            Process all syntax trees parsed by <see cref="T:Keen.VRage.Scripting.Compilation.ScriptCompiler"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Processors.ScriptingAssemblyInjectorPreProcessor">
+            <summary>
+            Post processor that injects <see cref="T:Keen.VRage.Core.Scripting.ScriptingAssemblyAttribute"/> into the compilation
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Project.EditorScriptCodeProvider">
+            <summary>
+            Custom <see cref="T:Keen.VRage.Core.Project.IProjectCodeProvider"/> for Editor scripting projects
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Project.GameScriptCodeProvider">
+            <summary>
+            Custom <see cref="T:Keen.VRage.Core.Project.IProjectCodeProvider"/> for Game scripting projects
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Project.ScriptCodeProvider">
+            <summary>
+            <see cref="T:Keen.VRage.Core.Project.IProjectCodeProvider"/> for mod scripts
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Project.ScriptingProject">
+            <summary>
+            Names for mod scripting projects
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Project.ScriptLoadingException">
+            <summary>
+            Exception that occurred during script loading
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Script">
+            <summary>
+            Represents a named script
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.ScriptingTarget">
+            <summary>
+            Target for scripts
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Scripting.ScriptingTarget.InGame">
+            <summary>
+            In-game script using programmable block
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Scripting.ScriptingTarget.GameMod">
+            <summary>
+            Mod script for game
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Scripting.ScriptingTarget.EditorMod">
+            <summary>
+            Mod script for Editor
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Tracking.ScriptTrackingPostProcessor">
+            <summary>
+            The ScriptrackingPostProcesser runs the ScriptTrackingRewriter on all SyntaxTrees and adds the ScriptContext tracking class.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.UnloadableScriptContext">
+            <summary>
+            A ScriptContext class that uses the AssemblyLoadContext to allow the assembly to be unloaded when it's no longer needed.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.UnloadableScriptContext.GetTypeFromAssembly(System.String)">
+            <summary>
+            Placeholder until we've implemented the entry point for the scripts
+            </summary>
+            <param name="name">Name of the type</param>
+            <returns>The type or null if it can't be found or the context has been unloaded.</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.UnloadableScriptContext.GetAllTypesFromAssembly">
+            <summary>
+            Returns all types in the loaded assembly. If it's no loaded an empty array is returned.
+            </summary>
+            <returns>The types</returns>
+        </member>
+        <member name="M:Keen.VRage.Scripting.UnloadableScriptContext.IsAssemblyUnloaded">
+            <summary>
+            Check if the Assembly is no longer in the AppDomain.
+            This is not a very fast method and should only be used in tests. 
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.UnloadableScriptContext.IsUnloaded">
+            <summary>
+            Check if the AssemblyLoadContext has been released and if the Assembly is not in the AppDomain.
+            This is not a very fast method and should only be used in tests. 
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Utils.MetadataReferenceHelper">
+            <summary>
+            Helper for manipulating <see cref="T:Microsoft.CodeAnalysis.MetadataReference"/>s
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Utils.SyntaxHelper">
+            <summary>
+            Helper for working with Roslyn's syntax trees and nodes
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Scripting.Utils.SyntaxHelper.InjectedAnnotation">
+            <summary>
+            Indicates that the annotated syntax node is injected (i.e. not present in the code initially)
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Whitelisting.IScriptWhitelistProvider">
+            <summary>
+            Represents a provider that can manipulate <see cref="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder"/> to construct a whitelist
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.IScriptWhitelistProvider.ConfigureWhitelist(Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder)">
+            <summary>
+            Configure this <paramref name="builder"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist">
+            <summary>
+            Represents a whitelist of symbols that's checked by the whitelist analyzer
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder">
+            <summary>
+            A builder for <see cref="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist"/>, contains methods to operate <see cref="T:System.Type"/> and adjacent
+            reflection API instead of <see cref="T:Microsoft.CodeAnalysis.ISymbol"/>s (that are used by <see cref="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist"/>)
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowNamespace``1">
+            <inheritdoc cref="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowNamespace(System.Type)"/>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowNamespace(System.Type)">
+            <summary>
+            Allow all types from the type's containing namespace
+            </summary>
+            <remarks>
+            This will not include types from nested namespaces, e.g., allowing
+            System.Collections will not allow types from System.Collections.Generic
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowType``1(Keen.VRage.Scripting.Whitelisting.SymbolInclusion)">
+            <inheritdoc cref="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowType(System.Type,Keen.VRage.Scripting.Whitelisting.SymbolInclusion)"/>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowType(System.Type,Keen.VRage.Scripting.Whitelisting.SymbolInclusion)">
+            <summary>
+            Allow a type, optionally including its members
+            </summary>
+            <param name="type">The type to allow in the whitelist</param>
+            <param name="inclusion">Whether to include the type only or also include all nested members</param>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowMembers``1(System.String[])">
+            <inheritdoc cref="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowMembers(System.Reflection.MemberInfo[])"/>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowMembers(System.Type,System.String[])">
+            <summary>
+            Allow multiple members in the whitelist
+            </summary>
+            <remarks>
+            This method only searches for public members in the type
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowMembers(System.Reflection.MemberInfo[])">
+            <summary>
+            Allow multiple members in the whitelist
+            </summary>
+            <remarks>
+            If the member's containing type was not in the whitelist, it will be automatically allowed
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.AllowMember(System.Reflection.MemberInfo)">
+            <summary>
+            Allow a single member in the whitelist
+            </summary>
+            <remarks>
+            If the member's containing type was not in the whitelist, it will be automatically allowed
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.BanType``1(Keen.VRage.Scripting.Whitelisting.SymbolInclusion)">
+            <inheritdoc cref="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.BanType(System.Type,Keen.VRage.Scripting.Whitelisting.SymbolInclusion)"/>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.BanType(System.Type,Keen.VRage.Scripting.Whitelisting.SymbolInclusion)">
+            <summary>
+            Ban a type, optionally banning its members
+            </summary>
+            <param name="type">The type to ban in the whitelist</param>
+            <param name="inclusion">Whether to include the type only or also include all nested members</param>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.BanMembers``1(System.String[])">
+            <inheritdoc cref="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.BanMembers(System.Type,System.String[])"/>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.BanMembers(System.Type,System.String[])">
+            <summary>
+            Ban multiple members in the whitelist
+            </summary>
+            <remarks>
+            This method only searches for public members in the type
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.BanMembers(System.Reflection.MemberInfo[])">
+            <summary>
+            Ban multiple members in the whitelist
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.Builder.BanMember(System.Reflection.MemberInfo)">
+            <summary>
+            Ban a single member in the whitelist
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.AllowSymbol(Microsoft.CodeAnalysis.ISymbol,Keen.VRage.Scripting.Whitelisting.SymbolInclusion)">
+            <summary>
+            Allow a symbol to the whitelist
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.BanSymbol(Microsoft.CodeAnalysis.ISymbol,Keen.VRage.Scripting.Whitelisting.SymbolInclusion)">
+            <summary>
+            Ban a symbol from the whitelist
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.IsWhitelisted(Microsoft.CodeAnalysis.ISymbol)">
+            <summary>
+            Whether the symbol is whitelisted
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist.GetAllSymbols">
+            <summary>
+            Get all whitelisted symbols in this whitelist
+            </summary>
+            <remarks>
+            This method returns all child symbols of whitelisted symbols as well, for example, if <see cref="T:System.Int32"/> symbol was allowed,
+            the set will also contain its members like <see cref="F:System.Int32.MaxValue"/>.
+            Calling this method first time has performance impact because it realizes all symbols' members
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelistException">
+            <summary>
+            An exception that occurred when constructing a <see cref="T:Keen.VRage.Scripting.Whitelisting.ScriptWhitelist"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Scripting.Whitelisting.SymbolInclusion">
+            <summary>
+            Describes how a symbol is treated when adding / removing it from a whitelist
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Scripting.Whitelisting.SymbolInclusion.ThisOnly">
+            <summary>
+            Include this symbol only
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Scripting.Whitelisting.SymbolInclusion.ThisAndMembers">
+            <summary>
+            Include all accessible members of this symbol
+            </summary>
+            <remarks>
+            <para>An accessible member is marked with either <c>public</c>, <c>protected</c> or <c>protected internal</c></para>
+            <para>For <see cref="T:Microsoft.CodeAnalysis.ITypeSymbol"/>, this includes all members, including nested types</para>
+            <para>For <see cref="T:Microsoft.CodeAnalysis.INamespaceSymbol"/> this includes all nested types, but not nested namespaces</para>
+            </remarks>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

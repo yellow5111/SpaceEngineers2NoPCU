@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.DCS.Samples</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.DCS.Samples.ConsoleRunner">
+            <summary />
+        </member>
+        <member name="M:Keen.VRage.DCS.Samples.ConsoleRunner.Run">
+            <summary />
+        </member>
+        <member name="T:Keen.VRage.DCS.Samples.Example1">
+             <summary>
+             The sample series follows examples described in the following presentation:
+             https://docs.google.com/presentation/d/1rc2bCkmIMbxkY9epRAkN67u5CxUxn6q7l8b-rbJJkw0
+             See info-graphics and notes in the presentation if you don't understand some details
+            
+            
+             This sample shows simple periodic job.
+             
+             Gas tanks are initialized to some fill state and drained gradually by periodic job.
+             </summary>
+        </member>
+        <member name="T:Keen.VRage.DCS.Samples.Example2">
+             <summary>
+             The sample series follows examples described in the following presentation:
+             https://docs.google.com/presentation/d/1rc2bCkmIMbxkY9epRAkN67u5CxUxn6q7l8b-rbJJkw0
+             See info-graphics and notes in the presentation if you don't understand some details
+             
+             
+             This sample shows simple data event and job/event ordering via JobGroups.
+            
+             Gas tanks are initialized to some fill state and drained gradually.
+             When emptied they stop ticking automatically, cos that's what good gas tanks do.
+             </summary>
+        </member>
+        <member name="T:Keen.VRage.DCS.Samples.Example3">
+             <summary>
+             The sample series follows examples described in the following presentation:
+             https://docs.google.com/presentation/d/1rc2bCkmIMbxkY9epRAkN67u5CxUxn6q7l8b-rbJJkw0
+             See info-graphics and notes in the presentation if you don't understand some details
+            
+             
+             This sample shows simple data interface/data contract.
+            
+             Gas tanks are initialized to some fill state and drained gradually.
+             As long as they have some gas left they "implement" the `ResourceSource` interface/data contract
+             that can be observed by, for example, resource distribution (see next sample for application on RD side).
+             When emptied they stop ticking automatically and remove the `ResourceSource` so that RD can observe this change.
+             </summary>
+        </member>
+        <member name="T:Keen.VRage.DCS.Samples.Example4">
+             <summary>
+             The sample series follows examples described in the following presentation:
+             https://docs.google.com/presentation/d/1rc2bCkmIMbxkY9epRAkN67u5CxUxn6q7l8b-rbJJkw0
+             See info-graphics and notes in the presentation if you don't understand some details
+            
+            
+             This example shows data interfaces/data contracts (implementation of observer).
+            
+             ResourceDistributionSystem collects producers (anything that "implements" `ResourceSource` data contract)
+             for given grid and redistributes between them static load (cos we don't have real consumers, yet!).
+             </summary>
+        </member>
+        <member name="T:Keen.VRage.DCS.Samples.Example5">
+             <summary>
+             The sample series follows examples described in the following presentation:
+             https://docs.google.com/presentation/d/1rc2bCkmIMbxkY9epRAkN67u5CxUxn6q7l8b-rbJJkw0
+             See info-graphics and notes in the presentation if you don't understand some details
+            
+            
+             Final data-oriented example. Shows 2 full resource loops with working resource distribution:
+               GasTank hydrogen "production"          -> Resource Distributor -> Real hydrogen demand
+               Hydrogen thruster "wanted consumption" -> Resource Distributor -> Hydrogen supply for thruster
+            
+             Follow `Exercise for reader` TODOs to extend the example and get your hands dirty a bit. #LearnByPractice
+             Use Keen.VRage.DCS.Tests.Examples.Example5Tests to verify your implementation
+             </summary>
+        </member>
+        <member name="T:Keen.VRage.DCS.Samples.Example6">
+             <summary>
+             The sample series follows examples described in the following presentation:
+             https://docs.google.com/presentation/d/1rc2bCkmIMbxkY9epRAkN67u5CxUxn6q7l8b-rbJJkw0
+             See info-graphics and notes in the presentation if you don't understand some details
+            
+            
+             First object oriented example. Shows connection of DCS with object-oriented entities and components via simple implementation of ShipController:
+               ShipController collects info about currently controlled grid
+               ShipController outputs grid info to console gui
+               ShipController simulates player input and controls thrusters on the grid
+            
+             Bits to pay attention to:
+               Data-oriented job invoking object-oriented event (GasTankComponent.DrainJob -> GasTankComponent.OnStateChanged -> GasTankComponent.OnFullyEmptied)
+               Object-oriented property/method accessing data-oriented Data (IGasTank.IsEmpty, IThruster.CurrentThrust, ResourceDistributionSystem.GetResourceInfo)
+               Object-oriented method/instance job working on data-oriented Data and triggering data-oriented events (GasTankComponent.OnStateChanged, IThruster.CurrentThrust)
+               
+            
+             Data-oriented part shows 2 full resource loops with working resource distribution:
+               GasTank hydrogen "production"          -> Resource Distributor -> Real hydrogen demand
+               Hydrogen thruster "wanted consumption" -> Resource Distributor -> Hydrogen supply for thruster
+            
+             </summary>
+        </member>
+        <member name="T:Keen.VRage.DCS.Samples.Example7">
+             <summary>
+             The sample series follows examples described in the following presentation:
+             https://docs.google.com/presentation/d/1rc2bCkmIMbxkY9epRAkN67u5CxUxn6q7l8b-rbJJkw0
+             See info-graphics and notes in the presentation if you don't understand some details
+            
+             Second object oriented example. Shows full power of Components, with definitions, dependencies and multiple Component instances of the same type on same entity.
+              - Component dependencies, definitions and objectBuilders are inferred automatically from component code
+              - Components can be instantiated either directly by type, or by definition and objectBuilder pair
+            
+             Data-oriented part shows 2 full resource loops with working resource distribution:
+               GasTank hydrogen "production"          -> Resource Distributor -> Real hydrogen demand
+               Hydrogen thruster "wanted consumption" -> Resource Distributor -> Hydrogen supply for thruster
+            
+             </summary>
+        </member>
+        <member name="P:Keen.VRage.DCS.Samples.Example7.ThrusterComponentDefinition.ResourceType">
+            <summary>
+            Resource type this reactor pumps into the grid system.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.DCS.Samples.Example7.ThrusterComponentDefinition.ThrustToConsumptionRatio">
+            <summary>
+            Maximal amount of resource that can be pumped into the grid system at once.
+            Units are dependent on resource type.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

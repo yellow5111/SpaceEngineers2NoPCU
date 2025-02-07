@@ -1,0 +1,2467 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.Render.Editor</name>
+    </assembly>
+    <members>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBox?}#Set(System.Object,System.Nullable{Keen.VRage.Library.Mathematics.BoundingBox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBox?}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBox?}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBox?}#Set(System.Byte@,System.Nullable{Keen.VRage.Library.Mathematics.BoundingBox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Nullable{Keen.VRage.Library.Mathematics.BoundingBox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._posAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._rotAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder._scaleAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosXAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosYAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PosZAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.YawAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.PitchAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.RollAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleXAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleYAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings.TypeInfoHolder.ScaleZAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Render#Editor#Previews#Decals#DecalRenderObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#Decals#DecalMaterialDefinition}#Set(System.Object,Keen.VRage.Render.Materials.Decals.DecalMaterialDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#Decals#DecalMaterialDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#Decals#DecalMaterialDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#Decals#DecalMaterialDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.Decals.DecalMaterialDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Set(Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@,Keen.VRage.Render.Materials.Decals.DecalMaterialDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder.TypeInfoHolder.DecalAccessor.Get(Keen.VRage.Render.Editor.Previews.Decals.DecalRenderObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBox?}#Set(System.Object,System.Nullable{Keen.VRage.Library.Mathematics.BoundingBox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBox?}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBox?}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#BoundingBox?}#Set(System.Byte@,System.Nullable{Keen.VRage.Library.Mathematics.BoundingBox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Nullable{Keen.VRage.Library.Mathematics.BoundingBox}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._modelBoundingBoxAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._posAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._rotAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Object,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Mathematics#Vector3}#Set(System.Byte@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,Keen.VRage.Library.Mathematics.Vector3@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder._scaleAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosXAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosYAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PosZAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.YawAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.PitchAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.RollAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleXAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleYAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings.TypeInfoHolder.ScaleZAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderComponent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Render#Editor#Previews#Particles#ParticleEffectRenderObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Data#ParticleEffectDefinition}#Set(System.Object,Keen.VRage.Render.Data.ParticleEffectDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Data#ParticleEffectDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Data#ParticleEffectDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Data#ParticleEffectDefinition}#Set(System.Byte@,Keen.VRage.Render.Data.ParticleEffectDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Set(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@,Keen.VRage.Render.Data.ParticleEffectDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder.TypeInfoHolder.ParticleEffectAccessor.Get(Keen.VRage.Render.Editor.Previews.Particles.ParticleEffectRenderObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.Background2DPreviewComponent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.SlugIconAssetPreview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Render#Editor#Previews#Vector#SlugIconPreviewComponentObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Set(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder.TypeInfoHolder.IconResourceHandleAccessor.Get(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponentObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Editor#Previews#Vector#SlugIconPreviewComponent}#Set(System.Object,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Editor#Previews#Vector#SlugIconPreviewComponent}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Editor#Previews#Vector#SlugIconPreviewComponent}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Editor#Previews#Vector#SlugIconPreviewComponent}#Set(System.Byte@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Set(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings@,Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder._previewComponentAccessor.Get(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Set(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.IconSizeAccessor.Get(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Set(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.AspectRatioAccessor.Get(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Set(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings.TypeInfoHolder.OpacityAccessor.Get(Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.Previews.Vector.SlugIconPreviewEntityData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Render.Editor.RenderPlugin">
+            <summary>
+            Implementation of Editor plugin with support for previewing decals
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

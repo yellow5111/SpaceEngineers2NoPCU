@@ -1,0 +1,852 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.Game.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.Game.Editor.EngineGamePlugin">
+            <summary>
+            Plugin implementation for game-related engine features
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockRenderComponentUtils.CreateSideRenderObjects(Keen.VRage.Game.Armor.Data.ArmorBlockSide,System.Nullable{Keen.VRage.Game.Armor.Data.NodePlace},System.Nullable{Keen.VRage.Render.Contracts.RootEntity},Keen.VRage.Core.RelativeTransform,System.String,Keen.VRage.Render.Materials.MaterialBaseDefinition,System.Collections.Generic.IList{System.IDisposable})">
+            <summary>
+            Creates render object for specific cell of armor side. If the cell is not specified, root cell is used
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockRenderComponentUtils.CreateSideBBoxRenderObjects(Keen.VRage.Game.Armor.Data.ArmorBlockSide,System.Nullable{Keen.VRage.Game.Armor.Data.NodePlace},System.Nullable{Keen.VRage.Render.Contracts.RootEntity},Keen.VRage.Core.RelativeTransform,System.String,System.Collections.Generic.IList{System.IDisposable})">
+            <summary>
+            Creates debug bounding box render object for specific cell of armor side. If the cell is not specified, root cell is used.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Game#Editor#Previews#ArmorSides#Components#ArmorBlockSideRenderComponentObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Set(Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.SideHandleAccessor.Get(Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Set(Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Get(Keen.VRage.Game.Editor.Previews.ArmorSides.Components.ArmorBlockSideRenderComponentObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.Armors.ArmorPreviewHelper">
+            <summary>
+            Helper class to create armor preview entities
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.Armors.ArmorPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Armors.ArmorPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Armors.ArmorPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings">
+            <summary>
+            Settings type used for previewing armor materials
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Reactive#Subjects#Subject{System#Reactive#Unit}}#Set(System.Object,System.Reactive.Subjects.Subject{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Reactive#Subjects#Subject{System#Reactive#Unit}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Reactive#Subjects#Subject{System#Reactive#Unit}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Reactive#Subjects#Subject{System#Reactive#Unit}}#Set(System.Byte@,System.Reactive.Subjects.Subject{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Set(Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings@,System.Reactive.Subjects.Subject{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Get(Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#IObservable{System#Reactive#Unit}}#Set(System.Object,System.IObservable{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#IObservable{System#Reactive#Unit}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#IObservable{System#Reactive#Unit}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#IObservable{System#Reactive#Unit}}#Set(System.Byte@,System.IObservable{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Set(Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings@,System.IObservable{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Get(Keen.VRage.Game.Editor.Previews.Armors.ArmorSkinPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Game#Editor#Previews#Armors#Components#ArmorBlockModelRenderComponentObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Set(Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Library.Utils.ResourceHandle@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.ModelHandleAccessor.Get(Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Object,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Render#Materials#MaterialBaseDefinition}#Set(System.Byte@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Set(Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Render.Materials.MaterialBaseDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.MaterialAccessor.Get(Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Game#Armor#Definitions#ArmorSkinDefinition}#Set(System.Object,Keen.VRage.Game.Armor.Definitions.ArmorSkinDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Game#Armor#Definitions#ArmorSkinDefinition}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Game#Armor#Definitions#ArmorSkinDefinition}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Game#Armor#Definitions#ArmorSkinDefinition}#Set(System.Byte@,Keen.VRage.Game.Armor.Definitions.ArmorSkinDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Set(Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@,Keen.VRage.Game.Armor.Definitions.ArmorSkinDefinition@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder.TypeInfoHolder.SkinAccessor.Get(Keen.VRage.Game.Editor.Previews.Armors.Components.ArmorBlockModelRenderComponentObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings">
+            <summary>
+            Settings type used for previewing armor materials
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Reactive#Subjects#Subject{System#Reactive#Unit}}#Set(System.Object,System.Reactive.Subjects.Subject{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Reactive#Subjects#Subject{System#Reactive#Unit}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Reactive#Subjects#Subject{System#Reactive#Unit}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Reactive#Subjects#Subject{System#Reactive#Unit}}#Set(System.Byte@,System.Reactive.Subjects.Subject{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Set(Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings@,System.Reactive.Subjects.Subject{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder._previewReloadSubjectAccessor.Get(Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#IObservable{System#Reactive#Unit}}#Set(System.Object,System.IObservable{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#IObservable{System#Reactive#Unit}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#IObservable{System#Reactive#Unit}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#IObservable{System#Reactive#Unit}}#Set(System.Byte@,System.IObservable{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Set(Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings@,System.IObservable{System.Reactive.Unit}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings.TypeInfoHolder.PreviewReloadAccessor.Get(Keen.VRage.Game.Editor.Previews.Materials.GameMaterialPreviewSettings@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Game.Editor.Suggesters.TransformGizmoModeSuggester">
+            <summary>
+            <see cref="T:Keen.VRage.UI.Shared.Suggester.ISuggesterImplementation`3"/> for <see cref="P:Keen.VRage.Game.Client.Gizmos.Instances.TransformGizmoSettings.Mode"/>.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

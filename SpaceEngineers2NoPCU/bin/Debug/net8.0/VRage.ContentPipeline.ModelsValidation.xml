@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.ModelsValidation</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker">
+            <summary>
+            Utility class to determine optimal numbers related to models, such as LOD distances, number of LODs, number of triangles
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.COLLIDER_VERTICES_TABLE_INDEX">
+            <summary>
+            0 = No cylinder reductions
+            1 = With cylinder reductions
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.MAX_TRIANGLE_INCREASE_IF_FRACTURES">
+            <summary>
+            Ratio by which the maximum number of triangles a model can have is increased
+            in case the model contain fractures (is construction/destruction)
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.FRACTURED_MODEL_MATERIALS_LIMIT_COUNT">
+            <summary>
+            Fractured models have loose limits on the number of materials. Each fracture must have unique mesh parts - therefore materials
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.LARGE_MODEL_MIN_EDGE_LENGTH">
+            <summary>
+            Maximum number of materials per LOD for large models
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.MEDIUM_MODEL_MIN_EDGE_LENGTH">
+            <summary>
+            Maximum number of materials per LOD for medium models
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker._smallModelMaxMaterialCountPerLOD">
+            <summary>
+            Maximum number of materials per LOD for small models
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker._characterModelMaxMaterialCountPerLOD">
+            <summary>
+            Maximum number of materials per LOD for character models
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetMaximumNumberOfTriangles(Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitStatKeys,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Get agreed number of triangles  that can be present in the model for the given LOD index and surface area approximation of the model
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetMaximumNumberOfTrianglesSkinned(System.Int32,System.Int32)">
+            <summary>
+            Get agreed number of triangles that can be present in skinned model for the given LOD index
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetOptimalLODDistanceFormula(System.Single,System.Single,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Calculate a distance that should be used for the LOD, using a formula:
+            x/((0.1+0.075*(min(2.5,x)-0.5))/(2^L))
+            where x = the average of the two longest edges, L = (LOD index - 1)
+            </summary>
+            <param name="sizeX"></param>
+            <param name="sizeY"></param>
+            <param name="sizeZ"></param>
+            <param name="lodIndex">The LOD index. Must be at least one (This method cannot be used for LOD 0)</param>
+            <param name="lodBias">The LOD bias, used to delay LOD switching to further distances if model is much smaller than its budget</param>
+            <returns>Optimal distance that the model should transition for that given LOD, in meters.</returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetOptimalLODDistanceSkinned(System.Int32,System.Int32)">
+            <summary>
+            Calculates distance that should be used for LOD of skinned mesh
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetOptimalNumberOfLODsSkinned(System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetOptimalNumberOfLODs(Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitStatKeys,System.Int32,System.Int32@)">
+            <summary>
+            Get number of LODs that the model should have for the given surface area approximation
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetHighestMatchingTableData(System.Collections.Immutable.ImmutableArray{Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.PerSizeLimits}@,System.Single,Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.LimitRounding)">
+            <summary>
+            Selects highest table row that matches the given size.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetInterpolatedTableData(System.Collections.Immutable.ImmutableArray{Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.PerSizeLimits}@,System.Single,System.Boolean)">
+            <summary>
+            Interpolates two table rows according to the surface area information.
+            The returned row does not contain the first column of the table (surface area)
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetInterpolatedTableData(System.Collections.Immutable.ImmutableArray{Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.PerSizeLimits}@,System.Single,System.Int32@,System.Int32@,System.Single@,System.Boolean)">
+            <summary>
+            See <see cref="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.GetInterpolatedTableData(System.Collections.Immutable.ImmutableArray{Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.PerSizeLimits}@,System.Single,System.Boolean)"/>
+            This overload provides the indices and ratio that were used for interpolation.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker.LimitRounding">
+            <summary>
+            Describe which limit should be choosen when key is between 2 limit.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitStatKeys">
+            <summary>
+            Stats used to interpolate limits in the <see cref="T:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker"/>.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitStatKeys.#ctor(System.Numerics.Vector3)">
+            <summary>
+            Stats used to interpolate limits in the <see cref="T:Keen.VRage.ContentPipeline.ModelsValidation.ModelLimitsChecker"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

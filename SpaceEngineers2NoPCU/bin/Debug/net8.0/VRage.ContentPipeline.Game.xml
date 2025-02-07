@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.ContentPipeline.Game</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberData">
+            <summary>
+            The data extracted from assets. Can be saved to a file (after extraction), or read back from a file and imported to the project.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberData.#ctor(Keen.VRage.Library.Collections.Readers.HashSetDictionaryReader{Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberData.AssetInfo,Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberData.AssetMemberValue})">
+            <summary>
+            The data extracted from assets. Can be saved to a file (after extraction), or read back from a file and imported to the project.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberData.SaveToCsvFile(System.String)">
+            <summary>
+            Saves the data to the file in CSV format.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberData.DataLoadingResult">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberExtractor">
+            <summary>
+            Extractor used to obtain values of specific members from assets in a project. The data can be exported to a CSV file and later imported back
+            to the project.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberExtractor.AssignableToAnyCache">
+            <summary>
+            Helper class to cache encountered types in project to speed up assets filtering
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberExtractor.AssignableToAnyCache._incompatibleTypes">
+            <summary>
+            Types that were already encountered and are not derived from any of the original types
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberExtractor.AssignableToAnyCache._derivedToOriginalMap">
+            <summary>
+            Types that were determined to be derived from the original types
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberExtractor.Extract(Keen.VRage.ContentPipeline.Game.Balancing.MembersExtractionContext@)">
+            <summary>
+            Extracts the values provided by <paramref name="context"/>.
+            </summary>
+            <param name="context">Context containing what members should be extracted and from what files</param>
+            <returns>Result of extraction containing both the data and problems that occured during extraction</returns>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Balancing.MembersExtractionContext">
+            <summary>
+            Context for <see cref="T:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberExtractor"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Balancing.MembersExtractionContext.#ctor(Keen.VRage.ContentPipeline.Project.Structure.LoadedProject)">
+            <summary>
+            Context for <see cref="T:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberExtractor"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Game.Balancing.MembersExtractionContext.IncludeDependencyProjects">
+            <summary>
+            Whether to include assets also from dependency projects in the extracted data,
+            or solely the files from project provided in <see cref="P:Keen.VRage.ContentPipeline.Game.Balancing.MembersExtractionContext.Project"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Balancing.MembersExtractionContext.WithMember``1(Keen.VRage.Library.Serialization.MemberPath)">
+            <inheritdoc cref="M:Keen.VRage.ContentPipeline.Game.Balancing.MembersExtractionContext.WithMember(System.Type,Keen.VRage.Library.Serialization.MemberPath)"/>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Balancing.MembersExtractionContext.WithMember(System.Type,Keen.VRage.Library.Serialization.MemberPath)">
+            <summary>
+            Adds a member that should be extracted from project data
+            </summary>
+            <param name="assetType">The object type for which the <paramref name="memberPath"/> is specified</param>
+            <param name="memberPath">Path of the member that should be extracted</param>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Balancing.MembersImportResult">
+            <summary>
+            Base class for results of asset members importing.
+            </summary>
+            <seealso cref="M:Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberExtractor.Import(Keen.VRage.ContentPipeline.Game.Balancing.AssetsMemberData,Keen.VRage.ContentPipeline.Game.Balancing.MembersImportContext@)"/>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Editor.PartialDefinitionGeneratorProvider">
+            <summary>
+            Generator for partial definitions
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility">
+            <summary>
+            Utility for Prefabs
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.CopyDefinitionSetFrom(Keen.VRage.ContentPipeline.Project.Structure.ExplorerAssetFile,Keen.VRage.ContentPipeline.Project.Structure.ExplorerAssetFile)">
+            <summary>
+            Copy the <see cref="T:Keen.VRage.ContentPipeline.Definitions.DefinitionSetItem"/> of <paramref name="baseDefinition"/>.
+            </summary>
+            <param name="partial"></param>
+            <param name="baseDefinition"></param>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.TryGetPrefabPairingInProject(Keen.VRage.ContentPipeline.Project.Structure.LoadedProject,System.Guid)">
+            <summary>
+            Returns a prefab pairing for the given guid
+            </summary>
+            <param name="project"></param>
+            <param name="guid">Can be the guid of the PrefabBindingDefinition, Client Prefab or Server Prefab</param>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.TryGetPairing(Keen.VRage.ContentPipeline.Project.Structure.ExplorerAssetFile)">
+            <summary>
+            Reads the client and server prefab from a PrefabBindingDefinition
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.TryGetPairingAllowIncomplete(Keen.VRage.ContentPipeline.Project.Structure.ExplorerAssetFile)">
+            <summary>
+            Reads the client and server prefab from a PrefabBindingDefinition, allowing the client or server prefab to be null
+            </summary>
+            <param name="bindingAsset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.GetPrefabGuidOfCompositeDefinition(Keen.VRage.ContentPipeline.Project.Structure.LoadedProject,System.Guid)">
+            <summary>
+            Returns the guid for the prefab of a composite definition
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.TryGetPrefabGuidOfCompositeDefinition(Keen.VRage.ContentPipeline.Project.Structure.LoadedProject,System.Guid)">
+            <summary>
+            Returns the guid for the prefab of a composite definition
+            </summary>
+            <param name="project"></param>
+            <param name="compositeGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.IsPrefabOfCompositeDefinition(Keen.VRage.ContentPipeline.Project.Structure.ExplorerAssetFile,System.Guid)">
+            <summary>
+            Checks if candidate is the prefab of a composite definition
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.IsPrefabBindingOfPrefab(Keen.VRage.ContentPipeline.Project.Structure.ExplorerAssetFile,System.Guid)">
+            <summary>
+            Checks if candidate is the binding of a prefab
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.GetPrefabAndCompositeAssets(Keen.VRage.ContentPipeline.Project.Structure.ExplorerAssetFile)">
+            <summary>
+            Returns all prefab and composite assets that are associated with the binding
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.ContentPipelinePrefabUtility.GetPrefabComposites(Keen.VRage.ContentPipeline.Project.Structure.ExplorerAssetFile)">
+            <summary>
+            Returns all Composite Assets associated with the prefab
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Prefabs.PrefabDefinitionPrefabGeneratorProvider">
+            <summary>
+            A provider for PrefabDefinition's UI prefab asset generation
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Prefabs.PrefabGeneratorFeature">
+            <summary>
+            Prefab generator feature to load templates
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.ContentPipeline.Game.Prefabs.PrefabGeneratorFeature.Name">
+            <summary>
+            Name of the feature
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.ContentPipeline.Game.Prefabs.PrefabGeneratorFeature.OnProjectLoad(Keen.VRage.ContentPipeline.Project.Structure.LoadedProject)">
+            <summary>
+            Invoked when project is being loaded. When invoked, initial items are already present in the project,
+            but files are not initialized yet. Usually when interacting with files, use <see cref="P:Keen.VRage.ContentPipeline.Project.Structure.ExplorerItem.ItemToken"/>
+            to handle item events.
+            </summary>
+            <param name="project"></param>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Prefabs.PrefabGeneratorProvider">
+            <summary>
+            Asset Generator for prefabs
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.ContentPipeline.Game.Prefabs.PrefabGeneratorProvider.TemplateFolder">
+            <summary>
+            </summary>
+        </member>
+    </members>
+</doc>

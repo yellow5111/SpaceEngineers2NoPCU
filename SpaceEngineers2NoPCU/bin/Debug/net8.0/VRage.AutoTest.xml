@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.AutoTest</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.AutoTest.EngineComponents.AutoTestEngineComponent">
+            <summary>
+            Controls screenshots queue with frame counts. Used for automated testing
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AutoTest.EngineComponents.AutoTestEngineComponent.Init(Keen.VRage.AutoTest.EngineComponents.AutoTestEngineComponent.ObjectBuilder)">
+            <summary>
+            Creates Automated Screenshots Queue
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AutoTest.EngineComponents.AutoTestEngineComponent.UpdateScreenshotQueue">
+            <summary>
+            Queue will issue a Screenshot command to the Render for all previously specified screenshot requests that has lower or equal frame id than the current frame count
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AutoTest.EngineComponents.AutoTestEngineComponent.ObjectBuilder">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AutoTest.EngineComponents.AutoTestScenarioManagerComponent">
+            <summary>
+            Placeholder
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AutoTest.EngineComponents.AutoTestScenarioManagerComponent.ObjectBuilder">
+            <summary>
+            Placeholder
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AutoTest.Extensions.EngineBuilderExtensions">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.AutoTest.IAutoTestScenario">
+            <summary>
+            Represents a generic auto test
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AutoTest.IAutoTestScenario.TestName">
+            <summary>
+            Name of the test scenario.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AutoTest.IAutoTestScenario.IsLoading">
+            <summary>
+            Is the test in a loading phase that should delay screenshots.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.AutoTest.IAutoTestScenario.ScreenshotFrames">
+            <summary>
+            List of frame numbers in which screenshots should be done.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AutoTest.IAutoTestScenario.GetScreenshotFolder">
+            <summary>
+            Return relative path of folder to put screenshots in.
+            By default, screenshots are put in folder named after the test
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.AutoTest.IAutoTestScenario.Update">
+            <summary>
+            One update of the test.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>

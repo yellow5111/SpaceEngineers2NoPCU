@@ -1,0 +1,2157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VRage.Animation.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Keen.VRage.Animation.Client.Animator.Animator">
+            <summary>
+            Stores and accepts pose update requests
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Animator.Animator._animationClipsLastUnavailableTick">
+            <summary>
+            Used for animator to catch up on pose update after animation clip becomes available later
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Animator.Animator.AnimationStreamingCatchUpFramesCount">
+            <summary>
+            When the animation clip becomes available, ramp up the weight over this many ticks to smooth out the transition
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Animator.Animator.ShowReferencePose">
+            <summary>
+            For debugging purposes, instead of sampling animation keyframes, the reference pose for first clip used instead.
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Animator.Animator.GetPoseMutableAbsoluteTransformsUnsafe">
+            <inheritdoc cref="M:Keen.VRage.Animation.Client.Animator.Animator.PoseContainer.GetMutableAbsolutePoseUnsafe"/>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Animator.Animator.UpdatePose(Keen.VRage.Animation.Animator.RigAnimatorRequest@,System.Nullable{Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent.BudgetMeasuringToken}@,System.Nullable{Keen.VRage.Animation.Client.Animator.Animator.AnimatedEntityInfo}@)">
+            <summary>
+            Updates the relativeTransform values in the pose
+            bone transforms array was passed to Animator in the constructor
+            </summary>
+            <param name="stack"></param>
+            <param name="measuringBudgetToken">Token used when the animator is subject to animator budgeting (dynamic runtime optimization).
+            Passing null will disable runtime budgeting.</param>
+            <param name="entityInfo">Entity info used for animation runtime budget.</param>
+            <returns></returns>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Animator.Animator.RequestResult.TotalWeight">
+            <summary>
+            Sum of weights of all items.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Animator.Animator.OptimizationHelper">
+            <summary>
+            Helps Animator to determine what optimizations to apply.
+            </summary>
+            <remarks>
+            When a feature is disabled, respective methods to determine how the optimization
+            should be applied will return values as if the optimization was enabled, animator is responsible for checking and skipping the optimization.
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Animator.Animator.PoseHistoryData">
+            <summary>
+            Helper struct to record last few previous valid frame poses, so that it is possible to extrapolate future pose from them
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Animator.Animator.PoseHistoryData._validEntityAbsolutePose1">
+            <summary>
+            Represents the pose from older previous frame
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Animator.Animator.PoseHistoryData._validEntityAbsolutePose2">
+            <summary>
+            Represents the pose from newer previous frame
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Animator.Animator.PoseHistoryData.TryExtrapolateFromHistoryData(System.Span{Keen.VRage.Library.Mathematics.Matrix})">
+            <returns><see langword="true"/> if there is was data and targetSpan was replaced with extrapolated values</returns>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Animator.Animator.PoseContainer.GetMutableRelativePose">
+            <remarks>
+            Invoking this method also invalidates cached absolute pose.
+            Make sure you are done modifying the relative pose before accessing absolute pose from this container.
+            </remarks>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Animator.Animator.PoseContainer.GetMutableAbsolutePoseUnsafe">
+            <summary>
+            Get absolute pose that can be modified. The changes to absolute pose are not reflected in relative pose and are visible until
+            the relative pose is updated.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Animator.EngineFrameCounter">
+            <summary>
+            <see cref="T:Keen.VRage.Animation.Client.Animator.IFrameCounter"/> implementation that uses <see cref="P:Keen.VRage.Core.VRageCore.FrameCounter"/> to measure frames
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Animator.IFrameCounter">
+            <summary>
+            Interface for providing frame number
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Animator.IFrameCounter.Frame">
+            <summary>
+            The current frame number
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration">
+            <summary>
+            Configuration for animation runtime budget system.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TargetAverageRuntimeMs">
+            <summary>
+            The optimal average per-frame runtime of all animated entities in the world, in milliseconds.
+            When actual time becomes suboptimal, the animations will be played at reduced quality to meet the budget.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.MeasureWindowTicks">
+            <summary>
+            Number of accumulated frames to measure the average runtime for animation budgeting.
+            Increasing this value will make the budgeting more stable, but less responsive to runtime changes.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.MaxUpdateInterval">
+            <summary>
+            Maximum interval the optimized animators will use. The higher the value, the less detailed the animation will look like when fully optimized.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.ObserverTag">
+            <summary>
+            Tag used to identify observer channel (using ObserverComponent) that the animation system should use to determine distance used
+            for calculations.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#Animation#Client#Configurations#AnimationRuntimeBudgetConfiguration}#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#Animation#Client#Configurations#AnimationRuntimeBudgetConfiguration}#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,System.Object@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Animation#Client#Configurations#AnimationRuntimeBudgetConfiguration}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Set(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Get(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Set(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MeasureWindowTicksAccessor.Get(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Set(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.MaxUpdateIntervalAccessor.Get(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Set(System.Object,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Set(System.Byte@,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Set(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration.TypeInfoHolder.ObserverTagAccessor.Get(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TargetAverageRuntimeMs">
+            <summary>
+            The optimal average per-frame runtime of all animated entities in the world, in milliseconds.
+            When actual time becomes suboptimal, the animations will be played at reduced quality to meet the budget.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.MeasureWindowTicks">
+            <summary>
+            Number of accumulated frames to measure the average runtime for animation budgeting.
+            Increasing this value will make the budgeting more stable, but less responsive to runtime changes.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.MaxUpdateInterval">
+            <summary>
+            Maximum interval the optimized animators will use. The higher the value, the less detailed the animation will look like when fully optimized.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.ObserverTag">
+            <summary>
+            Tag used to identify observer channel (using ObserverComponent) that the animation system should use to determine distance used
+            for calculations.
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Animation#Client#Configurations#AnimationRuntimeBudgetConfigurationObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Set(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.TargetAverageRuntimeMsAccessor.Get(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Set(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MeasureWindowTicksAccessor.Get(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Object,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32}#Set(System.Byte@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Set(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.MaxUpdateIntervalAccessor.Get(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Set(System.Object,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#StringId}#Set(System.Byte@,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Set(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@,Keen.VRage.Library.Utils.StringId@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder.TypeInfoHolder.ObserverTagAccessor.Get(Keen.VRage.Animation.Client.Configurations.AnimationRuntimeBudgetConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Extensions.AnimationControllerManipulatorExtensions">
+            <summary>
+            Extensions for <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Extensions.PlaybackControllerExtensions">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Extensions.PlaybackControllerExtensions.Step(Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController)">
+            <summary>
+            Step 1 frame forward in the animation and pause it
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu">
+            <summary>
+            Debug menu for <see cref="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Animation#Client#GameObjects#Budgeting#AnimationBudgetSessionComponent}#Set(System.Object,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Animation#Client#GameObjects#Budgeting#AnimationBudgetSessionComponent}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Animation#Client#GameObjects#Budgeting#AnimationBudgetSessionComponent}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Animation#Client#GameObjects#Budgeting#AnimationBudgetSessionComponent}#Set(System.Byte@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Set(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder._componentAccessor.Get(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single?}#Set(System.Object,System.Nullable{System.Single}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single?}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single?}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single?}#Set(System.Byte@,System.Nullable{System.Single}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Set(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@,System.Nullable{System.Single}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.OptimizationPercentageOverrideAccessor.Get(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Animation#Client#GameObjects#Budgeting#OptimizationFeatures}#Set(System.Object,Keen.VRage.Animation.Client.GameObjects.Budgeting.OptimizationFeatures@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Animation#Client#GameObjects#Budgeting#OptimizationFeatures}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Animation#Client#GameObjects#Budgeting#OptimizationFeatures}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Animation#Client#GameObjects#Budgeting#OptimizationFeatures}#Set(System.Byte@,Keen.VRage.Animation.Client.GameObjects.Budgeting.OptimizationFeatures@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Set(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@,Keen.VRage.Animation.Client.GameObjects.Budgeting.OptimizationFeatures@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.EnabledOptimizationsAccessor.Get(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32?}#Set(System.Object,System.Nullable{System.Int32}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32?}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32?}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32?}#Set(System.Byte@,System.Nullable{System.Int32}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Set(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@,System.Nullable{System.Int32}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.UpdateFrequencyOverrideAccessor.Get(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32?}#Set(System.Object,System.Nullable{System.Int32}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32?}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32?}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Int32?}#Set(System.Byte@,System.Nullable{System.Int32}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Set(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@,System.Nullable{System.Int32}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODIndexOverrideAccessor.Get(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single?}#Set(System.Object,System.Nullable{System.Single}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single?}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single?}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single?}#Set(System.Byte@,System.Nullable{System.Single}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Set(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@,System.Nullable{System.Single}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu.TypeInfoHolder.SkeletonLODBonesCountPercentageOverrideAccessor.Get(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetDebugMenu@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder">
+            <summary>
+            <see cref="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Animation#Client#GameObjects#Budgeting#AnimationBudgetObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent">
+            <summary>
+            Component used to balance animation CPU runtime load by reducing quality of animation subjects
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent.CollectAnimatorUpdateRuntime">
+            <summary>
+            Used by animators to both measure runtime and provide optimization factor to use for dynamic quality reduction.
+            This must be used before or during <see cref="T:Keen.VRage.Animation.GameObjects.AnimationUpdate.AnimatorRigUpdate"/> job.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent.GetBudgetToken">
+            <summary>
+            Token that provides access to optimization techniques for the animators. To be used only for information purposes, animators
+            should use <see cref="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent.CollectAnimatorUpdateRuntime"/> as it will both measure their impact and also provide access to this token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent.GetOptimizationFactor">
+            <summary>
+            Gets the percentage of optimization that should be applied to the animation
+            </summary>
+            <returns>0 for no optimizations, 1 for maximum optimization possible</returns>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent.BudgetMeasuringToken">
+            <summary>
+            Token used by Animator to runtime budget optimizations
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetSessionComponent.BudgetToken">
+            <summary>
+            Token used by Animator to runtime budget optimizations
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.OptimizationFeatures">
+            <summary>
+            Flags for various animator optimizations. Used to enable or disable them globally.
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.OptimizationFeatures.FrequencyReduction">
+            <summary>
+            Animated pose is updated and reduced frequency (every n-th frame)
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.OptimizationFeatures.LowFrequencyExtrapolation">
+            <summary>
+            When frequency is reduced, the intermediate frames are extrapolated from last known poses
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.OptimizationFeatures.LODSkeletonBones">
+            <summary>
+            Animator does not update bones not present in the visible LOD of the model
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats">
+            <summary>
+            Stats for animations
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Set(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.RuntimeAccessor.Get(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Object,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{System#Single}#Set(System.Byte@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Set(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats@,System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats.TypeInfoHolder.OptimizationPercentageAccessor.Get(Keen.VRage.Animation.Client.GameObjects.Budgeting.AnimationBudgetStats@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.GameObjects.Budgeting.Extensions.AnimationBudgetHelper">
+            <summary>
+            Helper for adding animation runtime budgeting to session
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator">
+            <summary>
+            User-friendly wrapper around Animation System that exposes API to manipulate <see cref="T:Keen.VRage.Animation.Controller.AnimationController"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.AnimatorRenderComponent">
+            <summary>
+            Render component for <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.AnimatorRenderComponent.Model">
+            <summary>
+            Handle of the model that the animation is previewed on
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.AnimatorRenderComponent.RenderModelEntity">
+            <summary>
+            Render model entity that is being animated
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.AnimatorRenderComponent.RenderRootEntity">
+            <summary>
+            Render root entity that the model entity is attached to
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.AnimatorRenderComponent.Rig">
+            <summary>
+            Rig that the animated model is using
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.AnimatorRenderComponent.ObjectBuilder">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayer">
+            <summary>
+            Represents a single layer inside <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayer.Name">
+            <inheritdoc cref="P:Keen.VRage.Animation.Data.AnimationControllerLayerObjectBuilder.Name"/>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayer.Id">
+            <inheritdoc cref="P:Keen.VRage.Animation.Data.AnimationControllerLayerObjectBuilder.Id"/>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayer.Nodes">
+            <summary>
+            Collection of nodes in this layer
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayerCollection">
+            <summary>
+            Lists all layers provided by <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayerCollection.#ctor(Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator)">
+            <summary>
+            Lists all layers provided by <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayerCollection.Count">
+            <summary>
+            Number of layers
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeBase">
+            <summary>
+            Represents a single node inside <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeBase.Layer">
+            <summary>
+            Animation layer that this node belongs to
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeBase.Id">
+            <inheritdoc cref="P:Keen.VRage.Animation.Data.AnimationControllerNodeBaseObjectBuilder.Id"/>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeBase.Name">
+            <inheritdoc cref="P:Keen.VRage.Animation.Data.AnimationControllerNodeBaseObjectBuilder.Name"/>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeBase.Transitions">
+            <summary>
+            Collection of transitions from this node to other nodes
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNode">
+            <summary>
+            Represents a single node inside <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNode.Loop">
+            <inheritdoc cref="P:Keen.VRage.Animation.Data.AnimationControllerNodeObjectBuilder.Loop"/>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNode.Speed">
+            <inheritdoc cref="P:Keen.VRage.Animation.Data.AnimationControllerNodeObjectBuilder.Speed"/>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeCollection">
+            <summary>
+            Lists all nodes provided by a given <see cref="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeCollection.Layer"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeCollection.#ctor(Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator,Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayer)">
+            <summary>
+            Lists all nodes provided by a given <see cref="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeCollection.Layer"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeCollection.Layer">
+            <summary>
+            The layer that this nodes collection belongs to
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController">
+            <summary>
+            Controls animation playback, allowing to stop / resume animations, change speed, etc.
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController.IsEmpty">
+            <summary>
+            If there are any frames buffered (previous or future)
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController.SetSpeed(System.Single)">
+            <summary>
+            Set the speed for the animation (default is <c>1</c>)
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController.SetFrameWindowCapacity(System.Int32)">
+            <summary>
+            Set the maximum size of the frame window
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController.Pause">
+            <summary>
+            Pause the animation
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController.Resume">
+            <summary>
+            Resume the animation
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController.Seek(System.Int32)">
+            <summary>
+            Seek and preview a certain frame back in history. This automatically pauses the animation (call <see cref="M:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController.Resume"/> to resume)
+            </summary>
+            <param name="frame">Zero-based number of frames to go back from the current frame. If 0 is specified, the most recent (current) frame is displayed.</param>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController.NextFrame">
+            <remarks>
+            Requests returned from this instance must not be returned, their lifetime is managed by this controller instance.
+            </remarks>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackControllerComponent">
+            <summary>
+            Component wrapper for <see cref="T:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackControllerComponent.ObjectBuilder">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransition">
+            <summary>
+            Represents a single transition coming from a given <see cref="P:Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransition.SourceNode"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransition.#ctor(Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator,Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeBase,Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeBase,Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayer,Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransitionCollection,Keen.VRage.Animation.Data.AnimationControllerTransitionObjectBuilder)">
+            <summary>
+            Represents a single transition coming from a given <see cref="P:Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransition.SourceNode"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransitionCollection">
+            <summary>
+            Lists all transitions coming from a given <see cref="P:Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransitionCollection.Node"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransitionCollection.#ctor(Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator,Keen.VRage.Animation.Client.Manipulator.Nodes.AnimationManipulatorNodeBase,Keen.VRage.Animation.Client.Manipulator.Layers.AnimationManipulatorLayer,Keen.VRage.Animation.Data.AnimationControllerNodeBaseObjectBuilder)">
+            <summary>
+            Lists all transitions coming from a given <see cref="P:Keen.VRage.Animation.Client.Manipulator.Transitions.AnimationManipulatorTransitionCollection.Node"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Preview.AnimationControllerPreviewHelper">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Preview.AnimationControllerPreviewListener">
+            <summary>
+            Talks to <see cref="T:Keen.VRage.Animation.Controller.AnimationController"/> based on calls from <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationControllerPreviewListener.#ctor(Keen.VRage.Animation.Controller.AnimationController,Keen.VRage.Animation.Client.Manipulator.Playback.PlaybackController)">
+            <summary>
+            Talks to <see cref="T:Keen.VRage.Animation.Controller.AnimationController"/> based on calls from <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Preview.AnimationPreviewListenerProxy">
+            <summary>
+            Proxies calls to its methods to the inner <see cref="T:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener"/>
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.Model">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#Animation#Client#Preview#AnimationPreviewModelConfiguration}#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameSerializer">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#NameType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer{Keen#VRage#Animation#Client#Preview#AnimationPreviewModelConfiguration}#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.Serializer.Keen#VRage#Library#Serialization#INamedObjectSerializer#ShouldSerializeAsName(Keen.VRage.Library.Serialization.SerializationContext,System.Object@)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Animation#Client#Preview#AnimationPreviewModelConfiguration}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#Core#Model#ModelAsset}}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.Core.Model.ModelAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#Core#Model#ModelAsset}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#Core#Model#ModelAsset}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#Core#Model#ModelAsset}}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.Core.Model.ModelAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Set(Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.Core.Model.ModelAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration.TypeInfoHolder.ModelAccessor.Get(Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfiguration@)">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener">
+            <summary>
+            Service that communicates changes to preview animation system from <see cref="T:Keen.VRage.Animation.Client.Manipulator.AnimationControllerManipulator"/>
+            </summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.PlaybackController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.OnNodeProgressUpdated(System.Guid,System.Action{System.Guid,System.Single,System.Single},System.Boolean)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.OnTransitionProgressUpdated(System.Guid,System.Action{System.Guid,System.Single,System.Single},System.Boolean)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.OnNodeActivated(System.Guid,System.Action{System.Guid},System.Boolean)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.OnNodeDeactivated(System.Guid,System.Action{System.Guid},System.Boolean)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.OnTransitionActivated(System.Guid,System.Action{System.Guid},System.Boolean)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetBlackboardValue``1(System.String,``0)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.EnableGlobalPreview">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.DisableGlobalPreview">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.AddLayer(System.Guid,Keen.VRage.Animation.Data.BonesMaskDefinition,System.Single)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.InsertLayer(System.Int32,System.Guid,Keen.VRage.Animation.Data.BonesMaskDefinition,System.Single)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.RemoveLayer(System.Guid)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.MoveLayer(System.Guid,System.Int32)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.RenameLayer(System.Guid,System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetLayerBlendingMode(System.Guid,Keen.VRage.Animation.Controller.BlendingMode)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetLayerWeight(System.Guid,System.Single)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetLayerMask(System.Guid,Keen.VRage.Animation.Data.BonesMaskDefinition)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.AddEmptyNode(System.Guid,Keen.VRage.Animation.Data.EmptyNodeObjectBuilder)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.AddSingleClipNode(System.Guid,Keen.VRage.Animation.Data.SingleClipNodeObjectBuilder)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.AddMixer1DNode(System.Guid,Keen.VRage.Animation.Data.Mixer1DNodeObjectBuilder)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.AddMixer2DDirectionalNode(System.Guid,Keen.VRage.Animation.Data.Mixer2DDirectionalNodeObjectBuilder)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.AddMixer2DCartesianNode(System.Guid,Keen.VRage.Animation.Data.Mixer2DCartesianNodeObjectBuilder)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.RemoveNode(System.Guid,System.Guid)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.MoveNode(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.ActivateNode(System.Guid,System.Guid)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.RenameNode(System.Guid,System.Guid,System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetNodeLoop(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetNodeSpeed(System.Guid,System.Guid,System.Single)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.UpdateSingleClip(System.Guid,System.Guid,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.Core.Model.AnimationAsset})">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.UpdateMixer1DClips(System.Guid,System.Guid,System.Collections.Generic.List{Keen.VRage.Animation.Data.Mixer1DClipData})">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.UpdateMixer2DClips(System.Guid,System.Guid,System.Collections.Generic.List{Keen.VRage.Animation.Data.Mixer2DClipData})">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetMixer1DNodeDriver(System.Guid,System.Guid,System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetMixer2DNodeDrivers(System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetMixerNodeInterpolationTime(System.Guid,System.Guid,System.Single)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.AddTransition(System.Guid,System.Guid,System.Guid,System.Guid,System.Guid)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.RemoveTransition(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.RetargetTransition(System.Guid,System.Guid,System.Guid,System.Guid)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.ChangeSource(System.Guid,System.Guid,System.Guid,System.Guid)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.RenameTransition(System.Guid,System.Guid,System.Guid,System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetTransitionDuration(System.Guid,System.Guid,System.Guid,System.Single)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetTransitionMinTime(System.Guid,System.Guid,System.Guid,System.Nullable{System.Single})">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetTransitionMaxTime(System.Guid,System.Guid,System.Guid,System.Nullable{System.Single})">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.SetTransitionCondition(System.Guid,System.Guid,System.Guid,Keen.VRage.Animation.Data.TransitionConditionObjectBuilder)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.IAnimationPreviewListener.RemoveTransitionCondition(System.Guid,System.Guid,System.Guid,System.Guid)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Model">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer">
+            <inheritdoc />
+            <inheritdoc />
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Json.JsonSerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.DeserializeMembers(Keen.VRage.Library.Serialization.Json.JsonDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.DeserializeIntoSlow(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Binary.BinaryDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Serialize(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,System.Object,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.SerializeMembers(Keen.VRage.Library.Serialization.Binary.BinarySerializationContext@,Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,System.Object@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.DeserializeInto(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Deserialize(Keen.VRage.Library.Serialization.Generic.GenericObjectDeserializationContext@,Keen.VRage.Library.Serialization.SerializerFlags)">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Instance">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Serializer.Bundles">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.GetStreamSerializer(Keen.VRage.Library.Serialization.SerializerFormat)">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.Keen#VRage#Library#Serialization#ISerializable{Keen#VRage#Animation#Client#Preview#AnimationPreviewModelConfigurationObjectBuilder}#Serializer">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="T:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder">
+            <inheritdoc />
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.Value">
+            <summary>Singleton instance</summary>
+        </member>
+        <member name="F:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.RawAccessors">
+            <summary>Accessors for this instance and parent types.</summary>
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.SerializedName">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.CanAccessByRef">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.AccessibleTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Serializers">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Member">
+            <inheritdoc />
+        </member>
+        <member name="P:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Set(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#Set(System.Byte@,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor#GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#Core#Model#ModelAsset}}#Set(System.Object,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.Core.Model.ModelAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#Core#Model#ModelAsset}}#Get(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#Core#Model#ModelAsset}}#Get(System.Byte@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Keen#VRage#Library#Serialization#IMemberAccessor{Keen#VRage#Library#Utils#ResourceHandle{Keen#VRage#Core#Model#ModelAsset}}#Set(System.Byte@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.Core.Model.ModelAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.GetReference(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Set(Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@,Keen.VRage.Library.Utils.ResourceHandle{Keen.VRage.Core.Model.ModelAsset}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder.TypeInfoHolder.ModelAccessor.Get(Keen.VRage.Animation.Client.Preview.AnimationPreviewModelConfigurationObjectBuilder@)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+            <summary>
+            Method builder for AsyncVoid methods.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create">
+            <summary>
+            Create the method builder.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)">
+            <summary>
+            Start the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)">
+            <summary>
+            Set the boxed state machine, unused.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)">
+            <summary>
+            Notify about an exception while executing the state machine.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult">
+            <summary>
+            Signal that the state machine has completed.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)">
+            <summary>
+            Await on another task.
+            </summary>
+        </member>
+    </members>
+</doc>
