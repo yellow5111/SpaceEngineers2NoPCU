@@ -1,1 +1,1 @@
-Taps into Game2.Simulation\Keen.Game2.Simulation.GameSystems.PCU\PCUSessionComponent.cs and Game2.Simulation\Keen.Game2.Simulation.GameSystems.PCU\PCUPerPlayerData.cs to modify PCU limit, and ultimately set it so blocks do not use PCU. 
+Taps into Space Engineers 2 Source Code, specifically Game2.Simulation\Keen.Game2.Simulation.GameSystems.PCU\PCUSessionComponent.cs and Game2.Simulation\Keen.Game2.Simulation.GameSystems.PCU\PCUPerPlayerData.cs, to modify PCU limit, and ultimately set it so blocks do not use PCU. 
